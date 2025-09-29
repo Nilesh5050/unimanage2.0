@@ -1,0 +1,979 @@
+﻿@page
+@{
+    ViewData["Title"] = "PowerFit Gym";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerFit Gym - Transform Your Body, Transform Your Life</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="~/css/PowerFitGym.css" rel="stylesheet" />
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <i class="fas fa-dumbbell"></i>
+                PowerFit Gym
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#classes">Classes</a></li>
+                <li><a href="#trainers">Trainers</a></li>
+                <li><a href="#membership">Membership</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="auth-buttons-mobile">
+                    <button class="btn btn-outline" onclick="showLoginModal()">Login</button>
+                    <button class="btn btn-primary" onclick="showRegisterModal()">Sign Up</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Transform Your Body</h1>
+                <p>Join PowerFit Gym and start your fitness journey today with expert trainers and state-of-the-art equipment</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="showRegisterModal()">Start Free Trial</button>
+                    <button class="btn btn-outline" onclick="scrollToSection('membership')">View Plans</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About PowerFit Gym</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Your Fitness Journey Starts Here</h3>
+                        <p>PowerFit Gym is more than just a gym - it's a community dedicated to helping you achieve your fitness goals. With over 10 years of experience, we've helped thousands of members transform their lives through fitness.</p>
+                        <p>Our state-of-the-art facility features the latest equipment, expert personal trainers, and a variety of group classes to keep your workouts exciting and effective.</p>
+                        <div class="stats">
+                            <div class="stat-card">
+                                <div class="stat-number">5000+</div>
+                                <div>Happy Members</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">50+</div>
+                                <div>Expert Trainers</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">100+</div>
+                                <div>Classes Weekly</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">24/7</div>
+                                <div>Access</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="~/images/Powerfil/gym.png" alt="Gym Interior" style="width: 100%; border-radius: 10px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Classes Section -->
+        <section id="classes" class="classes">
+            <div class="container">
+                <h2 class="section-title">Our Classes</h2>
+                <div class="classes-grid">
+                    <div class="class-card" onclick="showClassDetails('HIIT Training')">
+                        <div class="class-image">
+                            <span class="class-badge">High Intensity</span>
+                        </div>
+                        <div class="class-content">
+                            <h3 class="class-title">HIIT Training</h3>
+                            <div class="class-info">
+                                <span><i class="fas fa-clock"></i> 45 min</span>
+                                <span><i class="fas fa-fire"></i> 600 cal</span>
+                            </div>
+                            <p>High-intensity interval training for maximum calorie burn and fitness improvement.</p>
+                        </div>
+                    </div>
+                    <div class="class-card" onclick="showClassDetails('Yoga Flow')">
+                        <div class="class-image" style="background-image: url('/images/yoga.jpg')">
+                            <span class="class-badge">Flexibility</span>
+                        </div>
+                        <div class="class-content">
+                            <h3 class="class-title">Yoga Flow</h3>
+                            <div class="class-info">
+                                <span><i class="fas fa-clock"></i> 60 min</span>
+                                <span><i class="fas fa-leaf"></i> Relaxing</span>
+                            </div>
+                            <p>Improve flexibility, balance, and mental clarity through dynamic yoga sequences.</p>
+                        </div>
+                    </div>
+                    <div class="class-card" onclick="showClassDetails('Strength Training')">
+                        <div class="class-image" style="background-image: url('/images/gym3.jpg')">
+                            <span class="class-badge">Strength</span>
+                        </div>
+                        <div class="class-content">
+                            <h3 class="class-title">Strength Training</h3>
+                            <div class="class-info">
+                                <span><i class="fas fa-clock"></i> 50 min</span>
+                                <span><i class="fas fa-dumbbell"></i> Muscle Gain</span>
+                            </div>
+                            <p>Build muscle and increase strength with guided weight training sessions.</p>
+                        </div>
+                    </div>
+                    <div class="class-card" onclick="showClassDetails('Cardio Blast')">
+                        <div class="class-image" style="background-image: url('/images/sarah.jpg')">
+                            <span class="class-badge">Cardio</span>
+                        </div>
+                        <div class="class-content">
+                            <h3 class="class-title">Cardio Blast</h3>
+                            <div class="class-info">
+                                <span><i class="fas fa-clock"></i> 40 min</span>
+                                <span><i class="fas fa-heart"></i> Heart Health</span>
+                            </div>
+                            <p>Get your heart pumping with high-energy cardio workouts.</p>
+                        </div>
+                    </div>
+                    <div class="class-card" onclick="showClassDetails('CrossFit')">
+                        <div class="class-image" style="background-image: url('/images/gym1.jpg')">
+                            <span class="class-badge">CrossFit</span>
+                        </div>
+                        <div class="class-content">
+                            <h3 class="class-title">CrossFit</h3>
+                            <div class="class-info">
+                                <span><i class="fas fa-clock"></i> 55 min</span>
+                                <span><i class="fas fa-trophy"></i> Challenge</span>
+                            </div>
+                            <p>Functional fitness movements performed at high intensity for total body conditioning.</p>
+                        </div>
+                    </div>
+                    <div class="class-card" onclick="showClassDetails('Pilates')">
+                        <div class="class-image" style="background-image: url('/images/gym.jpg')">
+                            <span class="class-badge">Core</span>
+                        </div>
+                        <div class="class-content">
+                            <h3 class="class-title">Pilates</h3>
+                            <div class="class-info">
+                                <span><i class="fas fa-clock"></i> 50 min</span>
+                                <span><i class="fas fa-balance-scale"></i> Core Focus</span>
+                            </div>
+                            <p>Strengthen your core and improve posture with controlled movements.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trainers Section -->
+        <section id="trainers" class="trainers">
+            <div class="container">
+                <h2 class="section-title">Meet Our Trainers</h2>
+                <div class="trainers-grid">
+                    <div class="trainer-card">
+                        <div class="trainer-image" style="background-image: url('/images/gym.jpg')"></div>
+                        <h3 class="trainer-name">Sarah Johnson</h3>
+                        <p class="trainer-specialty">Strength & Conditioning</p>
+                        <p>Certified personal trainer with 8+ years experience in strength training and athletic performance.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="trainer-card">
+                        <div class="trainer-image" style="background-image: url('/images/gym2.jpg')"></div>
+                        <h3 class="trainer-name">Mike Chen</h3>
+                        <p class="trainer-specialty">HIIT & CrossFit</p>
+                        <p>Former athlete turned trainer, specializing in high-intensity workouts and functional fitness.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="trainer-card">
+                        <div class="trainer-image" style="background-image: url('/images/gym1.jpg')"></div>
+                        <h3 class="trainer-name">Emma Williams</h3>
+                        <p class="trainer-specialty">Yoga & Pilates</p>
+                        <p>Registered yoga instructor and Pilates expert, focused on mind-body connection and flexibility.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="trainer-card">
+                        <div class="trainer-image" style="background-image: url('/images/gym3.jpg')"></div>
+                        <h3 class="trainer-name">David Martinez</h3>
+                        <p class="trainer-specialty">Nutrition & Weight Loss</p>
+                        <p>Certified nutritionist and personal trainer, helping clients achieve sustainable weight loss goals.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Membership Section -->
+        <section id="membership" class="membership">
+            <div class="container">
+                <h2 class="section-title">Membership Plans</h2>
+                <div class="membership-grid">
+                    <div class="plan-card">
+                        <h3 class="plan-name">Basic</h3>
+                        <div class="plan-price">₹3000<span>/month</span></div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> Gym Access (6AM-10PM)</li>
+                            <li><i class="fas fa-check"></i> Basic Equipment</li>
+                            <li><i class="fas fa-check"></i> Locker Room Access</li>
+                            <li><i class="fas fa-check"></i> 1 Guest Pass/Month</li>
+                            <li><i class="fas fa-times"></i> Group Classes</li>
+                            <li><i class="fas fa-times"></i> Personal Training</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="selectPlan('Basic')">Choose Plan</button>
+                    </div>
+                    <div class="plan-card featured">
+                        <span class="plan-badge">Most Popular</span>
+                        <h3 class="plan-name">Premium</h3>
+                        <div class="plan-price">₹5000<span>/month</span></div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> 24/7 Gym Access</li>
+                            <li><i class="fas fa-check"></i> All Equipment</li>
+                            <li><i class="fas fa-check"></i> Unlimited Group Classes</li>
+                            <li><i class="fas fa-check"></i> 5 Guest Passes/Month</li>
+                            <li><i class="fas fa-check"></i> 1 Personal Training Session</li>
+                            <li><i class="fas fa-check"></i> Nutrition Consultation</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="selectPlan('Premium')">Choose Plan</button>
+                    </div>
+                    <div class="plan-card">
+                        <h3 class="plan-name">VIP</h3>
+                        <div class="plan-price">₹15000<span>/month</span></div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> 24/7 VIP Access</li>
+                            <li><i class="fas fa-check"></i> Premium Equipment</li>
+                            <li><i class="fas fa-check"></i> Unlimited Classes</li>
+                            <li><i class="fas fa-check"></i> Unlimited Guest Passes</li>
+                            <li><i class="fas fa-check"></i> 4 Personal Training Sessions</li>
+                            <li><i class="fas fa-check"></i> Meal Plan & Nutrition</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="selectPlan('VIP')">Choose Plan</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule" class="schedule">
+            <div class="container">
+                <h2 class="section-title">Class Schedule</h2>
+                <div class="table-responsive">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Monday</th>
+                                <th>Tuesday</th>
+                                <th>Wednesday</th>
+                                <th>Thursday</th>
+                                <th>Friday</th>
+                                <th>Saturday</th>
+                                <th>Sunday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>6:00 AM</td>
+                                <td>Yoga Flow<br><small>Emma</small></td>
+                                <td>HIIT Training<br><small>Mike</small></td>
+                                <td>Yoga Flow<br><small>Emma</small></td>
+                                <td>Cardio Blast<br><small>Sarah</small></td>
+                                <td>HIIT Training<br><small>Mike</small></td>
+                                <td>Yoga Flow<br><small>Emma</small></td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>8:00 AM</td>
+                                <td>Strength Training<br><small>Sarah</small></td>
+                                <td>CrossFit<br><small>Mike</small></td>
+                                <td>Strength Training<br><small>Sarah</small></td>
+                                <td>Pilates<br><small>Emma</small></td>
+                                <td>CrossFit<br><small>Mike</small></td>
+                                <td>Strength Training<br><small>Sarah</small></td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>12:00 PM</td>
+                                <td>Cardio Blast<br><small>Sarah</small></td>
+                                <td>Yoga Flow<br><small>Emma</small></td>
+                                <td>HIIT Training<br><small>Mike</small></td>
+                                <td>Strength Training<br><small>Sarah</small></td>
+                                <td>Yoga Flow<br><small>Emma</small></td>
+                                <td>CrossFit<br><small>Mike</small></td>
+                                <td>Yoga Flow<br><small>Emma</small></td>
+                            </tr>
+                            <tr>
+                                <td>5:00 PM</td>
+                                <td>CrossFit<br><small>Mike</small></td>
+                                <td>Strength Training<br><small>Sarah</small></td>
+                                <td>Cardio Blast<br><small>Sarah</small></td>
+                                <td>HIIT Training<br><small>Mike</small></td>
+                                <td>Strength Training<br><small>Sarah</small></td>
+                                <td>Pilates<br><small>Emma</small></td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>7:00 PM</td>
+                                <td>Pilates<br><small>Emma</small></td>
+                                <td>Cardio Blast<br><small>Sarah</small></td>
+                                <td>Pilates<br><small>Emma</small></td>
+                                <td>CrossFit<br><small>Mike</small></td>
+                                <td>HIIT Training<br><small>Mike</small></td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>123 Fitness Street, Health City, HC 12345</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>(555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@powerfitgym.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Hours</h4>
+                                <p>24/7 for Premium & VIP Members<br>6AM - 10PM for Basic Members</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Send us a Message</h3>
+                        <form onsubmit="handleContactForm(event)">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" rows="5" style="width: 100%; padding: 0.75rem; background: var(--secondary-color); border: 1px solid var(--bg-card); border-radius: 5px; color: white; resize: vertical;" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="dashboard">
+        <div class="dashboard-header">
+            <div class="container">
+                <h1>Member Dashboard</h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="dashboard-content">
+                <aside class="sidebar">
+                    <ul class="sidebar-menu">
+                        <li><a href="#" class="active" onclick="showDashboardSection('overview')"><i class="fas fa-home"></i> Overview</a></li>
+                        <li><a href="#" onclick="showDashboardSection('profile')"><i class="fas fa-user"></i> Profile</a></li>
+                        <li><a href="#" onclick="showDashboardSection('classes')"><i class="fas fa-calendar"></i> My Classes</a></li>
+                        <li><a href="#" onclick="showDashboardSection('progress')"><i class="fas fa-chart-line"></i> Progress</a></li>
+                        <li><a href="#" onclick="showDashboardSection('membership')"><i class="fas fa-id-card"></i> Membership</a></li>
+                        <li><a href="#" onclick="showDashboardSection('billing')"><i class="fas fa-credit-card"></i> Billing</a></li>
+                        <li><a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </aside>
+                <main class="dashboard-main">
+                    <div id="dashboard-overview" class="dashboard-section">
+                        <div class="welcome-card">
+                            <h2>Welcome back, <span id="user-name">Member</span>!</h2>
+                            <p>You're doing great! Keep up the amazing work.</p>
+                        </div>
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <i class="fas fa-fire"></i>
+                                <h3>15</h3>
+                                <p>Workouts This Month</p>
+                            </div>
+                            <div class="stat-box">
+                                <i class="fas fa-calendar-check"></i>
+                                <h3>8</h3>
+                                <p>Classes Booked</p>
+                            </div>
+                            <div class="stat-box">
+                                <i class="fas fa-trophy"></i>
+                                <h3>3</h3>
+                                <p>Goals Achieved</p>
+                            </div>
+                            <div class="stat-box">
+                                <i class="fas fa-clock"></i>
+                                <h3>24h</h3>
+                                <p>Total Time</p>
+                            </div>
+                        </div>
+                        <h3>Upcoming Classes</h3>
+                        <div class="table-responsive">
+                            <table class="schedule-table">
+                                <thead>
+                                    <tr>
+                                        <th>Class</th>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                        <th>Trainer</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>HIIT Training</td>
+                                        <td>Tomorrow</td>
+                                        <td>6:00 AM</td>
+                                        <td>Mike Chen</td>
+                                        <td><button class="book-btn" onclick="cancelClass()">Cancel</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Yoga Flow</td>
+                                        <td>Wednesday</td>
+                                        <td>12:00 PM</td>
+                                        <td>Emma Williams</td>
+                                        <td><button class="book-btn" onclick="cancelClass()">Cancel</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="dashboard-profile" class="dashboard-section" style="display: none;">
+                        <h2>Profile Settings</h2>
+                        <form onsubmit="updateProfile(event)">
+                            <div class="form-group">
+                                <label for="profile-name">Full Name</label>
+                                <input type="text" id="profile-name" value="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="profile-email">Email</label>
+                                <input type="email" id="profile-email" value="john.doe@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="profile-phone">Phone</label>
+                                <input type="tel" id="profile-phone" value="(555) 123-4567">
+                            </div>
+                            <div class="form-group">
+                                <label for="profile-goal">Fitness Goal</label>
+                                <select id="profile-goal">
+                                    <option value="weight-loss">Weight Loss</option>
+                                    <option value="muscle-gain">Muscle Gain</option>
+                                    <option value="endurance">Improve Endurance</option>
+                                    <option value="general">General Fitness</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Update Profile</button>
+                        </form>
+                    </div>
+                    <div id="dashboard-classes" class="dashboard-section" style="display: none;">
+                        <h2>Book a Class</h2>
+                        <div class="form-group">
+                            <label for="class-select">Select Class</label>
+                            <select id="class-select">
+                                <option value="">Choose a class...</option>
+                                <option value="hiit">HIIT Training</option>
+                                <option value="yoga">Yoga Flow</option>
+                                <option value="strength">Strength Training</option>
+                                <option value="cardio">Cardio Blast</option>
+                                <option value="crossfit">CrossFit</option>
+                                <option value="pilates">Pilates</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="class-date">Date</label>
+                            <input type="date" id="class-date">
+                        </div>
+                        <div class="form-group">
+                            <label for="class-time">Time</label>
+                            <select id="class-time">
+                                <option value="">Select time...</option>
+                                <option value="6:00">6:00 AM</option>
+                                <option value="8:00">8:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="17:00">5:00 PM</option>
+                                <option value="19:00">7:00 PM</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" onclick="bookClass()">Book Class</button>
+                    </div>
+                    <div id="dashboard-progress" class="dashboard-section" style="display: none;">
+                        <h2>Your Progress</h2>
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <i class="fas fa-weight"></i>
+                                <h3>-5 lbs</h3>
+                                <p>Weight Change</p>
+                            </div>
+                            <div class="stat-box">
+                                <i class="fas fa-percentage"></i>
+                                <h3>+15%</h3>
+                                <p>Strength Increase</p>
+                            </div>
+                            <div class="stat-box">
+                                <i class="fas fa-heartbeat"></i>
+                                <h3>-10 bpm</h3>
+                                <p>Resting Heart Rate</p>
+                            </div>
+                            <div class="stat-box">
+                                <i class="fas fa-running"></i>
+                                <h3>+2 min</h3>
+                                <p>Endurance</p>
+                            </div>
+                        </div>
+                        <h3>Recent Achievements</h3>
+                        <div style="background: var(--secondary-color); padding: 1rem; border-radius: 10px; margin-bottom: 1rem;">
+                            <i class="fas fa-medal" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                            Completed 30-day workout streak!
+                        </div>
+                        <div style="background: var(--secondary-color); padding: 1rem; border-radius: 10px; margin-bottom: 1rem;">
+                            <i class="fas fa-medal" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                            Lifted personal best in bench press
+                        </div>
+                        <div style="background: var(--secondary-color); padding: 1rem; border-radius: 10px;">
+                            <i class="fas fa-medal" style="color: var(--accent-color); margin-right: 0.5rem;"></i>
+                            Attended 50 group classes
+                        </div>
+                    </div>
+                    <div id="dashboard-membership" class="dashboard-section" style="display: none;">
+                        <h2>Membership Details</h2>
+                        <div style="background: var(--secondary-color); padding: 2rem; border-radius: 10px; margin-bottom: 2rem;">
+                            <h3>Current Plan: Premium</h3>
+                            <p style="color: var(--text-gray); margin: 1rem 0;">Renews on: March 15, 2024</p>
+                            <p style="color: var(--text-gray);">Monthly Fee: $59</p>
+                            <button class="btn btn-primary" style="margin-top: 1rem;">Upgrade to VIP</button>
+                        </div>
+                        <h3>Membership Benefits</h3>
+                        <ul style="list-style: none; margin-top: 1rem;">
+                            <li style="padding: 0.5rem 0;"><i class="fas fa-check" style="color: var(--success); margin-right: 0.5rem;"></i> 24/7 Gym Access</li>
+                            <li style="padding: 0.5rem 0;"><i class="fas fa-check" style="color: var(--success); margin-right: 0.5rem;"></i> Unlimited Group Classes</li>
+                            <li style="padding: 0.5rem 0;"><i class="fas fa-check" style="color: var(--success); margin-right: 0.5rem;"></i> 5 Guest Passes/Month</li>
+                            <li style="padding: 0.5rem 0;"><i class="fas fa-check" style="color: var(--success); margin-right: 0.5rem;"></i> 1 Personal Training Session</li>
+                            <li style="padding: 0.5rem 0;"><i class="fas fa-check" style="color: var(--success); margin-right: 0.5rem;"></i> Nutrition Consultation</li>
+                        </ul>
+                    </div>
+                    <div id="dashboard-billing" class="dashboard-section" style="display: none;">
+                        <h2>Billing Information</h2>
+                        <h3>Payment Method</h3>
+                        <div style="background: var(--secondary-color); padding: 1.5rem; border-radius: 10px; margin-bottom: 2rem;">
+                            <p><i class="fab fa-cc-visa" style="color: var(--primary-color); margin-right: 0.5rem;"></i> Visa ending in 4242</p>
+                            <p style="color: var(--text-gray); margin-top: 0.5rem;">Expires 12/25</p>
+                            <button class="btn btn-outline" style="margin-top: 1rem;">Update Payment Method</button>
+                        </div>
+                        <h3>Billing History</h3>
+                        <div class="table-responsive">
+                            <table class="schedule-table">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Description</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Feb 15, 2024</td>
+                                        <td>Monthly Membership</td>
+                                        <td>$59.00</td>
+                                        <td style="color: var(--success);">Paid</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jan 15, 2024</td>
+                                        <td>Monthly Membership</td>
+                                        <td>$59.00</td>
+                                        <td style="color: var(--success);">Paid</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dec 15, 2023</td>
+                                        <td>Monthly Membership</td>
+                                        <td>$59.00</td>
+                                        <td style="color: var(--success);">Paid</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('login-modal')">&times;</button>
+            <h2>Login to Your Account</h2>
+            <form onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+            </form>
+            <p style="text-align: center; margin-top: 1rem; color: var(--text-gray);">
+                Don't have an account? <a href="#" onclick="switchToRegister()" style="color: var(--primary-color);">Sign up</a>
+            </p>
+        </div>
+    </div>
+
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('register-modal')">&times;</button>
+            <h2>Create Your Account</h2>
+            <form onsubmit="handleRegister(event)">
+                <div class="form-group">
+                    <label for="register-name">Full Name</label>
+                    <input type="text" id="register-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-phone">Phone</label>
+                    <input type="tel" id="register-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-plan">Select Plan</label>
+                    <select id="register-plan" required>
+                        <option value="">Choose a plan...</option>
+                        <option value="basic">Basic - $29/month</option>
+                        <option value="premium">Premium - $59/month</option>
+                        <option value="vip">VIP - $99/month</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Create Account</button>
+            </form>
+            <p style="text-align: center; margin-top: 1rem; color: var(--text-gray);">
+                Already have an account? <a href="#" onclick="switchToLogin()" style="color: var(--primary-color);">Login</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PowerFit Gym</h3>
+                    <p>Transform your body, transform your life. Join thousands of members who have achieved their fitness goals with us.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="#about">About Us</a></p>
+                    <p><a href="#classes">Classes</a></p>
+                    <p><a href="#trainers">Trainers</a></p>
+                    <p><a href="#membership">Membership</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Fitness Street, Health City</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@powerfitgym.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links" style="justify-content: flex-start;">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PowerFit Gym. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
+    <script>
+        // Initialize
+        let currentUser = null;
+        let isLoggedIn = false;
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('nav-links').classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Modal functions
+        function showLoginModal() {
+            document.getElementById('login-modal').classList.add('active');
+        }
+
+        function showRegisterModal() {
+            document.getElementById('register-modal').classList.add('active');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+        }
+
+        function switchToRegister() {
+            closeModal('login-modal');
+            showRegisterModal();
+        }
+
+        function switchToLogin() {
+            closeModal('register-modal');
+            showLoginModal();
+        }
+
+        // Form handlers
+        function handleLogin(event) {
+            event.preventDefault();
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+
+            // Simulate login
+            currentUser = { name: 'John Doe', email: email };
+            isLoggedIn = true;
+
+            closeModal('login-modal');
+            showNotification('Login successful!', 'success');
+            showDashboard();
+        }
+
+        function handleRegister(event) {
+            event.preventDefault();
+            const name = document.getElementById('register-name').value;
+            const email = document.getElementById('register-email').value;
+            const phone = document.getElementById('register-phone').value;
+            const password = document.getElementById('register-password').value;
+            const plan = document.getElementById('register-plan').value;
+
+            // Simulate registration
+            currentUser = { name: name, email: email, phone: phone, plan: plan };
+            isLoggedIn = true;
+
+            closeModal('register-modal');
+            showNotification('Registration successful! Welcome to PowerFit Gym!', 'success');
+            showDashboard();
+        }
+
+        function handleContactForm(event) {
+            event.preventDefault();
+            showNotification('Message sent successfully! We\'ll get back to you soon.', 'success');
+            event.target.reset();
+        }
+
+        function updateProfile(event) {
+            event.preventDefault();
+            showNotification('Profile updated successfully!', 'success');
+        }
+
+        // Dashboard functions
+        function showDashboard() {
+            if (!isLoggedIn) {
+                showLoginModal();
+                return;
+            }
+
+            document.getElementById('main-content').style.display = 'none';
+            document.getElementById('dashboard').classList.add('active');
+            document.getElementById('user-name').textContent = currentUser.name;
+
+            // Update auth buttons
+            document.querySelector('.auth-buttons').innerHTML = `
+                <button class="btn btn-outline" onclick="logout()">Logout</button>
+            `;
+        }
+
+        function logout() {
+            isLoggedIn = false;
+            currentUser = null;
+            document.getElementById('main-content').style.display = 'block';
+            document.getElementById('dashboard').classList.remove('active');
+
+            // Reset auth buttons
+            document.querySelector('.auth-buttons').innerHTML = `
+                <button class="btn btn-outline" onclick="showLoginModal()">Login</button>
+                <button class="btn btn-primary" onclick="showRegisterModal()">Sign Up</button>
+            `;
+
+            showNotification('Logged out successfully!', 'success');
+        }
+
+        function showDashboardSection(section) {
+            // Hide all sections
+            document.querySelectorAll('.dashboard-section').forEach(sec => {
+                sec.style.display = 'none';
+            });
+
+            // Show selected section
+            document.getElementById(`dashboard-${section}`).style.display = 'block';
+
+            // Update active menu
+            document.querySelectorAll('.sidebar-menu a').forEach(link => {
+                link.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        // Class functions
+        function showClassDetails(className) {
+            showNotification(`Viewing details for ${className}`, 'success');
+        }
+
+        function bookClass() {
+            const classSelect = document.getElementById('class-select');
+            const date = document.getElementById('class-date');
+            const time = document.getElementById('class-time');
+
+            if (classSelect.value && date.value && time.value) {
+                showNotification('Class booked successfully!', 'success');
+                classSelect.value = '';
+                date.value = '';
+                time.value = '';
+            } else {
+                showNotification('Please fill in all fields', 'error');
+            }
+        }
+
+        function cancelClass() {
+            if (confirm('Are you sure you want to cancel this class?')) {
+                showNotification('Class cancelled successfully!', 'success');
+            }
+        }
+
+        // Membership functions
+        function selectPlan(plan) {
+            if (!isLoggedIn) {
+                showRegisterModal();
+                document.getElementById('register-plan').value = plan.toLowerCase();
+            } else {
+                showNotification(`${plan} plan selected!`, 'success');
+            }
+        }
+
+        // Notification system
+        function showNotification(message, type = 'success') {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.className = `notification ${type}`;
+            notification.classList.add('show');
+
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(10, 10, 10, 0.98)';
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.3)';
+            } else {
+                header.style.background = 'rgba(10, 10, 10, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Initialize date inputs
+        document.addEventListener('DOMContentLoaded', () => {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('class-date').setAttribute('min', today);
+        });
+
+        // Close modals on outside click
+        window.addEventListener('click', (e) => {
+            if (e.target.classList.contains('modal')) {
+                e.target.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

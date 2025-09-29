@@ -1,0 +1,323 @@
+﻿@page
+@{
+    ViewData["Title"] = "Product";
+    Layout = "_Layout";
+}
+<section id="gym-software" class="py-16 lg:py-24 bg-white">
+    <div class="container mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-3xl mx-auto mb-12 lg:mb-16" data-aos="fade-up">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4 lg:mb-6">
+                Gym Management <span class="gradient-text-primary">Software</span>
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-600">
+                All-in-one solution to streamline your fitness business operations
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            <!-- Feature Cards -->
+            <div class="feature-card bg-white p-6 lg:p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-icon w-12 h-12 lg:w-16 lg:h-16 gradient-primary rounded-2xl flex items-center justify-center mb-4 lg:mb-6 shadow-lg">
+                    <i class="fas fa-users text-white text-xl lg:text-2xl"></i>
+                </div>
+                <h3 class="text-xl lg:text-2xl font-semibold mb-3 lg:mb-4">Member Management</h3>
+                <p class="text-gray-600 mb-4 lg:mb-6 text-sm lg:text-base">Effortlessly manage member profiles, attendance, and communication with our intuitive member portal.</p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Member profiles & photos</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Attendance tracking</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Automated reminders</li>
+                </ul>
+            </div>
+            <div class="feature-card bg-white p-6 lg:p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
+                 data-aos-delay="200">
+                <div class="feature-icon w-12 h-12 lg:w-16 lg:h-16 gradient-primary rounded-2xl flex items-center justify-center mb-4 lg:mb-6 shadow-lg">
+                    <i class="fas fa-chart-line text-white text-xl lg:text-2xl"></i>
+                </div>
+                <h3 class="text-xl lg:text-2xl font-semibold mb-3 lg:mb-4">Revenue Dashboard</h3>
+                <p class="text-gray-600 mb-4 lg:mb-6 text-sm lg:text-base">
+                    Track earnings, monitor growth
+                    trends, and get insights into your
+                    business performance in real-time.
+                </p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Real-time
+                        revenue tracking
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Monthly
+                        &
+                        yearly reports
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Visual
+                        charts & analytics
+                    </li>
+                </ul>
+            </div>
+            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
+                 data-aos-delay="300">
+                <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                    <i class="fas fa-credit-card text-white text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4">Billing & Payments</h3>
+                <p class="text-gray-600 mb-6">
+                    Automate billing, process payments, and manage memberships with
+                    our
+                    secure payment system.
+                </p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Recurring
+                        billing
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Payment
+                        processing
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Financial
+                        reports
+                    </li>
+                </ul>
+            </div>
+            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
+                 data-aos-delay="400">
+                <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                    <i class="fas fa-calendar-check text-white text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4">Trainer Scheduling</h3>
+                <p class="text-gray-600 mb-6">
+                    Schedule personal training sessions and group classes with ease.
+                </p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Personal
+                        training sessions
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Group
+                        class
+                        scheduling
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Trainer
+                        availability management
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
+                 data-aos-delay="500">
+                <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                    <i class="fas fa-chart-bar text-white text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4">Analytics & Reporting</h3>
+                <p class="text-gray-600 mb-6">
+                    Gain valuable insights into your business performance with
+                    comprehensive analytics and reports.
+                </p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Revenue
+                        tracking
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Member
+                        retention
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Custom
+                        reports
+                    </li>
+                </ul>
+            </div>
+
+            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
+                 data-aos-delay="600">
+                <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                    <i class="fas fa-tools text-white text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4">Maintenance Logs</h3>
+                <p class="text-gray-600 mb-6">
+                    Track equipment repairs, costs, and replacements across locations.
+                </p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Repair
+                        history tracking
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Maintenance
+                        cost management
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Equipment
+                        replacement records
+                    </li>
+                </ul>
+            </div>
+
+            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
+                 data-aos-delay="600">
+                <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                    <i class="fas fa-code-branch text-white text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4">Branch Selection</h3>
+                <p class="text-gray-600 mb-6">Select branches and track branch-wise metrics in one click.</p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Quick
+                        branch switching
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Branch-wise
+                        performance metrics
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Multi-location management
+                    </li>
+                </ul>
+            </div>
+            <!-- Inventory & Stock -->
+            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
+                 data-aos-delay="200">
+                <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                    <i class="fas fa-boxes text-white text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4">Inventory & Stock</h3>
+                <p class="text-gray-600 mb-6">Manage equipment categories, vendors, and inventory with ease.</p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Equipment &
+                        category management
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Vendor
+                        tracking
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Stock
+                        level
+                        monitoring
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Accounts Tracking -->
+            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
+                 data-aos-delay="400">
+                <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                    <i class="fas fa-file-invoice-dollar text-white text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4">Accounts Tracking</h3>
+                <p class="text-gray-600 mb-6">
+                    Handle incomes, expenses, and export reports in a single
+                    dashboard.
+                </p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Income
+                        &
+                        expense tracking
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Automated
+                        financial reports
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Export
+                        in
+                        multiple formats
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Templates & Notifications -->
+            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
+                 data-aos-delay="600">
+                <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                    <i class="fas fa-bell text-white text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4">Templates & Notifications</h3>
+                <p class="text-gray-600 mb-6">
+                    Customize WhatsApp and email templates to alert your members
+                    instantly.
+                </p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Custom
+                        WhatsApp templates
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Email
+                        notification setup
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Automated
+                        alerts & reminders
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Lead Management -->
+            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
+                 data-aos-delay="200">
+                <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                    <i class="fas fa-user-plus text-white text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4">Lead Management</h3>
+                <p class="text-gray-600 mb-6">
+                    Capture, track, and convert leads seamlessly with built-in CRM
+                    tools.
+                </p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Lead
+                        capture & tracking
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Status
+                        &
+                        priority updates
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Follow-up
+                        reminders
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Birthday Wishes -->
+            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
+                 data-aos-delay="400">
+                <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                    <i class="fas fa-birthday-cake text-white text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4">Birthday Wishes</h3>
+                <p class="text-gray-600 mb-6">
+                    Send personalized birthday greetings and strengthen member
+                    relationships.
+                </p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Automated
+                        birthday reminders
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Custom
+                        WhatsApp & email messages
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Boost
+                        member engagement
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Add more feature cards from your original HTML -->
+            <!-- ... (Copy all feature cards from original HTML) ... -->
+        </div>
+    </div>
+</section>

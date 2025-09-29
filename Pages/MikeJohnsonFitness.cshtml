@@ -1,0 +1,1131 @@
+﻿@page
+@{
+    ViewData["Title"] = "Mike Johnson Fitness";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mike Johnson Fitness - Premium Personal Training</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+    <link href="~/css/MikeJohnsonFitness.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation"></div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <i class="fas fa-dumbbell"></i>
+                Mike Johnson Fitness
+            </a>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="auth-buttons">
+                    <button class="btn btn-outline" onclick="showLoginModal()">Client Login</button>
+                    <button class="btn btn-primary" onclick="showRegisterModal()">Get Started</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Transform Your Body<br>Elevate Your Life</h1>
+                <p>Elite personal training with proven results. Your journey to peak fitness starts here.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="showRegisterModal()">Start Your Journey</button>
+                    <button class="btn btn-outline" onclick="scrollToSection('services')">Explore Services</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Mike Johnson</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Your Elite Fitness Architect</h3>
+                        <p>
+                            With over a decade of transforming lives through fitness, I've mastered the art of
+                            personalized training. My approach combines cutting-edge science with real-world results,
+                            crafting programs that adapt to your unique physiology and lifestyle.
+                        </p>
+                        <p>
+                            I don't just train bodies – I build champions. Whether you're a beginner taking your first
+                            steps or an athlete pushing boundaries, my methodology ensures sustainable progress that
+                            lasts a lifetime.
+                        </p>
+                        <div class="credentials">
+                            <div class="credential-badge">
+                                <i class="fas fa-certificate"></i>
+                                NASM Elite Trainer
+                            </div>
+                            <div class="credential-badge">
+                                <i class="fas fa-certificate"></i>
+                                Precision Nutrition Coach
+                            </div>
+                            <div class="credential-badge">
+                                <i class="fas fa-certificate"></i>
+                                Functional Movement Specialist
+                            </div>
+                            <div class="credential-badge">
+                                <i class="fas fa-trophy"></i>
+                                500+ Transformations
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="~/images/Powerfil/gym.png" alt="Mike Johnson"
+                             style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(255, 0, 110, 0.3);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">Premium Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-image"></div>
+                        <div class="service-content">
+                            <h3 class="service-title">1-on-1 Elite Training</h3>
+                            <p class="service-description">
+                                Personalized training sessions designed for maximum results.
+                                Experience the difference of truly customized programming.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Biomechanical Analysis</li>
+                                <li><i class="fas fa-check-circle"></i> Custom Periodization</li>
+                                <li><i class="fas fa-check-circle"></i> Real-time Form Correction</li>
+                                <li><i class="fas fa-check-circle"></i> Performance Metrics</li>
+                            </ul>
+                            <button class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;"
+                                    onclick="showServiceDetails('1-on-1 Elite Training')">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-image"
+                             style="background-image: url('/images/gym3.jpg')"></div>
+                        <div class="service-content">
+                            <h3 class="service-title">Nutrition Architecture</h3>
+                            <p class="service-description">
+                                Scientific nutrition planning that fuels your goals. No
+                                cookie-cutter diets – just precision nutrition for your body.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Metabolic Testing</li>
+                                <li><i class="fas fa-check-circle"></i> Custom Meal Plans</li>
+                                <li><i class="fas fa-check-circle"></i> Supplement Protocol</li>
+                                <li><i class="fas fa-check-circle"></i> Habit Coaching</li>
+                            </ul>
+                            <button class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;"
+                                    onclick="showServiceDetails('Nutrition Architecture')">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-image"
+                             style="background-image: url('/images/gym1.jpg')"></div>
+                        <div class="service-content">
+                            <h3 class="service-title">Digital Coaching</h3>
+                            <p class="service-description">
+                                Elite training delivered anywhere. Full access to my
+                                methodology through our cutting-edge platform.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> AI-Powered App</li>
+                                <li><i class="fas fa-check-circle"></i> Video Form Analysis</li>
+                                <li><i class="fas fa-check-circle"></i> Progress Tracking</li>
+                                <li><i class="fas fa-check-circle"></i> Community Support</li>
+                            </ul>
+                            <button class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;"
+                                    onclick="showServiceDetails('Digital Coaching')">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2 class="section-title">Success Stories</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">
+                            "Mike transformed not just my body, but my entire approach to
+                            fitness. His attention to detail and personalized programming helped me achieve what I
+                            thought was impossible. 40lbs down and stronger than ever!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-image"
+                                 style="background-image: url('/images/gym2.jpg')"></div>
+                            <div class="author-info">
+                                <h4>Sarah Mitchell</h4>
+                                <p>Lost 40 lbs in 6 months</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">
+                            "As a competitive athlete, I needed someone who understands
+                            performance at the highest level. Mike's expertise in periodization and recovery took my
+                            performance to new heights. PRs every month!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-image"
+                                 style="background-image: url('/images/gym3.jpg')"></div>
+                            <div class="author-info">
+                                <h4>Marcus Rodriguez</h4>
+                                <p>Professional Athlete</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">
+                            "The nutrition coaching alone was life-changing. Mike taught me how
+                            to fuel my body for performance and health. I have more energy, better focus, and I'm in the
+                            best shape of my life at 45."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-image"
+                                 style="background-image: url('/images/gym2.jpg')"></div>
+                            <div class="author-info">
+                                <h4>Jennifer Chen</h4>
+                                <p>CEO & Mother of 3</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="blog">
+            <div class="container">
+                <h2 class="section-title">Fitness Intelligence</h2>
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <div class="blog-image"></div>
+                        <div class="blog-content">
+                            <div class="blog-date">
+                                <i class="fas fa-calendar-alt"></i> May 15, 2024
+                            </div>
+                            <h3 class="blog-title">The Science of Metabolic Adaptation</h3>
+                            <p class="blog-excerpt">
+                                Understanding how your metabolism adapts to training and nutrition
+                                is key to breaking through plateaus. Discover the latest research on metabolic
+                                flexibility.
+                            </p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="blog-image"
+                             style="background-image: url('/images/gym1.jpg')"></div>
+                        <div class="blog-content">
+                            <div class="blog-date">
+                                <i class="fas fa-calendar-alt"></i> May 8, 2024
+                            </div>
+                            <h3 class="blog-title">Nutrient Timing for Peak Performance</h3>
+                            <p class="blog-excerpt">
+                                When you eat is just as important as what you eat. Learn the optimal
+                                timing strategies for muscle growth, fat loss, and performance enhancement.
+                            </p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="blog-image"
+                             style="background-image: url('/images/gym3.jpg')"></div>
+                        <div class="blog-content">
+                            <div class="blog-date">
+                                <i class="fas fa-calendar-alt"></i> May 1, 2024
+                            </div>
+                            <h3 class="blog-title">Building Unbreakable Consistency</h3>
+                            <p class="blog-excerpt">
+                                Consistency beats intensity every time. Discover the psychological
+                                strategies that elite performers use to maintain motivation and build lasting habits.
+                            </p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Start Your Transformation</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Training Studio</h4>
+                                <p>123 Elite Fitness Blvd<br>Performance District, PD 12345</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Connect</h4>
+                                <p>(555) 123-4567<br>Available 6AM - 9PM</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>mike@mikejohnsonfitness.com<br>Response within 24 hours</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Studio Hours</h4>
+                                <p>Mon-Fri: 6AM-8PM<br>Sat: 8AM-2PM<br>Sun: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Send Message</h3>
+                        <form onsubmit="handleContactForm(event)">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="your@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" placeholder="How can I help you?" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" rows="5" placeholder="Tell me about your fitness goals..."
+                                          required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="dashboard">
+        <div class="dashboard-header">
+            <div class="container">
+                <h1>Client Command Center</h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="dashboard-content">
+                <aside class="sidebar">
+                    <ul class="sidebar-menu">
+                        <li>
+                            <a href="#" class="active" onclick="showDashboardSection('overview')">
+                                <i class="fas fa-tachometer-alt"></i> Overview
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="showDashboardSection('profile')">
+                                <i class="fas fa-user-circle"></i>
+                                Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="showDashboardSection('sessions')">
+                                <i class="fas fa-calendar-alt"></i>
+                                Sessions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="showDashboardSection('progress')">
+                                <i class="fas fa-chart-line"></i>
+                                Progress
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="showDashboardSection('nutrition')">
+                                <i class="fas fa-apple-alt"></i>
+                                Nutrition
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="showDashboardSection('messages')">
+                                <i class="fas fa-comments"></i>
+                                Messages
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="showDashboardSection('billing')">
+                                <i class="fas fa-credit-card"></i>
+                                Billing
+                            </a>
+                        </li>
+                        <li><a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </aside>
+                <main class="dashboard-main">
+                    <div id="dashboard-overview" class="dashboard-section">
+                        <div class="welcome-card">
+                            <h2>Welcome back, <span id="user-name">Champion</span>!</h2>
+                            <p>You're crushing your goals! Keep pushing your limits.</p>
+                        </div>
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <i class="fas fa-fire"></i>
+                                <h3>24</h3>
+                                <p>Sessions Crushed</p>
+                            </div>
+                            <div class="stat-box">
+                                <i class="fas fa-calendar-check"></i>
+                                <h3>45</h3>
+                                <p>Day Streak</p>
+                            </div>
+                            <div class="stat-box">
+                                <i class="fas fa-weight-hanging"></i>
+                                <h3>-12</h3>
+                                <p>lbs Lost</p>
+                            </div>
+                            <div class="stat-box">
+                                <i class="fas fa-trophy"></i>
+                                <h3>8</h3>
+                                <p>Goals Achieved</p>
+                            </div>
+                        </div>
+                        <h3>Upcoming Sessions</h3>
+                        <table class="payment-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Session Type</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Tomorrow</td>
+                                    <td>7:00 AM</td>
+                                    <td>Elite Training</td>
+                                    <td>
+                                        <button class="btn btn-outline" onclick="cancelSession()">Reschedule</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Wednesday</td>
+                                    <td>6:00 PM</td>
+                                    <td>Nutrition Review</td>
+                                    <td>
+                                        <button class="btn btn-outline" onclick="cancelSession()">Reschedule</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="dashboard-profile" class="dashboard-section" style="display: none;">
+                        <h2>Profile Settings</h2>
+                        <form onsubmit="updateProfile(event)">
+                            <div class="form-group">
+                                <label for="profile-name">Full Name</label>
+                                <input type="text" id="profile-name" value="Alex Thompson"
+                                       placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="profile-email">Email</label>
+                                <input type="email" id="profile-email" value="alex.thompson@email.com"
+                                       placeholder="your@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="profile-phone">Phone</label>
+                                <input type="tel" id="profile-phone" value="(555) 987-6543"
+                                       placeholder="(555) 123-4567">
+                            </div>
+                            <div class="form-group">
+                                <label for="profile-goal">Primary Goal</label>
+                                <select id="profile-goal">
+                                    <option value="weight-loss">Fat Loss</option>
+                                    <option value="muscle-gain">Muscle Building</option>
+                                    <option value="performance">Athletic Performance</option>
+                                    <option value="general">General Fitness</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="profile-experience">Fitness Level</label>
+                                <select id="profile-experience">
+                                    <option value="beginner">Beginner</option>
+                                    <option value="intermediate">Intermediate</option>
+                                    <option value="advanced">Advanced</option>
+                                    <option value="elite">Elite</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Update Profile</button>
+                        </form>
+                    </div>
+                    <div id="dashboard-sessions" class="dashboard-section" style="display: none;">
+                        <h2>Book Your Next Session</h2>
+                        <div class="session-calendar">
+                            <div class="calendar-header">
+                                <h3>June 2024</h3>
+                                <div>
+                                    <button class="btn btn-outline"><i class="fas fa-chevron-left"></i></button>
+                                    <button class="btn btn-outline"><i class="fas fa-chevron-right"></i></button>
+                                </div>
+                            </div>
+                            <div class="calendar-grid">
+                                <div class="calendar-day disabled">S</div>
+                                <div class="calendar-day disabled">M</div>
+                                <div class="calendar-day disabled">T</div>
+                                <div class="calendar-day disabled">W</div>
+                                <div class="calendar-day disabled">T</div>
+                                <div class="calendar-day disabled">F</div>
+                                <div class="calendar-day disabled">S</div>
+                                <div class="calendar-day">1</div>
+                                <div class="calendar-day">2</div>
+                                <div class="calendar-day">3</div>
+                                <div class="calendar-day">4</div>
+                                <div class="calendar-day">5</div>
+                                <div class="calendar-day">6</div>
+                                <div class="calendar-day">7</div>
+                                <div class="calendar-day">8</div>
+                                <div class="calendar-day">9</div>
+                                <div class="calendar-day">10</div>
+                                <div class="calendar-day">11</div>
+                                <div class="calendar-day">12</div>
+                                <div class="calendar-day">13</div>
+                                <div class="calendar-day">14</div>
+                                <div class="calendar-day selected">15</div>
+                                <div class="calendar-day">16</div>
+                                <div class="calendar-day">17</div>
+                                <div class="calendar-day">18</div>
+                                <div class="calendar-day">19</div>
+                                <div class="calendar-day">20</div>
+                                <div class="calendar-day">21</div>
+                            </div>
+                            <h4 style="margin-top: 1.5rem; color: var(--light-color);">Available Time Slots</h4>
+                            <div class="time-slots">
+                                <div class="time-slot">7:00 AM</div>
+                                <div class="time-slot">8:00 AM</div>
+                                <div class="time-slot">9:00 AM</div>
+                                <div class="time-slot">10:00 AM</div>
+                                <div class="time-slot">11:00 AM</div>
+                                <div class="time-slot">12:00 PM</div>
+                                <div class="time-slot">1:00 PM</div>
+                                <div class="time-slot">2:00 PM</div>
+                                <div class="time-slot">3:00 PM</div>
+                                <div class="time-slot">4:00 PM</div>
+                                <div class="time-slot">5:00 PM</div>
+                                <div class="time-slot">6:00 PM</div>
+                            </div>
+                            <div class="form-group" style="margin-top: 1.5rem;">
+                                <label for="session-type">Session Type</label>
+                                <select id="session-type">
+                                    <option value="personal">1-on-1 Elite Training</option>
+                                    <option value="nutrition">Nutrition Consultation</option>
+                                    <option value="assessment">Performance Assessment</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-primary" onclick="bookSession()"
+                                    style="width: 100%; margin-top: 1rem;">
+                                Book Session
+                            </button>
+                        </div>
+                    </div>
+                    <div id="dashboard-progress" class="dashboard-section" style="display: none;">
+                        <h2>Your Transformation Journey</h2>
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <i class="fas fa-weight"></i>
+                                <h3>-12 lbs</h3>
+                                <p>Weight Change</p>
+                            </div>
+                            <div class="stat-box">
+                                <i class="fas fa-percentage"></i>
+                                <h3>+25%</h3>
+                                <p>Strength Gain</p>
+                            </div>
+                            <div class="stat-box">
+                                <i class="fas fa-heartbeat"></i>
+                                <h3>-15 bpm</h3>
+                                <p>Resting Heart Rate</p>
+                            </div>
+                            <div class="stat-box">
+                                <i class="fas fa-running"></i>
+                                <h3>+3 min</h3>
+                                <p>Endurance</p>
+                            </div>
+                        </div>
+                        <h3>Goal Progress</h3>
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%;"></div>
+                            </div>
+                            <div class="progress-label">
+                                <span>Weight Loss Goal</span>
+                                <span>75%</span>
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 60%;"></div>
+                            </div>
+                            <div class="progress-label">
+                                <span>Muscle Gain Goal</span>
+                                <span>60%</span>
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%;"></div>
+                            </div>
+                            <div class="progress-label">
+                                <span>Endurance Goal</span>
+                                <span>90%</span>
+                            </div>
+                        </div>
+                        <h3 style="margin-top: 2.5rem;">Progress Tracking</h3>
+                        <table class="payment-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Weight</th>
+                                    <th>Body Fat %</th>
+                                    <th>Muscle Mass</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Jun 1, 2024</td>
+                                    <td>168 lbs</td>
+                                    <td>18%</td>
+                                    <td>138 lbs</td>
+                                </tr>
+                                <tr>
+                                    <td>May 15, 2024</td>
+                                    <td>172 lbs</td>
+                                    <td>20%</td>
+                                    <td>135 lbs</td>
+                                </tr>
+                                <tr>
+                                    <td>May 1, 2024</td>
+                                    <td>180 lbs</td>
+                                    <td>22%</td>
+                                    <td>130 lbs</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="dashboard-nutrition" class="dashboard-section" style="display: none;">
+                        <h2>Nutrition Blueprint</h2>
+                        <div style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%); border: 1px solid rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 20px; margin-bottom: 2rem;">
+                            <h3 style="color: var(--light-color); margin-bottom: 1rem;">
+                                Current Plan: Fat Loss Phase
+                            </h3>
+                            <p style="margin: 1rem 0; color: rgba(255, 255, 255, 0.8);">Daily Target: 2,200 calories</p>
+                            <p style="color: rgba(255, 255, 255, 0.8);">Macros: 165g Protein | 220g Carbs | 75g Fat</p>
+                            <button class="btn btn-primary" style="margin-top: 1.5rem;">View Detailed Plan</button>
+                        </div>
+                        <h3 style="color: var(--light-color); margin-bottom: 1.5rem;">Today's Fuel</h3>
+                        <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 15px; margin-bottom: 1rem;">
+                            <h4 style="color: var(--light-color); margin-bottom: 0.5rem;">Breakfast</h4>
+                            <p style="color: rgba(255, 255, 255, 0.7);">
+                                Power Protein Bowl: Greek yogurt, berries,
+                                almonds, honey
+                            </p>
+                            <p style="color: var(--accent-color); font-size: 0.9rem; margin-top: 0.5rem;">
+                                Calories: 450
+                                | Protein: 35g
+                            </p>
+                        </div>
+                        <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 15px; margin-bottom: 1rem;">
+                            <h4 style="color: var(--light-color); margin-bottom: 0.5rem;">Lunch</h4>
+                            <p style="color: rgba(255, 255, 255, 0.7);">
+                                Grilled chicken breast, quinoa, roasted
+                                vegetables, avocado
+                            </p>
+                            <p style="color: var(--accent-color); font-size: 0.9rem; margin-top: 0.5rem;">
+                                Calories: 650
+                                | Protein: 45g
+                            </p>
+                        </div>
+                        <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 15px; margin-bottom: 1rem;">
+                            <h4 style="color: var(--light-color); margin-bottom: 0.5rem;">Dinner</h4>
+                            <p style="color: rgba(255, 255, 255, 0.7);">
+                                Salmon fillet, sweet potato, asparagus, olive
+                                oil
+                            </p>
+                            <p style="color: var(--accent-color); font-size: 0.9rem; margin-top: 0.5rem;">
+                                Calories: 750
+                                | Protein: 50g
+                            </p>
+                        </div>
+                        <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 15px;">
+                            <h4 style="color: var(--light-color); margin-bottom: 0.5rem;">Post-Workout</h4>
+                            <p style="color: rgba(255, 255, 255, 0.7);">Protein shake with banana and peanut butter</p>
+                            <p style="color: var(--accent-color); font-size: 0.9rem; margin-top: 0.5rem;">
+                                Calories: 350
+                                | Protein: 35g
+                            </p>
+                        </div>
+                    </div>
+                    <div id="dashboard-messages" class="dashboard-section" style="display: none;">
+                        <h2>Direct Message with Mike</h2>
+                        <div class="message-container">
+                            <div class="message received">
+                                <p>Hey Alex! How's the new program feeling? Any questions about the nutrition plan?</p>
+                                <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 0.5rem;">Today, 9:30 AM</p>
+                            </div>
+                            <div class="message sent">
+                                <p>It's going great! The energy levels are amazing. Loving the meal plan too!</p>
+                                <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 0.5rem;">Today, 10:15 AM</p>
+                            </div>
+                            <div class="message received">
+                                <p>Awesome to hear! Keep crushing it. Let's check in on Friday to review progress.</p>
+                                <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 0.5rem;">Today, 10:30 AM</p>
+                            </div>
+                        </div>
+                        <div class="message-form">
+                            <input type="text" placeholder="Type your message...">
+                            <button class="btn btn-primary">Send</button>
+                        </div>
+                    </div>
+                    <div id="dashboard-billing" class="dashboard-section" style="display: none;">
+                        <h2>Billing & Payments</h2>
+                        <h3 style="color: var(--light-color); margin-bottom: 1.5rem;">Current Membership</h3>
+                        <div style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%); border: 1px solid rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 20px; margin-bottom: 2rem;">
+                            <p style="color: var(--light-color); font-size: 1.1rem; margin-bottom: 0.5rem;">
+                                Elite
+                                Training Package: 12 sessions/month
+                            </p>
+                            <p style="margin: 1rem 0; color: rgba(255, 255, 255, 0.8);">Monthly Investment: $399</p>
+                            <p style="color: var(--accent-color);">Next Billing: July 1, 2024</p>
+                            <button class="btn btn-outline" style="margin-top: 1.5rem;">Upgrade Plan</button>
+                        </div>
+                        <h3 style="color: var(--light-color); margin-bottom: 1.5rem;">Payment Method</h3>
+                        <div style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%); border: 1px solid rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 20px; margin-bottom: 2rem;">
+                            <p style="color: var(--light-color);">
+                                <i class="fab fa-cc-visa"
+                                   style="color: var(--primary-color); margin-right: 0.75rem;"></i> Visa ending in 4242
+                            </p>
+                            <p style="color: rgba(255, 255, 255, 0.7); margin-top: 0.5rem;">Expires: 12/2025</p>
+                            <button class="btn btn-outline" style="margin-top: 1.5rem;">Update Payment</button>
+                        </div>
+                        <h3 style="color: var(--light-color); margin-bottom: 1.5rem;">Payment History</h3>
+                        <table class="payment-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Description</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Jun 1, 2024</td>
+                                    <td>Elite Training Package</td>
+                                    <td>$399.00</td>
+                                    <td style="color: var(--success);">✓ Paid</td>
+                                </tr>
+                                <tr>
+                                    <td>May 1, 2024</td>
+                                    <td>Elite Training Package</td>
+                                    <td>$399.00</td>
+                                    <td style="color: var(--success);">✓ Paid</td>
+                                </tr>
+                                <tr>
+                                    <td>Apr 15, 2024</td>
+                                    <td>Nutrition Consultation</td>
+                                    <td>$99.00</td>
+                                    <td style="color: var(--success);">✓ Paid</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('login-modal')">&times;</button>
+            <h2>Client Login</h2>
+            <form onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="login-email">Email Address</label>
+                    <input type="email" id="login-email" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Login to Dashboard</button>
+            </form>
+            <p style="text-align: center; margin-top: 1.5rem; color: rgba(255, 255, 255, 0.7);">
+                New client? <a href="#" onclick="switchToRegister()" style="color: var(--primary-color);">
+                    Create
+                    Account
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('register-modal')">&times;</button>
+            <h2>Start Your Journey</h2>
+            <form onsubmit="handleRegister(event)">
+                <div class="form-group">
+                    <label for="register-name">Full Name</label>
+                    <input type="text" id="register-name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email Address</label>
+                    <input type="email" id="register-email" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-phone">Phone Number</label>
+                    <input type="tel" id="register-phone" placeholder="(555) 123-4567" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Create Password</label>
+                    <input type="password" id="register-password" placeholder="Create a strong password" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-goal">Your Fitness Goal</label>
+                    <select id="register-goal" required>
+                        <option value="">Select your primary goal...</option>
+                        <option value="weight-loss">Fat Loss</option>
+                        <option value="muscle-gain">Muscle Building</option>
+                        <option value="performance">Athletic Performance</option>
+                        <option value="general">General Fitness</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Create Account</button>
+            </form>
+            <p style="text-align: center; margin-top: 1.5rem; color: rgba(255, 255, 255, 0.7);">
+                Already have an account? <a href="#" onclick="switchToLogin()"
+                                            style="color: var(--primary-color);">Login Here</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mike Johnson Fitness</h3>
+                    <p>Elite personal training with proven results. Transform your body, elevate your life.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="#about">About Mike</a></p>
+                    <p><a href="#services">Training Programs</a></p>
+                    <p><a href="#testimonials">Success Stories</a></p>
+                    <p><a href="#blog">Fitness Blog</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Elite Fitness Blvd<br>Performance District</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> mike@mikejohnsonfitness.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow</h3>
+                    <div class="social-links"
+                         style="display: flex; gap: 1rem; justify-content: flex-start; margin-top: 1rem;">
+                        <a href="#" style="font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="font-size: 1.5rem;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="font-size: 1.5rem;"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mike Johnson Fitness. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
+    <script>
+        // Initialize
+        let currentUser = null;
+        let isLoggedIn = false;
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+
+            // Toggle icon between bars and times
+            const icon = this.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                const navLinks = document.getElementById('nav-links');
+                navLinks.classList.remove('active');
+
+                // Reset icon to bars
+                const icon = document.getElementById('mobile-menu-toggle').querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // Smooth scrolling
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Modal functions
+        function showLoginModal() {
+            document.getElementById('login-modal').classList.add('active');
+        }
+
+        function showRegisterModal() {
+            document.getElementById('register-modal').classList.add('active');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+        }
+
+        function switchToRegister() {
+            closeModal('login-modal');
+            showRegisterModal();
+        }
+
+        function switchToLogin() {
+            closeModal('register-modal');
+            showLoginModal();
+        }
+
+        // Form handlers
+        function handleLogin(event) {
+            event.preventDefault();
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+
+            // Simulate login
+            currentUser = { name: 'Alex Thompson', email: email };
+            isLoggedIn = true;
+
+            closeModal('login-modal');
+            showNotification('Welcome back! Ready to crush your goals?', 'success');
+            showDashboard();
+        }
+
+        function handleRegister(event) {
+            event.preventDefault();
+            const name = document.getElementById('register-name').value;
+            const email = document.getElementById('register-email').value;
+            const phone = document.getElementById('register-phone').value;
+            const password = document.getElementById('register-password').value;
+            const goal = document.getElementById('register-goal').value;
+
+            // Simulate registration
+            currentUser = { name: name, email: email, phone: phone, goal: goal };
+            isLoggedIn = true;
+
+            closeModal('register-modal');
+            showNotification('Account created! Let\'s start your transformation journey!', 'success');
+            showDashboard();
+        }
+
+        function handleContactForm(event) {
+            event.preventDefault();
+            showNotification('Message sent! I\'ll get back to you within 24 hours.', 'success');
+            event.target.reset();
+        }
+
+        function updateProfile(event) {
+            event.preventDefault();
+            showNotification('Profile updated successfully!', 'success');
+        }
+
+        // Service details
+        function showServiceDetails(service) {
+            showNotification(`Loading details for ${service}...`, 'info');
+        }
+
+        // Session management
+        function bookSession() {
+            showNotification('Session booked! Get ready to crush it!', 'success');
+        }
+
+        function cancelSession() {
+            if (confirm('Are you sure you want to reschedule this session?')) {
+                showNotification('Session rescheduled. Choose a new time!', 'info');
+            }
+        }
+
+        // Dashboard functions
+        function showDashboard() {
+            if (!isLoggedIn) {
+                showLoginModal();
+                return;
+            }
+
+            document.getElementById('main-content').style.display = 'none';
+            document.getElementById('dashboard').classList.add('active');
+            document.getElementById('user-name').textContent = currentUser.name;
+
+            // Update auth buttons
+            document.querySelector('.auth-buttons').innerHTML = `
+                <button class="btn btn-outline" onclick="logout()">Logout</button>
+            `;
+        }
+
+        function logout() {
+            isLoggedIn = false;
+            currentUser = null;
+            document.getElementById('main-content').style.display = 'block';
+            document.getElementById('dashboard').classList.remove('active');
+
+            // Reset auth buttons
+            document.querySelector('.auth-buttons').innerHTML = `
+                <button class="btn btn-outline" onclick="showLoginModal()">Client Login</button>
+                <button class="btn btn-primary" onclick="showRegisterModal()">Get Started</button>
+            `;
+
+            showNotification('Logged out successfully. Come back stronger!', 'success');
+        }
+
+        function showDashboardSection(section) {
+            // Hide all sections
+            document.querySelectorAll('.dashboard-section').forEach(sec => {
+                sec.style.display = 'none';
+            });
+
+            // Show selected section
+            document.getElementById(`dashboard-${section}`).style.display = 'block';
+
+            // Update active menu
+            document.querySelectorAll('.sidebar-menu a').forEach(link => {
+                link.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        // Notification system
+        function showNotification(message, type = 'success') {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.className = `notification ${type}`;
+            notification.classList.add('show');
+
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(10, 14, 39, 0.95)';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
+            } else {
+                header.style.background = 'rgba(10, 14, 39, 0.8)';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Close modals on outside click
+        window.addEventListener('click', (e) => {
+            if (e.target.classList.contains('modal')) {
+                e.target.classList.remove('active');
+            }
+        });
+
+        // Calendar interaction
+        document.addEventListener('DOMContentLoaded', () => {
+            const calendarDays = document.querySelectorAll('.calendar-day:not(.disabled)');
+            calendarDays.forEach(day => {
+                day.addEventListener('click', function () {
+                    calendarDays.forEach(d => d.classList.remove('selected'));
+                    this.classList.add('selected');
+                });
+            });
+
+            const timeSlots = document.querySelectorAll('.time-slot');
+            timeSlots.forEach(slot => {
+                slot.addEventListener('click', function () {
+                    timeSlots.forEach(s => s.classList.remove('selected'));
+                    this.classList.add('selected');
+                });
+            });
+        });
+
+        // Add parallax effect to hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        });
+    </script>
+</body>
+
+</html>

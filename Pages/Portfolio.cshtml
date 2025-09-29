@@ -1,0 +1,136 @@
+﻿@page
+@{
+    ViewData["Title"] = "Portfolio";
+    Layout = "_Layout";
+}
+<section id="portfolio" class="py-16 lg:py-24 bg-white">
+    <div class="container mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-3xl mx-auto mb-12 lg:mb-16" data-aos="fade-up">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4 lg:mb-6">
+                Our <span class="gradient-text-primary">Portfolio</span>
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-600">
+                Websites and solutions we've created for fitness businesses
+            </p>
+        </div>
+
+        <div class="flex justify-center mb-8 lg:mb-12" data-aos="fade-up">
+            <div class="inline-flex flex-col sm:flex-row bg-gray-100 rounded-lg p-1 w-full sm:w-auto">
+                <button class="tab-active px-4 py-2 sm:px-6 sm:py-3 rounded-md font-medium transition text-sm sm:text-base"
+                        onclick="filterPortfolio('all')">
+                    All
+                </button>
+                <button class="px-4 py-2 sm:px-6 sm:py-3 rounded-md font-medium text-gray-600 hover:text-primary transition text-sm sm:text-base"
+                        onclick="filterPortfolio('gym')">
+                    Gym Websites
+                </button>
+                <button class="px-4 py-2 sm:px-6 sm:py-3 rounded-md font-medium text-gray-600 hover:text-primary transition text-sm sm:text-base"
+                        onclick="filterPortfolio('studio')">
+                    Studios
+                </button>
+                <button class="px-4 py-2 sm:px-6 sm:py-3 rounded-md font-medium text-gray-600 hover:text-primary transition text-sm sm:text-base"
+                        onclick="filterPortfolio('trainer')">
+                    Trainers
+                </button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8" id="portfolio-grid">
+            <div class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
+                 data-aos-delay="100" data-category="gym">
+                <img src="~/images/gym.jpg"
+                     alt="PowerFit Gym" class="w-full h-48 sm:h-64 object-cover">
+                <div class="portfolio-overlay">
+                    <div class="text-center text-white p-4 lg:p-6">
+                        <h3 class="text-xl lg:text-2xl font-bold mb-2">PowerFit Gym</h3>
+                        <p class="mb-4 text-sm lg:text-base">
+                            Modern gym website with integrated management
+                            system
+                        </p>
+                        <button class="btn-primary text-white px-3 py-2 rounded-lg font-semibold text-sm lg:text-base">
+                            <a asp-page="/PowerFitGym" class="text-primary" target="_blank">View Project</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
+                 data-aos-delay="200" data-category="studio">
+                <img src="~/images/yoga.jpg"
+                     alt="Yoga Bliss Studio" class="w-full h-64 object-cover">
+                <div class="portfolio-overlay">
+                    <div class="text-center text-white p-6">
+                        <h3 class="text-2xl font-bold mb-2">Yoga Bliss Studio</h3>
+                        <p class="mb-4">Serene yoga studio website with class booking system</p>
+                        <button class="btn-primary text-white px-3 py-2 rounded-lg font-semibold">
+                            <a asp-page="/YogaBlissStudio" class="text-primary" target="_blank">View Project</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
+                 data-aos-delay="300" data-category="trainer">
+
+                <img src="~/images/gym1.jpg"
+                     alt="Mike Johnson Fitness" class="w-full h-64 object-cover">
+                <div class="portfolio-overlay">
+                    <div class="text-center text-white p-6">
+                        <h3 class="text-2xl font-bold mb-2">Mike Johnson Fitness</h3>
+                        <p class="mb-4">Personal trainer website with client management</p>
+                        <button class="btn-primary text-white px-3 py-2 rounded-lg font-semibold">
+                            <a asp-page="/MikeJohnsonFitness" class="text-primary" target="_blank">View Project</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
+                 data-aos-delay="400" data-category="gym">
+                <img src="~/images/gym2.jpg"
+                     alt="IronCore Fitness" class="w-full h-64 object-cover">
+                <div class="portfolio-overlay">
+                    <div class="text-center text-white p-6">
+                        <h3 class="text-2xl font-bold mb-2">IronCore Fitness</h3>
+                        <p class="mb-4">CrossFit gym with membership management</p>
+                        <button class="btn-primary text-white px-3 py-2 rounded-lg font-semibold">
+                            <a asp-page="/IronCoreFitness" class="text-primary" target="_blank">View Project</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
+                 data-aos-delay="500" data-category="studio">
+                <img src="~/images/dance.png"
+                     alt="Dance Dynamics" class="w-full h-64 object-cover">
+                <div class="portfolio-overlay">
+                    <div class="text-center text-white p-6">
+                        <h3 class="text-2xl font-bold mb-2">Dance Dynamics</h3>
+                        <p class="mb-4">Dance studio website with class schedules</p>
+                        <button class="btn-primary text-white px-3 py-2 rounded-lg font-semibold">
+                            <a asp-page="/DanceDynamics" class="text-primary" target="_blank">View Project</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
+                 data-aos-delay="600" data-category="trainer">
+                <img src="~/images/sarah.jpg"
+                     alt="Sarah's Pilates" class="w-full h-64 object-cover">
+
+                <div class="portfolio-overlay">
+                    <div class="text-center text-white p-6">
+                        <h3 class="text-2xl font-bold mb-2">Sarah's Pilates</h3>
+                        <p class="mb-4">Pilates instructor website with booking system</p>
+                        <button class="btn-primary text-white px-3 py-2 rounded-lg font-semibold">
+                            <a asp-page="/SarahPilates" class="text-primary" target="_blank">View Project</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>

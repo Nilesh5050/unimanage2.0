@@ -1,0 +1,904 @@
+﻿@page
+@{
+    ViewData["Title"] = "Ironcore Fitness";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IronCore Fitness | Professional CrossFit Training</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="~/css/IronCoreFitness.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-dumbbell"></i>
+                IronCore Fitness
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#membership">Membership</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#trainers">Trainers</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" class="cta-button" id="loginBtn">Member Login</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Transform Your Body, Transform Your Life</h1>
+            <p>Professional CrossFit training for all fitness levels with expert coaches and a supportive community</p>
+            <div class="hero-buttons">
+                <a href="#membership" class="cta-button">Join Now</a>
+                <a href="#programs" class="btn-secondary">Our Programs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>About IronCore Fitness</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text slide-in-left">
+                    <p>At IronCore Fitness, we believe that true strength comes from within. Our state-of-the-art CrossFit facility is designed to challenge you, support you, and help you achieve your fitness goals.</p>
+                    <p>Founded in 2015, we've built a community of dedicated athletes and fitness enthusiasts who push each other to be better every day. Our certified coaches provide personalized guidance to ensure you train safely and effectively.</p>
+                    <p>Whether you're a seasoned athlete or just starting your fitness journey, IronCore Fitness has a program for you. Join us and discover what you're truly capable of.</p>
+                    <a href="#contact" class="cta-button">Visit Our Gym</a>
+                </div>
+                <div class="about-image slide-in-right">
+                    <img src="~/images/ironcore/about.jpg" alt="Gym Interior">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs" id="programs">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Our Programs</h2>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card fade-in">
+                    <div class="program-image">
+                        <img src="/images/gym.jpg" alt="CrossFit">
+                    </div>
+                    <div class="program-content">
+                        <h3>CrossFit</h3>
+                        <p>Our core program combines weightlifting, cardio, and gymnastics to build functional strength and endurance.</p>
+                        <a href="#membership" class="cta-button">Join Now</a>
+                    </div>
+                </div>
+                <div class="program-card fade-in">
+                    <div class="program-image">
+                        <img src="~/images/gym2.jpg" alt="Personal Training">
+                    </div>
+                    <div class="program-content">
+                        <h3>Personal Training</h3>
+                        <p>One-on-one sessions with our certified trainers to help you achieve your specific fitness goals.</p>
+                        <a href="#membership" class="cta-button">Join Now</a>
+                    </div>
+                </div>
+                <div class="program-card fade-in">
+                    <div class="program-image">
+                        <img src="~/images/gym3.jpg" alt="Group Classes">
+                    </div>
+                    <div class="program-content">
+                        <h3>Group Classes</h3>
+                        <p>High-energy group workouts that build community while pushing your limits in a supportive environment.</p>
+                        <a href="#membership" class="cta-button">Join Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Section -->
+    <section class="membership" id="membership">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Membership Plans</h2>
+            </div>
+            <div class="membership-grid">
+                <div class="membership-card fade-in">
+                    <h3>Basic</h3>
+                    <div class="price">₹1499<span>/month</span></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Access to gym facilities</li>
+                        <li><i class="fas fa-check"></i> 3 CrossFit classes per week</li>
+                        <li><i class="fas fa-check"></i> Basic nutrition guidance</li>
+                        <li><i class="fas fa-check"></i> Monthly progress tracking</li>
+                    </ul>
+                    <a href="#" class="cta-button">Choose Plan</a>
+                </div>
+                <div class="membership-card featured fade-in">
+                    <h3>Premium</h3>
+                    <div class="price">₹3999<span>/month</span></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Unlimited gym access</li>
+                        <li><i class="fas fa-check"></i> Unlimited CrossFit classes</li>
+                        <li><i class="fas fa-check"></i> Personalized nutrition plan</li>
+                        <li><i class="fas fa-check"></i> Weekly progress tracking</li>
+                        <li><i class="fas fa-check"></i> 1 personal training session/month</li>
+                    </ul>
+                    <a href="#" class="cta-button">Choose Plan</a>
+                </div>
+                <div class="membership-card fade-in">
+                    <h3>Elite</h3>
+                    <div class="price">₹4999<span>/month</span></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> All Premium benefits</li>
+                        <li><i class="fas fa-check"></i> 4 personal training sessions/month</li>
+                        <li><i class="fas fa-check"></i> Advanced nutrition coaching</li>
+                        <li><i class="fas fa-check"></i> Priority class booking</li>
+                        <li><i class="fas fa-check"></i> Free guest passes</li>
+                    </ul>
+                    <a href="#" class="cta-button">Choose Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="schedule" id="schedule">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Class Schedule</h2>
+            </div>
+            <div class="schedule-tabs fade-in">
+                <button class="schedule-tab active" data-day="monday">Monday</button>
+                <button class="schedule-tab" data-day="tuesday">Tuesday</button>
+                <button class="schedule-tab" data-day="wednesday">Wednesday</button>
+                <button class="schedule-tab" data-day="thursday">Thursday</button>
+                <button class="schedule-tab" data-day="friday">Friday</button>
+                <button class="schedule-tab" data-day="saturday">Saturday</button>
+                <button class="schedule-tab" data-day="sunday">Sunday</button>
+            </div>
+            <div class="schedule-content fade-in">
+                <table class="schedule-table" id="monday-schedule">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Class</th>
+                            <th>Trainer</th>
+                            <th>Duration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>6:00 AM</td>
+                            <td class="class-name">Morning CrossFit</td>
+                            <td class="trainer-name">Alex Johnson</td>
+                            <td>60 min</td>
+                        </tr>
+                        <tr>
+                            <td>12:00 PM</td>
+                            <td class="class-name">Lunch Break Workout</td>
+                            <td class="trainer-name">Sarah Miller</td>
+                            <td>45 min</td>
+                        </tr>
+                        <tr>
+                            <td>5:30 PM</td>
+                            <td class="class-name">Evening CrossFit</td>
+                            <td class="trainer-name">Mike Torres</td>
+                            <td>60 min</td>
+                        </tr>
+                        <tr>
+                            <td>7:00 PM</td>
+                            <td class="class-name">Yoga & Recovery</td>
+                            <td class="trainer-name">Emma Wilson</td>
+                            <td>60 min</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="schedule-table" id="tuesday-schedule" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Class</th>
+                            <th>Trainer</th>
+                            <th>Duration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>6:00 AM</td>
+                            <td class="class-name">Strength Training</td>
+                            <td class="trainer-name">Mike Torres</td>
+                            <td>60 min</td>
+                        </tr>
+                        <tr>
+                            <td>12:00 PM</td>
+                            <td class="class-name">HIIT Circuit</td>
+                            <td class="trainer-name">Alex Johnson</td>
+                            <td>45 min</td>
+                        </tr>
+                        <tr>
+                            <td>5:30 PM</td>
+                            <td class="class-name">CrossFit Endurance</td>
+                            <td class="trainer-name">Sarah Miller</td>
+                            <td>60 min</td>
+                        </tr>
+                        <tr>
+                            <td>7:00 PM</td>
+                            <td class="class-name">Mobility & Stretching</td>
+                            <td class="trainer-name">Emma Wilson</td>
+                            <td>45 min</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="schedule-table" id="wednesday-schedule" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Class</th>
+                            <th>Trainer</th>
+                            <th>Duration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>6:00 AM</td>
+                            <td class="class-name">Morning CrossFit</td>
+                            <td class="trainer-name">Alex Johnson</td>
+                            <td>60 min</td>
+                        </tr>
+                        <tr>
+                            <td>12:00 PM</td>
+                            <td class="class-name">Core & Abs</td>
+                            <td class="trainer-name">Emma Wilson</td>
+                            <td>45 min</td>
+                        </tr>
+                        <tr>
+                            <td>5:30 PM</td>
+                            <td class="class-name">Evening CrossFit</td>
+                            <td class="trainer-name">Sarah Miller</td>
+                            <td>60 min</td>
+                        </tr>
+                        <tr>
+                            <td>7:00 PM</td>
+                            <td class="class-name">Boxing & Cardio</td>
+                            <td class="trainer-name">Mike Torres</td>
+                            <td>60 min</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="schedule-table" id="thursday-schedule" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Class</th>
+                            <th>Trainer</th>
+                            <th>Duration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>6:00 AM</td>
+                            <td class="class-name">HIIT Circuit</td>
+                            <td class="trainer-name">Sarah Miller</td>
+                            <td>45 min</td>
+                        </tr>
+                        <tr>
+                            <td>12:00 PM</td>
+                            <td class="class-name">Lunch Break Workout</td>
+                            <td class="trainer-name">Alex Johnson</td>
+                            <td>45 min</td>
+                        </tr>
+                        <tr>
+                            <td>5:30 PM</td>
+                            <td class="class-name">Strength Training</td>
+                            <td class="trainer-name">Mike Torres</td>
+                            <td>60 min</td>
+                        </tr>
+                        <tr>
+                            <td>7:00 PM</td>
+                            <td class="class-name">Yoga & Recovery</td>
+                            <td class="trainer-name">Emma Wilson</td>
+                            <td>60 min</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="schedule-table" id="friday-schedule" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Class</th>
+                            <th>Trainer</th>
+                            <th>Duration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>6:00 AM</td>
+                            <td class="class-name">Morning CrossFit</td>
+                            <td class="trainer-name">Alex Johnson</td>
+                            <td>60 min</td>
+                        </tr>
+                        <tr>
+                            <td>12:00 PM</td>
+                            <td class="class-name">Boxing & Cardio</td>
+                            <td class="trainer-name">Mike Torres</td>
+                            <td>60 min</td>
+                        </tr>
+                        <tr>
+                            <td>5:30 PM</td>
+                            <td class="class-name">Evening CrossFit</td>
+                            <td class="trainer-name">Sarah Miller</td>
+                            <td>60 min</td>
+                        </tr>
+                        <tr>
+                            <td>7:00 PM</td>
+                            <td class="class-name">Mobility & Stretching</td>
+                            <td class="trainer-name">Emma Wilson</td>
+                            <td>45 min</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="schedule-table" id="saturday-schedule" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Class</th>
+                            <th>Trainer</th>
+                            <th>Duration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>8:00 AM</td>
+                            <td class="class-name">Weekend CrossFit</td>
+                            <td class="trainer-name">Alex Johnson</td>
+                            <td>60 min</td>
+                        </tr>
+                        <tr>
+                            <td>10:00 AM</td>
+                            <td class="class-name">Strength Training</td>
+                            <td class="trainer-name">Mike Torres</td>
+                            <td>60 min</td>
+                        </tr>
+                        <tr>
+                            <td>12:00 PM</td>
+                            <td class="class-name">HIIT Circuit</td>
+                            <td class="trainer-name">Sarah Miller</td>
+                            <td>45 min</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="schedule-table" id="sunday-schedule" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Class</th>
+                            <th>Trainer</th>
+                            <th>Duration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>8:00 AM</td>
+                            <td class="class-name">Weekend CrossFit</td>
+                            <td class="trainer-name">Sarah Miller</td>
+                            <td>60 min</td>
+                        </tr>
+                        <tr>
+                            <td>10:00 AM</td>
+                            <td class="class-name">Yoga & Recovery</td>
+                            <td class="trainer-name">Emma Wilson</td>
+                            <td>60 min</td>
+                        </tr>
+                        <tr>
+                            <td>12:00 PM</td>
+                            <td class="class-name">Core & Abs</td>
+                            <td class="trainer-name">Alex Johnson</td>
+                            <td>45 min</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainers Section -->
+    <section class="trainers" id="trainers">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Meet Our Trainers</h2>
+            </div>
+            <div class="trainers-grid">
+                <div class="trainer-card fade-in">
+                    <div class="trainer-image">
+                        <img src="~/images/trainer.jpg" alt="Alex Johnson">
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Alex Johnson</h3>
+                        <div class="title">Head Coach</div>
+                        <p>CrossFit Level 3 Trainer with 8+ years of experience in competitive fitness and strength conditioning.</p>
+                        <div class="trainer-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="trainer-card fade-in">
+                    <div class="trainer-image">
+                        <img src="~/images/gym3.jpg" alt="Sarah Miller">
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Sarah Miller</h3>
+                        <div class="title">Fitness Specialist</div>
+                        <p>Certified personal trainer specializing in functional movement and injury prevention with a background in physical therapy.</p>
+                        <div class="trainer-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="trainer-card fade-in">
+                    <div class="trainer-image">
+                        <img src="~/images/trainer2.jpg" alt="Mike Torres">
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Mike Torres</h3>
+                        <div class="title">Strength Coach</div>
+                        <p>Olympic weightlifting specialist and former competitive athlete with expertise in strength and conditioning programs.</p>
+                        <div class="trainer-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="trainer-card fade-in">
+                    <div class="trainer-image">
+                        <img src="~/images/gym2.jpg" alt="Emma Wilson">
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Emma Wilson</h3>
+                        <div class="title">Yoga & Recovery</div>
+                        <p>Certified yoga instructor and mobility expert focused on flexibility, recovery, and injury prevention for athletes.</p>
+                        <div class="trainer-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Member Success Stories</h2>
+            </div>
+            <div class="testimonials-container">
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-text">IronCore Fitness completely transformed my approach to fitness. The coaches are knowledgeable, the community is supportive, and the results speak for themselves. I've never felt stronger or more confident!</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="~/images/gym2.jpg" alt="Jessica Brown">
+                        </div>
+                        <div class="author-info">
+                            <h4>Jessica Brown</h4>
+                            <p>Member for 2 years</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info slide-in-left">
+                    <h3>Get In Touch</h3>
+                    <p>Have questions about our programs or membership options? Reach out to us and we'll be happy to help!</p>
+
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>123 Fitness Street, Health City, HC 12345</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-phone text-teal-600 text-xl mt-1 mr-4"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>(123) 456-7890</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@ironcorefitness.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Monday-Friday: 5:00 AM - 9:00 PM</p>
+                            <p>Saturday-Sunday: 7:00 AM - 7:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form slide-in-right">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col fade-in">
+                    <h3>IronCore Fitness</h3>
+                    <p>Professional CrossFit training for all fitness levels. Join our community and transform your life.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col fade-in">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#membership">Membership</a></li>
+                        <li><a href="#schedule">Schedule</a></li>
+                        <li><a href="#trainers">Trainers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col fade-in">
+                    <h3>Programs</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">CrossFit</a></li>
+                        <li><a href="#">Personal Training</a></li>
+                        <li><a href="#">Group Classes</a></li>
+                        <li><a href="#">Nutrition Coaching</a></li>
+                        <li><a href="#">Competition Prep</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col fade-in">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">123 Fitness Street</a></li>
+                        <li><a href="#">Health City, HC 12345</a></li>
+                        <li><a href="#">(123) 456-7890</a></li>
+                        <li><a href="#">info@ironcorefitness.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 IronCore Fitness. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-tabs">
+                <div class="modal-tab active" data-tab="login">Login</div>
+                <div class="modal-tab" data-tab="register">Register</div>
+            </div>
+
+            <div class="tab-content active" id="login-tab">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Username or Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me</label>
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="form-submit">Login</button>
+                </form>
+            </div>
+
+            <div class="tab-content" id="register-tab">
+                <form id="registerForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Confirm Password" required>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the Terms and Conditions</label>
+                    </div>
+                    <button type="submit" class="form-submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Schedule tabs functionality
+        const scheduleTabs = document.querySelectorAll('.schedule-tab');
+        scheduleTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const day = this.getAttribute('data-day');
+
+                // Remove active class from all tabs
+                scheduleTabs.forEach(t => t.classList.remove('active'));
+
+                // Add active class to clicked tab
+                this.classList.add('active');
+
+                // Hide all schedule tables
+                document.querySelectorAll('.schedule-table').forEach(table => {
+                    table.style.display = 'none';
+                });
+
+                // Show selected schedule table
+                const selectedTable = document.getElementById(`${day}-schedule`);
+                if (selectedTable) {
+                    selectedTable.style.display = 'table';
+                }
+            });
+        });
+
+        // Login modal functionality
+        const loginBtn = document.getElementById('loginBtn');
+        const loginModal = document.getElementById('loginModal');
+        const closeModal = document.querySelector('.close-modal');
+
+        loginBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            loginModal.style.display = 'flex';
+        });
+
+        closeModal.addEventListener('click', function() {
+            loginModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', function(e) {
+            if (e.target === loginModal) {
+                loginModal.style.display = 'none';
+            }
+        });
+
+        // Modal tabs functionality
+        const modalTabs = document.querySelectorAll('.modal-tab');
+        modalTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const tabName = this.getAttribute('data-tab');
+
+                // Remove active class from all tabs
+                modalTabs.forEach(t => t.classList.remove('active'));
+
+                // Add active class to clicked tab
+                this.classList.add('active');
+
+                // Hide all tab contents
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+
+                // Show selected tab content
+                document.getElementById(`${tabName}-tab`).classList.add('active');
+            });
+        });
+
+        // Form submissions
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Login successful! Redirecting to your dashboard...');
+            loginModal.style.display = 'none';
+        });
+
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Registration successful! Please check your email to verify your account.');
+            loginModal.style.display = 'none';
+        });
+
+        // Testimonial dots functionality
+        const dots = document.querySelectorAll('.dot');
+        dots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                dots.forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                // In a real implementation, this would change the testimonial content
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animation classes
+        document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu');
+        const mobileNav = document.createElement('div');
+        mobileNav.className = 'mobile-nav';
+        mobileNav.innerHTML = `
+            <span class="mobile-nav-close">&times;</span>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#membership">Membership</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#trainers">Trainers</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="cta-button" id="mobileLoginBtn">Member Login</a></li>
+            </ul>
+        `;
+
+        document.body.appendChild(mobileNav);
+
+        const overlay = document.createElement('div');
+        overlay.className = 'overlay';
+        document.body.appendChild(overlay);
+
+        const mobileNavClose = document.querySelector('.mobile-nav-close');
+
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileNav.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        mobileNavClose.addEventListener('click', closeMobileNav);
+        overlay.addEventListener('click', closeMobileNav);
+
+        function closeMobileNav() {
+            mobileNav.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Mobile menu links
+        const mobileNavLinks = mobileNav.querySelectorAll('a[href^="#"]');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    closeMobileNav();
+                }
+            });
+        });
+
+        // Mobile login button
+        const mobileLoginBtn = document.getElementById('mobileLoginBtn');
+        mobileLoginBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            loginModal.style.display = 'flex';
+            closeMobileNav();
+        });
+    </script>
+</body>
+</html>

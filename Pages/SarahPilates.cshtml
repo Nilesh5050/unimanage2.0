@@ -1,0 +1,963 @@
+﻿@page
+@{
+    ViewData["Title"] = "Sarah's Pilates";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah's Pilates - Mindful Movement Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="~/css/SarahPilates.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 py-4 px-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-spa text-3xl text-teal-600"></i>
+                <span class="text-2xl font-bold gradient-text">Sarah's Pilates</span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link hover:text-teal-600 transition">Home</a>
+                <a href="#about" class="nav-link hover:text-teal-600 transition">About</a>
+                <a href="#services" class="nav-link hover:text-teal-600 transition">Services</a>
+                <a href="#booking" class="nav-link hover:text-teal-600 transition">Booking</a>
+                <a href="#testimonials" class="nav-link hover:text-teal-600 transition">Testimonials</a>
+                <a href="#contact" class="nav-link hover:text-teal-600 transition">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 p-6">
+        <button id="close-menu" class="absolute top-4 right-4 text-2xl">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="mt-12 flex flex-col space-y-6">
+            <a href="#home" class="nav-link hover:text-teal-600 transition text-lg">Home</a>
+            <a href="#about" class="nav-link hover:text-teal-600 transition text-lg">About</a>
+            <a href="#services" class="nav-link hover:text-teal-600 transition text-lg">Services</a>
+            <a href="#booking" class="nav-link hover:text-teal-600 transition text-lg">Booking</a>
+            <a href="#testimonials" class="nav-link hover:text-teal-600 transition text-lg">Testimonials</a>
+            <a href="#contact" class="nav-link hover:text-teal-600 transition text-lg">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center text-white relative">
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h1 class="heading-font text-5xl md:text-7xl font-bold mb-6 animate-fadeInUp">Sarah's Pilates</h1>
+            <p class="text-xl md:text-2xl mb-8 animate-fadeInUp" style="animation-delay: 0.2s">Mindful Movement for Body & Soul</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fadeInUp" style="animation-delay: 0.4s">
+                <a href="#booking" class="btn-primary bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-full transition transform hover:scale-105">
+                    Book a Session
+                </a>
+                <a href="#services" class="btn-primary bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full transition transform hover:scale-105">
+                    Explore Classes
+                </a>
+            </div>
+            <div class="mt-16 animate-float">
+                <i class="fas fa-chevron-down text-3xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="text-4xl font-bold mb-4">About Sarah</h2>
+                <div class="w-24 h-1 bg-teal-500 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="scroll-reveal">
+                    <img src="~/images/sarah2.jpg" alt="Sarah" class="rounded-lg shadow-xl animate-breathe">
+                </div>
+                <div class="scroll-reveal">
+                    <h3 class="text-3xl font-bold mb-4">Your Guide to Mindful Movement</h3>
+                    <p class="text-gray-600 mb-4">
+                        With over 10 years of experience in Pilates instruction, Sarah is a certified instructor who has dedicated her career to helping clients achieve balance, strength, and flexibility through mindful movement.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Sarah's approach combines classical Pilates principles with contemporary techniques, creating a personalized experience for each client. Her sessions focus on proper alignment, breath control, and core strength to improve overall well-being.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <i class="fas fa-certificate text-3xl text-teal-500 mb-2"></i>
+                            <h4 class="font-bold">Certified Instructor</h4>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <i class="fas fa-users text-3xl text-blue-500 mb-2"></i>
+                            <h4 class="font-bold">500+ Clients</h4>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <i class="fas fa-award text-3xl text-teal-500 mb-2"></i>
+                            <h4 class="font-bold">Award Winning</h4>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <i class="fas fa-heart text-3xl text-blue-500 mb-2"></i>
+                            <h4 class="font-bold">Passionate Teacher</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="text-4xl font-bold mb-4">Pilates Services</h2>
+                <div class="w-24 h-1 bg-teal-500 mx-auto"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Discover the perfect Pilates experience tailored to your needs and goals</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Private Sessions -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden scroll-reveal">
+                    <div class="h-48 bg-gradient-to-r from-teal-500 to-teal-600 flex items-center justify-center">
+                        <i class="fas fa-user text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Private Sessions</h3>
+                        <p class="text-gray-600 mb-4">One-on-one instruction tailored to your specific needs and goals. Perfect for beginners or those with specific concerns.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-teal-600 font-bold">$85/session</span>
+                            <a href="#booking" class="text-teal-600 hover:text-teal-800">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Duets -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden scroll-reveal">
+                    <div class="h-48 bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center">
+                        <i class="fas fa-user-friends text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Duet Sessions</h3>
+                        <p class="text-gray-600 mb-4">Share your Pilates journey with a partner or friend. Enjoy personalized attention at a more affordable rate.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-teal-600 font-bold">$55/person</span>
+                            <a href="#booking" class="text-teal-600 hover:text-teal-800">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group Classes -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden scroll-reveal">
+                    <div class="h-48 bg-gradient-to-r from-purple-500 to-purple-600 flex items-center justify-center">
+                        <i class="fas fa-users text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Group Classes</h3>
+                        <p class="text-gray-600 mb-4">Join our energizing group sessions. Limited to 6 participants to ensure personalized attention.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-teal-600 font-bold">$35/class</span>
+                            <a href="#booking" class="text-teal-600 hover:text-teal-800">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mat Pilates -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden scroll-reveal">
+                    <div class="h-48 bg-gradient-to-r from-green-500 to-green-600 flex items-center justify-center">
+                        <i class="fas fa-music text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Mat Pilates</h3>
+                        <p class="text-gray-600 mb-4">Focus on core strength, flexibility, and body awareness using just a mat and your body weight.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-teal-600 font-bold">$30/class</span>
+                            <a href="#booking" class="text-teal-600 hover:text-teal-800">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reformer Pilates -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden scroll-reveal">
+                    <div class="h-48 bg-gradient-to-r from-yellow-500 to-orange-500 flex items-center justify-center">
+                        <i class="fas fa-dumbbell text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Reformer Pilates</h3>
+                        <p class="text-gray-600 mb-4">Experience the transformative power of the Pilates reformer machine for enhanced resistance and support.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-teal-600 font-bold">$45/class</span>
+                            <a href="#booking" class="text-teal-600 hover:text-teal-800">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Prenatal Pilates -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden scroll-reveal">
+                    <div class="h-48 bg-gradient-to-r from-pink-500 to-rose-500 flex items-center justify-center">
+                        <i class="fas fa-baby text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Prenatal Pilates</h3>
+                        <p class="text-gray-600 mb-4">Specially designed exercises to support your body through pregnancy and prepare for childbirth.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-teal-600 font-bold">$65/session</span>
+                            <a href="#booking" class="text-teal-600 hover:text-teal-800">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="text-4xl font-bold mb-4">Book Your Session</h2>
+                <div class="w-24 h-1 bg-teal-500 mx-auto"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Schedule your Pilates session in just a few simple steps</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto booking-form scroll-reveal">
+                <div class="progress-bar">
+                    <div id="progress" class="progress-step"></div>
+                </div>
+
+                <form id="booking-form">
+                    <!-- Step 1: Select Service -->
+                    <div class="form-step active p-8" id="step-1">
+                        <h3 class="text-2xl font-bold mb-6">Select a Service</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <label class="service-option cursor-pointer">
+                                <input type="radio" name="service" value="private" class="hidden service-radio">
+                                <div class="border-2 border-gray-200 rounded-lg p-4 hover:border-teal-500 transition">
+                                    <div class="font-bold">Private Session</div>
+                                    <div class="text-gray-600">$85/session</div>
+                                </div>
+                            </label>
+                            <label class="service-option cursor-pointer">
+                                <input type="radio" name="service" value="duet" class="hidden service-radio">
+                                <div class="border-2 border-gray-200 rounded-lg p-4 hover:border-teal-500 transition">
+                                    <div class="font-bold">Duet Session</div>
+                                    <div class="text-gray-600">$55/person</div>
+                                </div>
+                            </label>
+                            <label class="service-option cursor-pointer">
+                                <input type="radio" name="service" value="group" class="hidden service-radio">
+                                <div class="border-2 border-gray-200 rounded-lg p-4 hover:border-teal-500 transition">
+                                    <div class="font-bold">Group Class</div>
+                                    <div class="text-gray-600">$35/class</div>
+                                </div>
+                            </label>
+                            <label class="service-option cursor-pointer">
+                                <input type="radio" name="service" value="mat" class="hidden service-radio">
+                                <div class="border-2 border-gray-200 rounded-lg p-4 hover:border-teal-500 transition">
+                                    <div class="font-bold">Mat Pilates</div>
+                                    <div class="text-gray-600">$30/class</div>
+                                </div>
+                            </label>
+                            <label class="service-option cursor-pointer">
+                                <input type="radio" name="service" value="reformer" class="hidden service-radio">
+                                <div class="border-2 border-gray-200 rounded-lg p-4 hover:border-teal-500 transition">
+                                    <div class="font-bold">Reformer Pilates</div>
+                                    <div class="text-gray-600">$45/class</div>
+                                </div>
+                            </label>
+                            <label class="service-option cursor-pointer">
+                                <input type="radio" name="service" value="prenatal" class="hidden service-radio">
+                                <div class="border-2 border-gray-200 rounded-lg p-4 hover:border-teal-500 transition">
+                                    <div class="font-bold">Prenatal Pilates</div>
+                                    <div class="text-gray-600">$65/session</div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="mt-8 flex justify-end">
+                            <button type="button" class="next-step btn-primary bg-teal-600 text-white font-bold py-2 px-6 rounded-lg transition">Next</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Select Date & Time -->
+                    <div class="form-step p-8" id="step-2">
+                        <h3 class="text-2xl font-bold mb-6">Select Date & Time</h3>
+
+                        <div class="mb-8">
+                            <h4 class="font-bold mb-4">Select a Date</h4>
+                            <div class="calendar" id="calendar">
+                                <!-- Calendar will be generated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold mb-4">Available Times</h4>
+                            <div class="grid grid-cols-3 md:grid-cols-4 gap-3" id="time-slots">
+                                <!-- Time slots will be generated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <div class="mt-8 flex justify-between">
+                            <button type="button" class="prev-step bg-gray-200 text-gray-700 font-bold py-2 px-6 rounded-lg transition">Back</button>
+                            <button type="button" class="next-step btn-primary bg-teal-600 text-white font-bold py-2 px-6 rounded-lg transition">Next</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Contact Information -->
+                    <div class="form-step p-8" id="step-3">
+                        <h3 class="text-2xl font-bold mb-6">Your Information</h3>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" required>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-gray-700 mb-2">Phone</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" required>
+                            </div>
+                            <div>
+                                <label for="experience" class="block text-gray-700 mb-2">Pilates Experience</label>
+                                <select id="experience" name="experience" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
+                                    <option value="beginner">Beginner</option>
+                                    <option value="intermediate">Intermediate</option>
+                                    <option value="advanced">Advanced</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mt-6">
+                            <label for="message" class="block text-gray-700 mb-2">Special Requests or Notes</label>
+                            <textarea id="message" name="message" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"></textarea>
+                        </div>
+
+                        <div class="mt-8 flex justify-between">
+                            <button type="button" class="prev-step bg-gray-200 text-gray-700 font-bold py-2 px-6 rounded-lg transition">Back</button>
+                            <button type="submit" class="btn-primary bg-teal-600 text-white font-bold py-2 px-6 rounded-lg transition">Book Now</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div id="booking-confirmation" class="p-8 text-center hidden">
+                    <i class="fas fa-check-circle text-6xl text-teal-500 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2">Booking Confirmed!</h3>
+                    <p class="text-gray-600 mb-6">Thank you for booking with Sarah's Pilates. You will receive a confirmation email shortly.</p>
+                    <button id="new-booking" class="btn-primary bg-teal-600 text-white font-bold py-2 px-6 rounded-lg transition">Book Another Session</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="text-4xl font-bold mb-4">Client Testimonials</h2>
+                <div class="w-24 h-1 bg-teal-500 mx-auto"></div>
+            </div>
+
+            <div class="testimonial-carousel max-w-4xl mx-auto">
+                <div class="testimonial-track" id="testimonial-track">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-slide">
+                        <div class="bg-white p-8 rounded-xl shadow-lg">
+                            <div class="flex items-center mb-4">
+                                <img src="~/images/sarah.jpg" alt="Jessica" class="w-16 h-16 rounded-full object-cover mr-4">
+                                <div>
+                                    <h4 class="font-bold">Jessica Martin</h4>
+                                    <div class="text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 italic">"Sarah's Pilates has completely transformed my approach to fitness. Her attention to detail and personalized instruction helped me recover from a back injury and build strength I never thought possible."</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-slide">
+                        <div class="bg-white p-8 rounded-xl shadow-lg">
+                            <div class="flex items-center mb-4">
+                                <img src="~/images/sarah.jpg" alt="Michael" class="w-16 h-16 rounded-full object-cover mr-4">
+                                <div>
+                                    <h4 class="font-bold">Michael Chen</h4>
+                                    <div class="text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 italic">"As an athlete, I was skeptical about Pilates, but Sarah's expertise won me over. The reformer sessions have improved my core strength and flexibility more than any other training I've done."</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-slide">
+                        <div class="bg-white p-8 rounded-xl shadow-lg">
+                            <div class="flex items-center mb-4">
+                                <img src="~/images/sarah.jpg" alt="Sophia" class="w-16 h-16 rounded-full object-cover mr-4">
+                                <div>
+                                    <h4 class="font-bold">Sophia Williams</h4>
+                                    <div class="text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 italic">"I started prenatal Pilates with Sarah during my second trimester, and it was the best decision I made. The sessions helped me stay comfortable and strong throughout my pregnancy."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-center mt-6 space-x-2">
+                    <button class="testimonial-dot w-3 h-3 rounded-full bg-teal-600" data-slide="0"></button>
+                    <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300" data-slide="1"></button>
+                    <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300" data-slide="2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+                <div class="w-24 h-1 bg-teal-500 mx-auto"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Have questions? We'd love to hear from you</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="scroll-reveal">
+                    <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-teal-600 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Studio Location</h4>
+                                <p class="text-gray-600">123 Wellness Way, Suite 101<br>Portland, OR 97204</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-phone text-teal-600 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Phone</h4>
+                                <p class="text-gray-600">(555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-teal-600 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Email</h4>
+                                <p class="text-gray-600">info@sarahspilates.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-teal-600 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Studio Hours</h4>
+                                <p class="text-gray-600">Monday-Friday: 7:00 AM - 7:00 PM<br>Saturday: 8:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-teal-600 text-white flex items-center justify-center hover:bg-teal-700 transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-teal-600 text-white flex items-center justify-center hover:bg-teal-700 transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-teal-600 text-white flex items-center justify-center hover:bg-teal-700 transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-teal-600 text-white flex items-center justify-center hover:bg-teal-700 transition">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scroll-reveal">
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
+                        <form id="contact-form">
+                            <div class="mb-4">
+                                <label for="contact-name" class="block text-gray-700 mb-2">Name</label>
+                                <input type="text" id="contact-name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="contact-email" class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" id="contact-email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="contact-subject" class="block text-gray-700 mb-2">Subject</label>
+                                <input type="text" id="contact-subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="contact-message" class="block text-gray-700 mb-2">Message</label>
+                                <textarea id="contact-message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-teal-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-teal-700 transition transform hover:scale-105">
+                                Send Message
+                            </button>
+                        </form>
+                        <div id="contact-form-message" class="mt-4 p-4 rounded-lg hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-spa text-3xl text-teal-400"></i>
+                        <span class="text-2xl font-bold">Sarah's Pilates</span>
+                    </div>
+                    <p class="text-gray-400">Mindful movement for body and soul. Transform your life through the power of Pilates.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Sarah</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#booking" class="text-gray-400 hover:text-white transition">Booking</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition">Testimonials</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Our Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Private Sessions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Duet Sessions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Group Classes</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Mat Pilates</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Reformer Pilates</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Prenatal Pilates</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe for wellness tips and special offers.</p>
+                    <form id="newsletter-form" class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg text-gray-800 w-full focus:outline-none">
+                        <button type="submit" class="bg-teal-600 hover:bg-teal-700 px-4 py-2 rounded-r-lg transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Sarah's Pilates. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Scroll reveal animation
+        const revealElements = document.querySelectorAll('.scroll-reveal');
+
+        const revealOnScroll = () => {
+            revealElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Run once on load
+
+        // Booking form functionality
+        const bookingForm = document.getElementById('booking-form');
+        const formSteps = document.querySelectorAll('.form-step');
+        const nextSteps = document.querySelectorAll('.next-step');
+        const prevSteps = document.querySelectorAll('.prev-step');
+        const progressBar = document.getElementById('progress');
+        const bookingConfirmation = document.getElementById('booking-confirmation');
+        const newBookingBtn = document.getElementById('new-booking');
+
+        let currentStep = 0;
+
+        // Service selection
+        const serviceOptions = document.querySelectorAll('.service-option');
+        serviceOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                const radio = option.querySelector('input[type="radio"]');
+                radio.checked = true;
+
+                // Update UI
+                serviceOptions.forEach(opt => {
+                    const div = opt.querySelector('div');
+                    div.classList.remove('border-teal-500', 'bg-teal-50');
+                    div.classList.add('border-gray-200');
+                });
+
+                const selectedDiv = option.querySelector('div');
+                selectedDiv.classList.remove('border-gray-200');
+                selectedDiv.classList.add('border-teal-500', 'bg-teal-50');
+            });
+        });
+
+        // Generate calendar
+        function generateCalendar() {
+            const calendar = document.getElementById('calendar');
+            const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            const today = new Date();
+            const currentMonth = today.getMonth();
+            const currentYear = today.getFullYear();
+
+            // Clear calendar
+            calendar.innerHTML = '';
+
+            // Add day headers
+            daysOfWeek.forEach(day => {
+                const dayHeader = document.createElement('div');
+                dayHeader.textContent = day;
+                dayHeader.classList.add('text-center', 'font-bold', 'text-gray-500');
+                calendar.appendChild(dayHeader);
+            });
+
+            // Get first day of month and number of days
+            const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+            const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+            // Add empty cells for days before month starts
+            for (let i = 0; i < firstDay; i++) {
+                const emptyDay = document.createElement('div');
+                calendar.appendChild(emptyDay);
+            }
+
+            // Add days of the month
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayElement = document.createElement('div');
+                dayElement.textContent = day;
+                dayElement.classList.add('calendar-day');
+
+                // Disable past days
+                const date = new Date(currentYear, currentMonth, day);
+                if (date < today) {
+                    dayElement.classList.add('disabled');
+                } else {
+                    dayElement.addEventListener('click', () => {
+                        // Remove previous selection
+                        document.querySelectorAll('.calendar-day.selected').forEach(el => {
+                            el.classList.remove('selected');
+                        });
+
+                        // Select current day
+                        dayElement.classList.add('selected');
+
+                        // Update time slots based on selected day
+                        updateTimeSlots();
+                    });
+                }
+
+                calendar.appendChild(dayElement);
+            }
+        }
+
+        // Generate time slots
+        function generateTimeSlots() {
+            const timeSlotsContainer = document.getElementById('time-slots');
+            const times = [
+                '7:00 AM', '8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM',
+                '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM',
+                '5:00 PM', '6:00 PM'
+            ];
+
+            // Clear existing time slots
+            timeSlotsContainer.innerHTML = '';
+
+            // Add time slots
+            times.forEach(time => {
+                const timeSlot = document.createElement('div');
+                timeSlot.textContent = time;
+                timeSlot.classList.add('time-slot');
+
+                // Randomly make some slots unavailable for demo
+                if (Math.random() > 0.7) {
+                    timeSlot.classList.add('unavailable');
+                } else {
+                    timeSlot.addEventListener('click', () => {
+                        // Remove previous selection
+                        document.querySelectorAll('.time-slot.selected').forEach(el => {
+                            el.classList.remove('selected');
+                        });
+
+                        // Select current time slot
+                        timeSlot.classList.add('selected');
+                    });
+                }
+
+                timeSlotsContainer.appendChild(timeSlot);
+            });
+        }
+
+        // Update time slots (placeholder for actual implementation)
+        function updateTimeSlots() {
+            // In a real application, this would fetch available times for the selected date
+            generateTimeSlots();
+        }
+
+        // Initialize calendar and time slots
+        generateCalendar();
+        generateTimeSlots();
+
+        // Next step
+        nextSteps.forEach(button => {
+            button.addEventListener('click', () => {
+                // Validate current step
+                let isValid = true;
+
+                if (currentStep === 0) {
+                    // Check if service is selected
+                    const serviceSelected = document.querySelector('input[name="service"]:checked');
+                    if (!serviceSelected) {
+                        isValid = false;
+                        alert('Please select a service');
+                    }
+                } else if (currentStep === 1) {
+                    // Check if date and time are selected
+                    const dateSelected = document.querySelector('.calendar-day.selected');
+                    const timeSelected = document.querySelector('.time-slot.selected');
+
+                    if (!dateSelected || !timeSelected) {
+                        isValid = false;
+                        alert('Please select a date and time');
+                    }
+                }
+
+                if (isValid) {
+                    // Hide current step
+                    formSteps[currentStep].classList.remove('active');
+
+                    // Show next step
+                    currentStep++;
+                    formSteps[currentStep].classList.add('active');
+
+                    // Update progress bar
+                    progressBar.classList.add(`step-${currentStep + 1}`);
+                }
+            });
+        });
+
+        // Previous step
+        prevSteps.forEach(button => {
+            button.addEventListener('click', () => {
+                // Hide current step
+                formSteps[currentStep].classList.remove('active');
+
+                // Show previous step
+                currentStep--;
+                formSteps[currentStep].classList.add('active');
+
+                // Update progress bar
+                progressBar.classList.remove(`step-${currentStep + 2}`);
+            });
+        });
+
+        // Submit booking form
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Hide form and show confirmation
+            bookingForm.style.display = 'none';
+            bookingConfirmation.classList.remove('hidden');
+        });
+
+        // New booking button
+        newBookingBtn.addEventListener('click', () => {
+            // Reset form
+            bookingForm.reset();
+            bookingForm.style.display = 'block';
+            bookingConfirmation.classList.add('hidden');
+
+            // Reset to first step
+            formSteps.forEach(step => step.classList.remove('active'));
+            formSteps[0].classList.add('active');
+            currentStep = 0;
+
+            // Reset progress bar
+            progressBar.classList.remove('step-2', 'step-3');
+
+            // Reset service selection UI
+            serviceOptions.forEach(opt => {
+                const div = opt.querySelector('div');
+                div.classList.remove('border-teal-500', 'bg-teal-50');
+                div.classList.add('border-gray-200');
+            });
+
+            // Reset calendar and time slots
+            document.querySelectorAll('.calendar-day.selected').forEach(el => {
+                el.classList.remove('selected');
+            });
+            document.querySelectorAll('.time-slot.selected').forEach(el => {
+                el.classList.remove('selected');
+            });
+        });
+
+        // Testimonial carousel
+        const testimonialTrack = document.getElementById('testimonial-track');
+        const testimonialDots = document.querySelectorAll('.testimonial-dot');
+        let currentSlide = 0;
+
+        const showSlide = (index) => {
+            testimonialTrack.style.transform = `translateX(-${index * 100}%)`;
+
+            // Update dots
+            testimonialDots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.remove('bg-gray-300');
+                    dot.classList.add('bg-teal-600');
+                } else {
+                    dot.classList.remove('bg-teal-600');
+                    dot.classList.add('bg-gray-300');
+                }
+            });
+
+            currentSlide = index;
+        };
+
+        testimonialDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+            });
+        });
+
+        // Auto-rotate testimonials
+        setInterval(() => {
+            const nextSlide = (currentSlide + 1) % testimonialDots.length;
+            showSlide(nextSlide);
+        }, 5000);
+
+        // Contact form submission
+        const contactForm = document.getElementById('contact-form');
+        const contactFormMessage = document.getElementById('contact-form-message');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Show success message
+            contactFormMessage.textContent = 'Thank you for your message! We will get back to you soon.';
+            contactFormMessage.classList.remove('hidden', 'bg-red-100', 'text-red-700');
+            contactFormMessage.classList.add('bg-green-100', 'text-green-700');
+
+            // Reset form
+            contactForm.reset();
+
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                contactFormMessage.classList.add('hidden');
+            }, 5000);
+        });
+
+        // Newsletter form submission
+        const newsletterForm = document.getElementById('newsletter-form');
+
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Show success message
+            const email = newsletterForm.querySelector('input[type="email"]').value;
+            alert(`Thank you for subscribing with ${email}! You'll receive our latest updates.`);
+
+            // Reset form
+            newsletterForm.reset();
+        });
+    </script>
+</body>
+</html>
