@@ -29,7 +29,7 @@
     <meta name="twitter:image" content="https://www.unimanage.com/images/gymicon.png">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="~/image/favicon1.ico" />
+    <link rel="icon" type="image/x-icon" href="~/images/favicon.ico" />
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -58,14 +58,14 @@
 </head>
 
 <body class="bg-white">
-    <header class="fixed top-0 w-full z-50 bg-white shadow-sm" role="banner">
-        <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+    <header class="fixed top-0 w-full z-40 bg-white shadow " role="banner">
+        <div class="container mx-auto  px-4 sm:px-6 py-2 flex justify-between items-center">
             <!-- Logo -->
             <a asp-page="/Index" class="flex items-center space-x-0" aria-label="Unimanage Technologies Home">
                 <img src="~/images/gymicon.png" alt="Unimanage Gym Software Logo" class="w-10 h-10 sm:w-12 sm:h-12">
                 <div>
-                    <span class="text-xl sm:text-2xl font-bold gradient-text-primary">Unimanage</span>
-                    <p class="text-xs text-gray-500 -mt-1">Technologies</p>
+                    <span class="text-xl sm:text-1xl font-bold gradient-text-primary">Unimanage</span>
+                    <p class="text-xs text-gray-400 -mt-1">Technologies</p>
                 </div>
             </a>
 
@@ -146,6 +146,9 @@
                     <h4 class="text-white font-semibold mb-6">Company</h4>
                     <ul>
                         <li><a asp-page="/About">About Us</a></li>
+                        <li><a asp-page="/Privacy">Privacy Policy</a></li>
+                        <li><a asp-page="/Terms">Terms of Use</a></li>
+                        <li><a asp-page="/Security">Security Practices</a></li>
                     </ul>
                 </div>
 
@@ -153,18 +156,15 @@
                     <h4 class="text-white font-semibold mb-6">Support</h4>
                     <ul>
                         <li><a asp-page="/Contact">Contact Us</a></li>
+                        
                     </ul>
                 </div>
             </div>
 
-            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="border-t border-gray-800 pt-6 flex justify-center items-center">
                 <p class="text-gray-400 text-sm">&copy; 2025 Unimanage Technologies. All rights reserved.</p>
-                <div class="flex items-center space-x-4">
-                    <a asp-page="/Privacy">Privacy Policy</a>
-                    <a asp-page="/Terms">Terms of Use</a>
-                    <a asp-page="/Security">Security Practices</a>
-                </div>
             </div>
+
         </div>
     </footer>
 
