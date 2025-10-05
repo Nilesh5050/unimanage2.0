@@ -1,136 +1,370 @@
 ﻿@page
 @{
-    ViewData["Title"] = "Portfolio";
+    ViewData["Title"] = "Portfolio - Fitness Websites & Digital Solutions by Unimanage India";
+    ViewData["Description"] = "Explore our portfolio of fitness websites, gym management systems, and digital solutions created for fitness businesses across India. See our work for gyms, studios, and personal trainers.";
+    ViewData["Keywords"] = "Fitness Website Portfolio, Gym Website Examples, Fitness Web Design India, Digital Solutions for Gyms, Fitness Business Websites";
+    ViewData["Canonical"] = "https://unimanage.tech/portfolio";
+    ViewData["OgImage"] = "https://unimanage.tech/images/portfolio-og.jpg";
     Layout = "_Layout";
 }
+
+<!-- Structured Data - Collection Page -->
+<script type="application/ld+json">
+    {
+      "@@context": "https://schema.org",
+      "@@type": "CollectionPage",
+      "name": "Unimanage Portfolio - Fitness Websites and Digital Solutions",
+      "description": "Portfolio of fitness websites, gym management systems, and digital solutions created for fitness businesses across India",
+      "url": "https://unimanage.tech/portfolio",
+      "mainEntity": {
+        "@@type": "CreativeWork",
+        "name": "Fitness Websites Portfolio",
+        "author": {
+          "@@type": "Organization",
+          "name": "Unimanage Technologies",
+          "url": "https://unimanage.tech/"
+        },
+        "genre": ["Web Design", "Fitness Technology", "Digital Solutions"],
+        "about": {
+          "@@type": "Thing",
+          "name": "Fitness Business Solutions",
+          "description": "Websites and digital solutions for fitness businesses in India"
+        }
+      },
+      "image": "https://unimanage.tech/images/portfolio-og.jpg"
+    }
+</script>
+
+<!-- Structured Data for Individual Portfolio Items -->
+<script type="application/ld+json">
+    [
+      {
+        "@@context": "https://schema.org",
+        "@@type": "CreativeWork",
+        "name": "PowerFit Gym Website",
+        "description": "Modern gym website with integrated management system for fitness businesses in India",
+        "url": "https://unimanage.tech/PowerFitGym",
+        "image": "https://unimanage.tech/images/gym.jpg",
+        "genre": "Gym Website",
+        "author": {
+          "@@type": "Organization",
+          "name": "Unimanage Technologies"
+        },
+        "datePublished": "2023-01-15"
+      },
+      {
+        "@@context": "https://schema.org",
+        "@@type": "CreativeWork",
+        "name": "Yoga Bliss Studio Website",
+        "description": "Serene yoga studio website with class booking system for Indian fitness businesses",
+        "url": "https://unimanage.tech/YogaBlissStudio",
+        "image": "https://unimanage.tech/images/yoga.jpg",
+        "genre": "Yoga Studio Website",
+        "author": {
+          "@@type": "Organization",
+          "name": "Unimanage Technologies"
+        },
+        "datePublished": "2023-02-20"
+      },
+      {
+        "@@context": "https://schema.org",
+        "@@type": "CreativeWork",
+        "name": "Mike Johnson Fitness Website",
+        "description": "Personal trainer website with client management system for fitness professionals in India",
+        "url": "https://unimanage.tech/MikeJohnsonFitness",
+        "image": "https://unimanage.tech/images/gym1.jpg",
+        "genre": "Personal Trainer Website",
+        "author": {
+          "@@type": "Organization",
+          "name": "Unimanage Technologies"
+        },
+        "datePublished": "2023-03-10"
+      },
+      {
+        "@@context": "https://schema.org",
+        "@@type": "CreativeWork",
+        "name": "IronCore Fitness Website",
+        "description": "CrossFit gym website with membership management system for fitness centers in India",
+        "url": "https://unimanage.tech/IronCoreFitness",
+        "image": "https://unimanage.tech/images/gym2.jpg",
+        "genre": "CrossFit Gym Website",
+        "author": {
+          "@@type": "Organization",
+          "name": "Unimanage Technologies"
+        },
+        "datePublished": "2023-04-05"
+      },
+      {
+        "@@context": "https://schema.org",
+        "@@type": "CreativeWork",
+        "name": "Dance Dynamics Website",
+        "description": "Dance studio website with class schedules and booking system for dance studios in India",
+        "url": "https://unimanage.tech/DanceDynamics",
+        "image": "https://unimanage.tech/images/dance.png",
+        "genre": "Dance Studio Website",
+        "author": {
+          "@@type": "Organization",
+          "name": "Unimanage Technologies"
+        },
+        "datePublished": "2023-05-12"
+      },
+      {
+        "@@context": "https://schema.org",
+        "@@type": "CreativeWork",
+        "name": "Sarah's Pilates Website",
+        "description": "Pilates instructor website with booking system for fitness professionals in India",
+        "url": "https://unimanage.tech/SarahPilates",
+        "image": "https://unimanage.tech/images/sarah.jpg",
+        "genre": "Pilates Instructor Website",
+        "author": {
+          "@@type": "Organization",
+          "name": "Unimanage Technologies"
+        },
+        "datePublished": "2023-06-18"
+      }
+    ]
+</script>
+
+<!-- Breadcrumb Navigation -->
+<nav aria-label="breadcrumb" class="bg-gray-100 py-2">
+    <div class="container mx-auto px-4 sm:px-6">
+        <ol class="breadcrumb flex items-center text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+                <meta itemprop="position" content="1" />
+            </li>
+            <li class="breadcrumb-item active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span itemprop="name">Portfolio</span>
+                <meta itemprop="position" content="2" />
+            </li>
+        </ol>
+    </div>
+</nav>
+
 <section id="portfolio" class="py-16 lg:py-24 bg-white">
     <div class="container mx-auto px-4 sm:px-6">
         <div class="text-center max-w-3xl mx-auto mb-12 lg:mb-16" data-aos="fade-up">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4 lg:mb-6">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4 lg:mb-6">
                 Our <span class="gradient-text-primary">Portfolio</span>
-            </h2>
+            </h1>
             <p class="text-lg sm:text-xl text-gray-600">
-                Websites and solutions we've created for fitness businesses
+                Websites and digital solutions we've created for fitness businesses across India
             </p>
         </div>
 
         <div class="flex justify-center mb-8 lg:mb-12" data-aos="fade-up">
-            <div class="inline-flex flex-col sm:flex-row bg-gray-100 rounded-lg p-1 w-full sm:w-auto">
+            <div class="inline-flex flex-col sm:flex-row bg-gray-100 rounded-lg p-1 w-full sm:w-auto" role="tablist">
                 <button class="tab-active px-4 py-2 sm:px-6 sm:py-3 rounded-md font-medium transition text-sm sm:text-base"
-                        onclick="filterPortfolio('all')">
-                    All
+                        onclick="filterPortfolio('all')" role="tab" aria-selected="true" aria-controls="all-portfolio">
+                    All Projects
                 </button>
                 <button class="px-4 py-2 sm:px-6 sm:py-3 rounded-md font-medium text-gray-600 hover:text-primary transition text-sm sm:text-base"
-                        onclick="filterPortfolio('gym')">
+                        onclick="filterPortfolio('gym')" role="tab" aria-selected="false" aria-controls="gym-portfolio">
                     Gym Websites
                 </button>
                 <button class="px-4 py-2 sm:px-6 sm:py-3 rounded-md font-medium text-gray-600 hover:text-primary transition text-sm sm:text-base"
-                        onclick="filterPortfolio('studio')">
+                        onclick="filterPortfolio('studio')" role="tab" aria-selected="false" aria-controls="studio-portfolio">
                     Studios
                 </button>
                 <button class="px-4 py-2 sm:px-6 sm:py-3 rounded-md font-medium text-gray-600 hover:text-primary transition text-sm sm:text-base"
-                        onclick="filterPortfolio('trainer')">
+                        onclick="filterPortfolio('trainer')" role="tab" aria-selected="false" aria-controls="trainer-portfolio">
                     Trainers
                 </button>
             </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8" id="portfolio-grid">
-            <div class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
-                 data-aos-delay="100" data-category="gym">
+            <article class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
+                     data-aos-delay="100" data-category="gym" itemscope itemtype="https://schema.org/CreativeWork">
                 <img src="~/images/gym.jpg"
-                     alt="PowerFit Gym" class="w-full h-48 sm:h-64 object-cover">
+                     alt="PowerFit Gym Website - Modern gym website with integrated management system for fitness businesses in India"
+                     class="w-full h-48 sm:h-64 object-cover" loading="lazy" width="400" height="300" itemprop="image">
                 <div class="portfolio-overlay">
                     <div class="text-center text-white p-4 lg:p-6">
-                        <h3 class="text-xl lg:text-2xl font-bold mb-2">PowerFit Gym</h3>
-                        <p class="mb-4 text-sm lg:text-base">
-                            Modern gym website with integrated management
-                            system
+                        <h3 class="text-xl lg:text-2xl font-bold mb-2" itemprop="name">PowerFit Gym</h3>
+                        <p class="mb-4 text-sm lg:text-base" itemprop="description">
+                            Modern gym website with integrated management system for fitness businesses in India
                         </p>
-                        <button class="btn-primary text-white px-3 py-2 rounded-lg font-semibold text-sm lg:text-base">
-                            <a asp-page="/PowerFitGym" class="text-primary" target="_blank">View Project</a>
-                        </button>
+                        <a href="/PowerFitGym" class="btn-primary text-white px-3 py-2 rounded-lg font-semibold text-sm lg:text-base inline-block" target="_blank" itemprop="url">
+                            View Project Details
+                        </a>
                     </div>
                 </div>
-            </div>
-            <div class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
-                 data-aos-delay="200" data-category="studio">
+            </article>
+
+            <article class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
+                     data-aos-delay="200" data-category="studio" itemscope itemtype="https://schema.org/CreativeWork">
                 <img src="~/images/yoga.jpg"
-                     alt="Yoga Bliss Studio" class="w-full h-64 object-cover">
+                     alt="Yoga Bliss Studio Website - Serene yoga studio website with class booking system for Indian fitness businesses"
+                     class="w-full h-64 object-cover" loading="lazy" width="400" height="300" itemprop="image">
                 <div class="portfolio-overlay">
                     <div class="text-center text-white p-6">
-                        <h3 class="text-2xl font-bold mb-2">Yoga Bliss Studio</h3>
-                        <p class="mb-4">Serene yoga studio website with class booking system</p>
-                        <button class="btn-primary text-white px-3 py-2 rounded-lg font-semibold">
-                            <a asp-page="/YogaBlissStudio" class="text-primary" target="_blank">View Project</a>
-                        </button>
+                        <h3 class="text-2xl font-bold mb-2" itemprop="name">Yoga Bliss Studio</h3>
+                        <p class="mb-4" itemprop="description">
+                            Serene yoga studio website with class booking system for Indian fitness businesses
+                        </p>
+                        <a href="/YogaBlissStudio" class="btn-primary text-white px-3 py-2 rounded-lg font-semibold inline-block" target="_blank" itemprop="url">
+                            View Project Details
+                        </a>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
-                 data-aos-delay="300" data-category="trainer">
-
+            <article class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
+                     data-aos-delay="300" data-category="trainer" itemscope itemtype="https://schema.org/CreativeWork">
                 <img src="~/images/gym1.jpg"
-                     alt="Mike Johnson Fitness" class="w-full h-64 object-cover">
+                     alt="Mike Johnson Fitness Website - Personal trainer website with client management system for fitness professionals in India"
+                     class="w-full h-64 object-cover" loading="lazy" width="400" height="300" itemprop="image">
                 <div class="portfolio-overlay">
                     <div class="text-center text-white p-6">
-                        <h3 class="text-2xl font-bold mb-2">Mike Johnson Fitness</h3>
-                        <p class="mb-4">Personal trainer website with client management</p>
-                        <button class="btn-primary text-white px-3 py-2 rounded-lg font-semibold">
-                            <a asp-page="/MikeJohnsonFitness" class="text-primary" target="_blank">View Project</a>
-                        </button>
+                        <h3 class="text-2xl font-bold mb-2" itemprop="name">Mike Johnson Fitness</h3>
+                        <p class="mb-4" itemprop="description">
+                            Personal trainer website with client management system for fitness professionals in India
+                        </p>
+                        <a href="/MikeJohnsonFitness" class="btn-primary text-white px-3 py-2 rounded-lg font-semibold inline-block" target="_blank" itemprop="url">
+                            View Project Details
+                        </a>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
-                 data-aos-delay="400" data-category="gym">
+            <article class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
+                     data-aos-delay="400" data-category="gym" itemscope itemtype="https://schema.org/CreativeWork">
                 <img src="~/images/gym2.jpg"
-                     alt="IronCore Fitness" class="w-full h-64 object-cover">
+                     alt="IronCore Fitness Website - CrossFit gym website with membership management for fitness centers in India"
+                     class="w-full h-64 object-cover" loading="lazy" width="400" height="300" itemprop="image">
                 <div class="portfolio-overlay">
                     <div class="text-center text-white p-6">
-                        <h3 class="text-2xl font-bold mb-2">IronCore Fitness</h3>
-                        <p class="mb-4">CrossFit gym with membership management</p>
-                        <button class="btn-primary text-white px-3 py-2 rounded-lg font-semibold">
-                            <a asp-page="/IronCoreFitness" class="text-primary" target="_blank">View Project</a>
-                        </button>
+                        <h3 class="text-2xl font-bold mb-2" itemprop="name">IronCore Fitness</h3>
+                        <p class="mb-4" itemprop="description">
+                            CrossFit gym website with membership management for fitness centers in India
+                        </p>
+                        <a href="/IronCoreFitness" class="btn-primary text-white px-3 py-2 rounded-lg font-semibold inline-block" target="_blank" itemprop="url">
+                            View Project Details
+                        </a>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
-                 data-aos-delay="500" data-category="studio">
+            <article class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
+                     data-aos-delay="500" data-category="studio" itemscope itemtype="https://schema.org/CreativeWork">
                 <img src="~/images/dance.png"
-                     alt="Dance Dynamics" class="w-full h-64 object-cover">
+                     alt="Dance Dynamics Website - Dance studio website with class schedules and booking system for dance studios in India"
+                     class="w-full h-64 object-cover" loading="lazy" width="400" height="300" itemprop="image">
                 <div class="portfolio-overlay">
                     <div class="text-center text-white p-6">
-                        <h3 class="text-2xl font-bold mb-2">Dance Dynamics</h3>
-                        <p class="mb-4">Dance studio website with class schedules</p>
-                        <button class="btn-primary text-white px-3 py-2 rounded-lg font-semibold">
-                            <a asp-page="/DanceDynamics" class="text-primary" target="_blank">View Project</a>
-                        </button>
+                        <h3 class="text-2xl font-bold mb-2" itemprop="name">Dance Dynamics</h3>
+                        <p class="mb-4" itemprop="description">
+                            Dance studio website with class schedules and booking system for dance studios in India
+                        </p>
+                        <a href="/DanceDynamics" class="btn-primary text-white px-3 py-2 rounded-lg font-semibold inline-block" target="_blank" itemprop="url">
+                            View Project Details
+                        </a>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
-                 data-aos-delay="600" data-category="trainer">
+            <article class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
+                     data-aos-delay="600" data-category="trainer" itemscope itemtype="https://schema.org/CreativeWork">
                 <img src="~/images/sarah.jpg"
-                     alt="Sarah's Pilates" class="w-full h-64 object-cover">
-
+                     alt="Sarah's Pilates Website - Pilates instructor website with booking system for fitness professionals in India"
+                     class="w-full h-64 object-cover" loading="lazy" width="400" height="300" itemprop="image">
                 <div class="portfolio-overlay">
                     <div class="text-center text-white p-6">
-                        <h3 class="text-2xl font-bold mb-2">Sarah's Pilates</h3>
-                        <p class="mb-4">Pilates instructor website with booking system</p>
-                        <button class="btn-primary text-white px-3 py-2 rounded-lg font-semibold">
-                            <a asp-page="/SarahPilates" class="text-primary" target="_blank">View Project</a>
-                        </button>
+                        <h3 class="text-2xl font-bold mb-2" itemprop="name">Sarah's Pilates</h3>
+                        <p class="mb-4" itemprop="description">
+                            Pilates instructor website with booking system for fitness professionals in India
+                        </p>
+                        <a href="/SarahPilates" class="btn-primary text-white px-3 py-2 rounded-lg font-semibold inline-block" target="_blank" itemprop="url">
+                            View Project Details
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- Case Study Highlights Section -->
+        <div class="mt-16 lg:mt-20" data-aos="fade-up">
+            <div class="text-center mb-8 lg:mb-12">
+                <h2 class="text-2xl lg:text-3xl font-bold mb-4">Featured Case Studies</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Dive deeper into our most successful projects and discover how we helped these fitness businesses grow</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                <div class="bg-gray-50 rounded-2xl overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-2/5">
+                            <img src="~/images/gym.jpg" alt="PowerFit Gym Case Study" class="w-full h-48 md:h-full object-cover" loading="lazy" width="400" height="300">
+                        </div>
+                        <div class="md:w-3/5 p-6 lg:p-8">
+                            <div class="text-orange-600 font-semibold mb-2">GYM WEBSITE</div>
+                            <h3 class="text-xl lg:text-2xl font-bold mb-3">PowerFit Gym: Complete Digital Transformation</h3>
+                            <p class="text-gray-600 mb-4">How we helped PowerFit Gym increase membership sign-ups by 65% with a new website and integrated management system.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">Web Design</span>
+                                <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">Member Management</span>
+                                <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">Booking System</span>
+                            </div>
+                            <a href="/PowerFitGym" class="text-orange-600 font-medium hover:underline">Read Full Case Study →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-2/5">
+                            <img src="~/images/yogabliss/about.png" alt="Yoga Bliss Studio Case Study" class="w-full h-48 md:h-full object-cover" loading="lazy" width="400" height="300">
+                        </div>
+                        <div class="md:w-3/5 p-6 lg:p-8">
+                            <div class="text-orange-600 font-semibold mb-2">YOGA STUDIO</div>
+                            <h3 class="text-xl lg:text-2xl font-bold mb-3">Yoga Bliss: Online Class Expansion</h3>
+                            <p class="text-gray-600 mb-4">How we helped Yoga Bliss Studio transition to online classes and increase revenue by 45% during challenging times.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">Online Booking</span>
+                                <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">Virtual Classes</span>
+                                <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">Member Portal</span>
+                            </div>
+                            <a href="/YogaBlissStudio" class="text-orange-600 font-medium hover:underline">Read Full Case Study →</a>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
 
+        <!-- Testimonial Section -->
+        <div class="mt-16 lg:mt-20" data-aos="fade-up">
+            <div class="bg-gradient-to-r from-orange-500 to-orange-600 rounded-3xl p-8 lg:p-12 text-white">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-2xl lg:text-3xl font-bold mb-6">What Our Clients Say</h2>
+                    <div class="text-xl italic mb-6">
+                        "Unimanage transformed our online presence completely. The new website and management system have streamlined our operations and helped us attract more members than ever before."
+                    </div>
+                    <div class="flex items-center justify-center space-x-2 mb-2">
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
 
+        <!-- CTA Section -->
+        <div class="mt-16 text-center" data-aos="fade-up">
+            <h2 class="text-2xl lg:text-3xl font-bold mb-4">Ready to Transform Your Fitness Business?</h2>
+            <p class="text-gray-600 mb-6 max-w-2xl mx-auto">Let's create a stunning website and digital solution that will help your fitness business grow in India.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/contact" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition">
+                    <i class="fas fa-phone-alt mr-2" style="transform: scaleX(-1);" aria-hidden="true"></i>
+                    Get a Free Quote
+                </a>
+                <a href="/Webservices" class="btn-secondary text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition">
+                    <i class="fas fa-cogs mr-2" aria-hidden="true"></i>
+                    Explore Our Services
+                </a>
+            </div>
         </div>
     </div>
 </section>

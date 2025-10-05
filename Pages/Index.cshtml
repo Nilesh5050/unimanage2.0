@@ -1,11 +1,117 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Unimanage Technologies - Gym Management & Web Development";
+    ViewData["Title"] = "Unimanage - Best Gym Management Software in India";
+    ViewData["Description"] = "Unimanage Gym Software helps fitness clubs and gyms in India manage memberships, billing, attendance, and trainers with ease.";
+    ViewData["Keywords"] = "Gym Management Software India, Fitness Club Software, Gym Software Billing, Gym CRM India";
+    ViewData["Canonical"] = "https://unimanage.tech/";
+    Layout = "_Layout";
 }
 
-<!-- Header Section -->
+<!-- Structured Data - Organization -->
+<script type="application/ld+json">
+    {
+      "@@context": "https://schema.org",
+      "@@type": "Organization",
+      "name": "Unimanage Technologies",
+      "url": "https://unimanage.tech/",
+      "logo": "https://unimanage.tech/images/logo.png",
+      "description": "Best gym management software in India for fitness clubs and gyms",
+      "address": {
+        "@@type": "PostalAddress",
+        "streetAddress": "M-3, Gali No. 7, Mamura, Sector 66",
+        "addressLocality": "Noida",
+        "addressRegion": "Uttar Pradesh",
+        "postalCode": "201301",
+        "addressCountry": "IN"
+      },
+      "contactPoint": {
+        "@@type": "ContactPoint",
+        "telephone": "+919205807124",
+        "contactType": "customer service",
+        "email": "support@unimanage.tech"
+      },
+      "sameAs": [
+        "https://www.facebook.com/share/1BV25U342s/",
+        "https://x.com/unimanage?t=WsxmJYOTXxyNUqmaN1_4eg&s=09",
+        "https://www.instagram.com/unimanage/?igsh=enB6ZmVpdDR5NTd0#",
+        "https://www.linkedin.com/company/unimanage-technologies"
+      ]
+    }
+</script>
 
+<!-- Structured Data - Software Application -->
+<script type="application/ld+json">
+    {
+      "@@context": "https://schema.org",
+      "@@type": "SoftwareApplication",
+      "name": "Unimanage Gym Management Software",
+      "operatingSystem": "Web, iOS, Android",
+      "applicationCategory": "BusinessApplication",
+      "aggregateRating": {
+        "@@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "500"
+      },
+      "offers": {
+        "@@type": "Offer",
+        "price": "1499",
+        "priceCurrency": "INR"
+      }
+    }
+</script>
+
+<!-- Structured Data - Local Business -->
+<script type="application/ld+json">
+    {
+      "@@context": "https://schema.org",
+      "@@type": "LocalBusiness",
+      "name": "Unimanage Technologies",
+      "image": "https://unimanage.tech/images/logo.png",
+      "url": "https://unimanage.tech/",
+      "telephone": "+919205807124",
+      "priceRange": "₹₹",
+      "address": {
+        "@@type": "PostalAddress",
+        "streetAddress": "M-3, Gali No. 7, Mamura, Sector 66",
+        "addressLocality": "Noida",
+        "addressRegion": "Uttar Pradesh",
+        "postalCode": "201301",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@@type": "GeoCoordinates",
+        "latitude": 28.6094,
+        "longitude": 77.3734
+      },
+      "openingHoursSpecification": {
+        "@@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    }
+</script>
+
+<!-- Breadcrumb Navigation -->
+<nav aria-label="breadcrumb" class="bg-gray-100 py-2">
+    <div class="container mx-auto px-4 sm:px-6">
+        <ol class="breadcrumb flex items-center text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+                <meta itemprop="position" content="1" />
+            </li>
+        </ol>
+    </div>
+</nav>
+
+<!-- Header Section -->
 <!-- Hero Section -->
 <section id="home" class="relative min-h-screen flex items-center hero-pattern pt-16">
     <div class="container mx-auto px-4 sm:px-6 relative z-10">
@@ -19,17 +125,19 @@
                     Transform Your <span class="gradient-text-primary">Fitness Business</span> & <span class="gradient-text-secondary">Digital Presence</span>
                 </h1>
                 <p class="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-xl">
-                    All-in-one gym management software and professional web development services to grow your fitness business and establish a powerful online presence.
+                    All-in-one gym management software and professional web development services to grow your fitness business and establish a powerful online presence in India.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                    <button class="btn-primary text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-semibold text-lg hover:shadow-xl flex items-center justify-center">
-                        <i class="fas fa-play-circle mr-2"></i>
-                        Watch Demo
-                    </button>
-                    <button class="btn-secondary text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-semibold text-lg hover:shadow-xl flex items-center justify-center">
-                        <i class="fas fa-calendar-alt mr-2"></i>
-                        <a href="#contact">Free Consultation</a>
-                    </button>
+                    
+                    <a href="https://wa.me/919205807124?text=Hello%2C%20I%27d%20like%20to%20schedule%20a%20free%20consultation%20for%20Gym%20Management%20Software."
+                       target="_blank"
+                       rel="noopener nofollow">
+                        <button class="btn-secondary text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-semibold text-lg hover:shadow-xl flex items-center justify-center" aria-label="Schedule free consultation">
+                            <i class="fas fa-calendar-alt mr-2"></i>
+                            Free Consultation
+                        </button>
+                    </a>
+
                 </div>
                 <div class="flex items-center space-x-4 sm:space-x-8 pt-6">
                     <div class="text-center">
@@ -60,7 +168,7 @@
                             <div class="w-3 h-3 bg-green-400 rounded-full"></div>
                         </div>
                     </div>
-                    <img src="~/images/Dashboard.png" alt="Gym Management Dashboard" class="rounded-2xl w-full">
+                    <img src="~/images/Dashboard.png" alt="Gym Management Dashboard showing member analytics, attendance tracking, and revenue reports" class="rounded-2xl w-full" loading="lazy" width="800" height="600">
                 </div>
             </div>
         </div>
@@ -86,7 +194,7 @@
                     We're dedicated to providing fitness businesses with the tools they need to thrive in the digital age. Our comprehensive gym management software streamlines operations while our web development services create powerful online presences that attract and retain members.
                 </p>
                 <p class="text-gray-600 mb-6 lg:mb-8">
-                    With over a decade of experience in both fitness management and web technologies, we understand the unique challenges faced by gym owners and fitness professionals. Our solutions are designed to save time, increase revenue, and enhance member experiences.
+                    With over a decade of experience in both fitness management and web technologies, we understand the unique challenges faced by gym owners and fitness professionals in India. Our solutions are designed to save time, increase revenue, and enhance member experiences.
                 </p>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
@@ -104,34 +212,34 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6" data-aos="fade-left">
                 <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 lg:p-8 rounded-2xl">
                     <div class="w-12 h-12 lg:w-16 lg:h-16 gradient-primary rounded-2xl flex items-center justify-center mb-4 lg:mb-6">
-                        <i class="fas fa-dumbbell text-white text-xl lg:text-2xl"></i>
+                        <i class="fas fa-dumbbell text-white text-xl lg:text-2xl" aria-hidden="true"></i>
                     </div>
                     <h4 class="text-lg lg:text-xl font-bold mb-2 lg:mb-3">Gym Management</h4>
-                    <p class="text-gray-600 text-sm lg:text-base">Comprehensive software to manage memberships, classes, trainers, and billing.</p>
+                    <p class="text-gray-600 text-sm lg:text-base">Comprehensive software to manage memberships, classes, trainers, and billing for Indian fitness centers.</p>
                 </div>
 
                 <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 lg:p-8 rounded-2xl">
                     <div class="w-12 h-12 lg:w-16 lg:h-16 gradient-secondary rounded-2xl flex items-center justify-center mb-4 lg:mb-6">
-                        <i class="fas fa-laptop-code text-white text-xl lg:text-2xl"></i>
+                        <i class="fas fa-laptop-code text-white text-xl lg:text-2xl" aria-hidden="true"></i>
                     </div>
                     <h4 class="text-lg lg:text-xl font-bold mb-2 lg:mb-3">Web Development</h4>
-                    <p class="text-gray-600 text-sm lg:text-base">Professional websites and web applications tailored to your brand.</p>
+                    <p class="text-gray-600 text-sm lg:text-base">Professional websites and web applications tailored to your fitness brand in India.</p>
                 </div>
 
                 <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 lg:p-8 rounded-2xl">
                     <div class="w-12 h-12 lg:w-16 lg:h-16 gradient-accent rounded-2xl flex items-center justify-center mb-4 lg:mb-6">
-                        <i class="fas fa-mobile-alt text-white text-xl lg:text-2xl"></i>
+                        <i class="fas fa-mobile-alt text-white text-xl lg:text-2xl" aria-hidden="true"></i>
                     </div>
                     <h4 class="text-lg lg:text-xl font-bold mb-2 lg:mb-3">Mobile Apps</h4>
-                    <p class="text-gray-600 text-sm lg:text-base">Custom mobile applications for member engagement and management.</p>
+                    <p class="text-gray-600 text-sm lg:text-base">Custom mobile applications for member engagement and gym management in India.</p>
                 </div>
 
                 <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-6 lg:p-8 rounded-2xl">
                     <div class="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 lg:mb-6">
-                        <i class="fas fa-chart-line text-white text-xl lg:text-2xl"></i>
+                        <i class="fas fa-chart-line text-white text-xl lg:text-2xl" aria-hidden="true"></i>
                     </div>
                     <h4 class="text-lg lg:text-xl font-bold mb-2 lg:mb-3">Analytics</h4>
-                    <p class="text-gray-600 text-sm lg:text-base">Data-driven insights to optimize your business performance.</p>
+                    <p class="text-gray-600 text-sm lg:text-base">Data-driven insights to optimize your fitness business performance in India.</p>
                 </div>
             </div>
         </div>
@@ -146,328 +254,203 @@
                 Gym Management <span class="gradient-text-primary">Software</span>
             </h2>
             <p class="text-lg sm:text-xl text-gray-600">
-                All-in-one solution to streamline your fitness business operations
+                All-in-one solution to streamline your fitness business operations in India
             </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             <!-- Feature Cards -->
-            <div class="feature-card bg-white p-6 lg:p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="100">
+            <article class="feature-card bg-white p-6 lg:p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="100">
                 <div class="feature-icon w-12 h-12 lg:w-16 lg:h-16 gradient-primary rounded-2xl flex items-center justify-center mb-4 lg:mb-6 shadow-lg">
-                    <i class="fas fa-users text-white text-xl lg:text-2xl"></i>
+                    <i class="fas fa-users text-white text-xl lg:text-2xl" aria-hidden="true"></i>
                 </div>
                 <h3 class="text-xl lg:text-2xl font-semibold mb-3 lg:mb-4">Member Management</h3>
-                <p class="text-gray-600 mb-4 lg:mb-6 text-sm lg:text-base">Effortlessly manage member profiles, attendance, and communication with our intuitive member portal.</p>
+                <p class="text-gray-600 mb-4 lg:mb-6 text-sm lg:text-base">Effortlessly manage member profiles, attendance, and communication with our intuitive member portal for Indian gyms.</p>
                 <ul class="space-y-2 text-sm text-gray-600">
-                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Member profiles & photos</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Attendance tracking</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Automated reminders</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Member profiles & photos</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Attendance tracking</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Automated reminders</li>
                 </ul>
-            </div>
-            <div class="feature-card bg-white p-6 lg:p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
-                 data-aos-delay="200">
+            </article>
+
+            <article class="feature-card bg-white p-6 lg:p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="200">
                 <div class="feature-icon w-12 h-12 lg:w-16 lg:h-16 gradient-primary rounded-2xl flex items-center justify-center mb-4 lg:mb-6 shadow-lg">
-                    <i class="fas fa-chart-line text-white text-xl lg:text-2xl"></i>
+                    <i class="fas fa-chart-line text-white text-xl lg:text-2xl" aria-hidden="true"></i>
                 </div>
                 <h3 class="text-xl lg:text-2xl font-semibold mb-3 lg:mb-4">Revenue Dashboard</h3>
                 <p class="text-gray-600 mb-4 lg:mb-6 text-sm lg:text-base">
-                    Track earnings, monitor growth
-                    trends, and get insights into your
-                    business performance in real-time.
+                    Track earnings, monitor growth trends, and get insights into your business performance in real-time for Indian fitness centers.
                 </p>
                 <ul class="space-y-2 text-sm text-gray-600">
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Real-time
-                        revenue tracking
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Monthly
-                        &
-                        yearly reports
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Visual
-                        charts & analytics
-                    </li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Real-time revenue tracking</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Monthly & yearly reports</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Visual charts & analytics</li>
                 </ul>
-            </div>
-            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
-                 data-aos-delay="300">
+            </article>
+
+            <article class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="300">
                 <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <i class="fas fa-credit-card text-white text-2xl"></i>
+                    <i class="fas fa-credit-card text-white text-2xl" aria-hidden="true"></i>
                 </div>
                 <h3 class="text-2xl font-semibold mb-4">Billing & Payments</h3>
                 <p class="text-gray-600 mb-6">
-                    Automate billing, process payments, and manage memberships with
-                    our
-                    secure payment system.
+                    Automate billing, process payments, and manage memberships with our secure payment system for Indian gyms and fitness centers.
                 </p>
                 <ul class="space-y-2 text-sm text-gray-600">
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Recurring
-                        billing
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Payment
-                        processing
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Financial
-                        reports
-                    </li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Recurring billing</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Payment processing</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Financial reports</li>
                 </ul>
-            </div>
-            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
-                 data-aos-delay="400">
+            </article>
+
+            <article class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="400">
                 <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <i class="fas fa-calendar-check text-white text-2xl"></i>
+                    <i class="fas fa-calendar-check text-white text-2xl" aria-hidden="true"></i>
                 </div>
                 <h3 class="text-2xl font-semibold mb-4">Trainer Scheduling</h3>
                 <p class="text-gray-600 mb-6">
-                    Schedule personal training sessions and group classes with ease.
+                    Schedule personal training sessions and group classes with ease for your Indian fitness business.
                 </p>
                 <ul class="space-y-2 text-sm text-gray-600">
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Personal
-                        training sessions
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Group
-                        class
-                        scheduling
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Trainer
-                        availability management
-                    </li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Personal training sessions</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Group class scheduling</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Trainer availability management</li>
                 </ul>
-            </div>
+            </article>
 
-
-            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
-                 data-aos-delay="500">
+            <article class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="500">
                 <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <i class="fas fa-chart-bar text-white text-2xl"></i>
+                    <i class="fas fa-chart-bar text-white text-2xl" aria-hidden="true"></i>
                 </div>
                 <h3 class="text-2xl font-semibold mb-4">Analytics & Reporting</h3>
                 <p class="text-gray-600 mb-6">
-                    Gain valuable insights into your business performance with
-                    comprehensive analytics and reports.
+                    Gain valuable insights into your business performance with comprehensive analytics and reports for Indian fitness centers.
                 </p>
                 <ul class="space-y-2 text-sm text-gray-600">
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Revenue
-                        tracking
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Member
-                        retention
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Custom
-                        reports
-                    </li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Revenue tracking</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Member retention</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Custom reports</li>
                 </ul>
-            </div>
+            </article>
 
-            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
-                 data-aos-delay="600">
+            <article class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="600">
                 <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <i class="fas fa-tools text-white text-2xl"></i>
+                    <i class="fas fa-tools text-white text-2xl" aria-hidden="true"></i>
                 </div>
                 <h3 class="text-2xl font-semibold mb-4">Maintenance Logs</h3>
                 <p class="text-gray-600 mb-6">
-                    Track equipment repairs, costs, and replacements across locations.
+                    Track equipment repairs, costs, and replacements across locations for your Indian gym business.
                 </p>
                 <ul class="space-y-2 text-sm text-gray-600">
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Repair
-                        history tracking
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Maintenance
-                        cost management
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Equipment
-                        replacement records
-                    </li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Repair history tracking</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Maintenance cost management</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Equipment replacement records</li>
                 </ul>
-            </div>
+            </article>
 
-            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
-                 data-aos-delay="600">
+            <article class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="600">
                 <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <i class="fas fa-code-branch text-white text-2xl"></i>
+                    <i class="fas fa-code-branch text-white text-2xl" aria-hidden="true"></i>
                 </div>
                 <h3 class="text-2xl font-semibold mb-4">Branch Selection</h3>
-                <p class="text-gray-600 mb-6">Select branches and track branch-wise metrics in one click.</p>
+                <p class="text-gray-600 mb-6">Select branches and track branch-wise metrics in one click for multi-location gyms in India.</p>
                 <ul class="space-y-2 text-sm text-gray-600">
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Quick
-                        branch switching
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Branch-wise
-                        performance metrics
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Multi-location management
-                    </li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Quick branch switching</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Branch-wise performance metrics</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Multi-location management</li>
                 </ul>
-            </div>
+            </article>
+
             <!-- Inventory & Stock -->
-            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
-                 data-aos-delay="200">
+            <article class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="200">
                 <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <i class="fas fa-boxes text-white text-2xl"></i>
+                    <i class="fas fa-boxes text-white text-2xl" aria-hidden="true"></i>
                 </div>
                 <h3 class="text-2xl font-semibold mb-4">Inventory & Stock</h3>
-                <p class="text-gray-600 mb-6">Manage equipment categories, vendors, and inventory with ease.</p>
+                <p class="text-gray-600 mb-6">Manage equipment categories, vendors, and inventory with ease for your Indian fitness business.</p>
                 <ul class="space-y-2 text-sm text-gray-600">
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Equipment &
-                        category management
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Vendor
-                        tracking
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Stock
-                        level
-                        monitoring
-                    </li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Equipment & category management</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Vendor tracking</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Stock level monitoring</li>
                 </ul>
-            </div>
+            </article>
 
             <!-- Accounts Tracking -->
-            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
-                 data-aos-delay="400">
+            <article class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="400">
                 <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <i class="fas fa-file-invoice-dollar text-white text-2xl"></i>
+                    <i class="fas fa-file-invoice-dollar text-white text-2xl" aria-hidden="true"></i>
                 </div>
                 <h3 class="text-2xl font-semibold mb-4">Accounts Tracking</h3>
                 <p class="text-gray-600 mb-6">
-                    Handle incomes, expenses, and export reports in a single
-                    dashboard.
+                    Handle incomes, expenses, and export reports in a single dashboard for your Indian gym business.
                 </p>
                 <ul class="space-y-2 text-sm text-gray-600">
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Income
-                        &
-                        expense tracking
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Automated
-                        financial reports
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Export
-                        in
-                        multiple formats
-                    </li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Income & expense tracking</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Automated financial reports</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Export in multiple formats</li>
                 </ul>
-            </div>
+            </article>
 
             <!-- Templates & Notifications -->
-            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
-                 data-aos-delay="600">
+            <article class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="600">
                 <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <i class="fas fa-bell text-white text-2xl"></i>
+                    <i class="fas fa-bell text-white text-2xl" aria-hidden="true"></i>
                 </div>
                 <h3 class="text-2xl font-semibold mb-4">Templates & Notifications</h3>
                 <p class="text-gray-600 mb-6">
-                    Customize WhatsApp and email templates to alert your members
-                    instantly.
+                    Customize WhatsApp and email templates to alert your members instantly for your Indian fitness business.
                 </p>
                 <ul class="space-y-2 text-sm text-gray-600">
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Custom
-                        WhatsApp templates
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Email
-                        notification setup
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Automated
-                        alerts & reminders
-                    </li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Custom WhatsApp templates</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Email notification setup</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Automated alerts & reminders</li>
                 </ul>
-            </div>
+            </article>
 
             <!-- Lead Management -->
-            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
-                 data-aos-delay="200">
+            <article class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="200">
                 <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <i class="fas fa-user-plus text-white text-2xl"></i>
+                    <i class="fas fa-user-plus text-white text-2xl" aria-hidden="true"></i>
                 </div>
                 <h3 class="text-2xl font-semibold mb-4">Lead Management</h3>
                 <p class="text-gray-600 mb-6">
-                    Capture, track, and convert leads seamlessly with built-in CRM
-                    tools.
+                    Capture, track, and convert leads seamlessly with built-in CRM tools for your Indian fitness business.
                 </p>
                 <ul class="space-y-2 text-sm text-gray-600">
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Lead
-                        capture & tracking
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Status
-                        &
-                        priority updates
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Follow-up
-                        reminders
-                    </li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Lead capture & tracking</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Status & priority updates</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Follow-up reminders</li>
                 </ul>
-            </div>
+            </article>
 
             <!-- Birthday Wishes -->
-            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
-                 data-aos-delay="400">
+            <article class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="400">
                 <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <i class="fas fa-birthday-cake text-white text-2xl"></i>
+                    <i class="fas fa-birthday-cake text-white text-2xl" aria-hidden="true"></i>
                 </div>
                 <h3 class="text-2xl font-semibold mb-4">Birthday Wishes</h3>
                 <p class="text-gray-600 mb-6">
-                    Send personalized birthday greetings and strengthen member
-                    relationships.
+                    Send personalized birthday greetings and strengthen member relationships for your Indian gym business.
                 </p>
                 <ul class="space-y-2 text-sm text-gray-600">
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Automated
-                        birthday reminders
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Custom
-                        WhatsApp & email messages
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Boost
-                        member engagement
-                    </li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Automated birthday reminders</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Custom WhatsApp & email messages</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Boost member engagement</li>
                 </ul>
-            </div>
-
-            <!-- Add more feature cards from your original HTML -->
-            <!-- ... (Copy all feature cards from original HTML) ... -->
+            </article>
         </div>
     </div>
 </section>
 
 <!-- Web Services Section -->
 <section id="web-services" class="py-16 lg:py-24 bg-gray-50">
-    <!-- Copy content from original HTML -->
     <div class="container mx-auto px-4 sm:px-6">
         <div class="text-center max-w-3xl mx-auto mb-12 lg:mb-16" data-aos="fade-up">
             <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4 lg:mb-6">
                 Web Development <span class="gradient-text-secondary">Services</span>
             </h2>
             <p class="text-lg sm:text-xl text-gray-600">
-                Professional websites and web applications tailored to your fitness business
+                Professional websites and web applications tailored to your fitness business in India
             </p>
         </div>
 
@@ -475,47 +458,48 @@
             <div data-aos="fade-right">
                 <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
                     <img src="~/images/webservice.jpg"
-                         alt="Web Development" class="w-full h-48 sm:h-64 object-cover">
+                         alt="Web Development for Fitness Businesses in India" class="w-full h-48 sm:h-64 object-cover" loading="lazy" width="800" height="600">
                     <div class="p-6 lg:p-8">
                         <h3 class="text-xl lg:text-2xl font-bold mb-3 lg:mb-4">Custom Website Development</h3>
                         <p class="text-gray-600 mb-4 lg:mb-6 text-sm lg:text-base">
-                            We create stunning, responsive websites that capture your brand's essence and
-                            convert
-                            visitors into members. Our designs are optimized for performance, SEO, and user
-                            experience.
+                            We create stunning, responsive websites that capture your brand's essence and convert visitors into members. Our designs are optimized for performance, SEO, and user experience for the Indian fitness market.
                         </p>
                         <ul class="space-y-2 lg:space-y-3 mb-4 lg:mb-6 text-sm lg:text-base">
                             <li class="flex items-start">
-                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2 lg:mr-3"></i>
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2 lg:mr-3" aria-hidden="true"></i>
                                 <span>Responsive design for all devices</span>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2 lg:mr-3"></i>
-                                <span>SEO optimized structure</span>
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2 lg:mr-3" aria-hidden="true"></i>
+                                <span>SEO optimized structure for Indian market</span>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2 lg:mr-3"></i>
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2 lg:mr-3" aria-hidden="true"></i>
                                 <span>Fast loading performance</span>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2 lg:mr-3"></i>
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2 lg:mr-3" aria-hidden="true"></i>
                                 <span>Content management integration</span>
                             </li>
                         </ul>
-                        <button class="btn-secondary text-white px-4 py-2 lg:px-6 lg:py-3 rounded-lg font-semibold hover:shadow-lg w-full sm:w-auto">
-                            <a href="#contact"> Order Now</a>
+                        <a href="https://wa.me/919205807124?text=Hello%2C%20I%27m%20interested%20in%20your%20website%20services.%20Please%20share%20more%20details."
+                           target="_blank"
+                           rel="noopener nofollow">
+                            <button class="btn-secondary text-white px-4 py-2 lg:px-6 lg:py-3 rounded-lg font-semibold hover:shadow-lg w-full sm:w-auto">
+                                Order Now
+                            </button>
+                        </a>
 
-                        </button>
                     </div>
                 </div>
             </div>
 
             <div data-aos="fade-left">
                 <div class="space-y-6 lg:space-y-8">
-                    <div class="bg-white p-4 lg:p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <article class="bg-white p-4 lg:p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
                         <div class="flex items-center space-x-4">
                             <div class="w-12 h-12 lg:w-16 lg:h-16 flex-shrink-0 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-white text-xl lg:text-2xl">
-                                <i class="fas fa-laptop-code"></i>
+                                <i class="fas fa-laptop-code" aria-hidden="true"></i>
                             </div>
 
                             <div class="flex-1">
@@ -523,75 +507,57 @@
                                     Trendy Websites, Tailored for You
                                 </h3>
                                 <p class="text-gray-500 text-xs lg:text-sm leading-relaxed">
-                                    We specialize in crafting cutting-edge websites that not only meet but
-                                    exceed
-                                    your unique requirements. By blending innovative design trends with
-                                    user-centric
-                                    functionality, we ensure your online presence stands out in today's
-                                    competitive
-                                    digital landscape.
+                                    We specialize in crafting cutting-edge websites that not only meet but exceed your unique requirements. By blending innovative design trends with user-centric functionality, we ensure your online presence stands out in today's competitive digital landscape in India.
                                 </p>
                             </div>
                         </div>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl  shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    </article>
+
+                    <article class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
                         <div class="flex items-center space-x-4">
-                            <!-- Icon Section -->
                             <div class="w-16 h-16 flex-shrink-0 rounded-lg bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center text-white text-2xl">
-                                <i class="fas fa-calendar-check"></i>
+                                <i class="fas fa-calendar-check" aria-hidden="true"></i>
                             </div>
 
-                            <!-- Content Section -->
                             <div class="flex-1">
                                 <h3 class="text-lg font-semibold text-gray-900 mb-1">
                                     Booking Systems & Integrations
                                 </h3>
                                 <p class="text-gray-500 text-sm leading-relaxed">
-                                    Custom booking solutions for classes, personal training, and facility
-                                    reservations.
-                                    We also provide seamless WhatsApp and email integrations to keep your
-                                    clients
-                                    connected.
+                                    Custom booking solutions for classes, personal training, and facility reservations. We also provide seamless WhatsApp and email integrations to keep your clients connected for your Indian fitness business.
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-
-                    <div class="bg-white p-8 rounded-3xl shadow-lg card-hover">
+                    <article class="bg-white p-8 rounded-3xl shadow-lg card-hover">
                         <div class="flex items-start">
                             <div class="w-14 h-14 gradient-secondary rounded-xl flex items-center justify-center mr-5 flex-shrink-0">
-                                <i class="fas fa-layer-group text-white text-xl"></i>
+                                <i class="fas fa-layer-group text-white text-xl" aria-hidden="true"></i>
                             </div>
                             <div>
                                 <h4 class="text-xl font-bold mb-2">Custom Templates Design</h4>
                                 <p class="text-gray-600">
-                                    Design and customize professional templates for
-                                    websites,
-                                    emails, and documents to match your brand identity.
+                                    Design and customize professional templates for websites, emails, and documents to match your fitness brand identity in India.
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-
-                    <div class="bg-white p-8 rounded-3xl shadow-lg card-hover">
+                    <article class="bg-white p-8 rounded-3xl shadow-lg card-hover">
                         <div class="flex items-start">
                             <div class="w-14 h-14 gradient-secondary rounded-xl flex items-center justify-center mr-5 flex-shrink-0">
-                                <i class="fas fa-tools text-white text-xl"></i>
+                                <i class="fas fa-tools text-white text-xl" aria-hidden="true"></i>
                             </div>
                             <div>
                                 <h4 class="text-xl font-bold mb-2">Maintenance & Support</h4>
                                 <p class="text-gray-600">
-                                    Ongoing website maintenance, security updates, and
-                                    technical support.
+                                    Ongoing website maintenance, security updates, and technical support for your fitness business in India.
                                 </p>
                             </div>
                         </div>
-                    </div>
-
+                    </article>
                 </div>
-
             </div>
         </div>
     </div>
@@ -605,450 +571,468 @@
                 Our <span class="gradient-text-primary">Portfolio</span>
             </h2>
             <p class="text-lg sm:text-xl text-gray-600">
-                Websites and solutions we've created for fitness businesses
+                Websites and solutions we've created for fitness businesses in India
             </p>
         </div>
 
         <div class="flex justify-center mb-8 lg:mb-12" data-aos="fade-up">
-            <div class="inline-flex flex-col sm:flex-row bg-gray-100 rounded-lg p-1 w-full sm:w-auto">
+            <div class="inline-flex flex-col sm:flex-row bg-gray-100 rounded-lg p-1 w-full sm:w-auto" role="tablist">
                 <button class="tab-active px-4 py-2 sm:px-6 sm:py-3 rounded-md font-medium transition text-sm sm:text-base"
-                        onclick="filterPortfolio('all')">
+                        onclick="filterPortfolio('all')" role="tab" aria-selected="true" aria-controls="all-portfolio">
                     All
                 </button>
                 <button class="px-4 py-2 sm:px-6 sm:py-3 rounded-md font-medium text-gray-600 hover:text-primary transition text-sm sm:text-base"
-                        onclick="filterPortfolio('gym')">
+                        onclick="filterPortfolio('gym')" role="tab" aria-selected="false" aria-controls="gym-portfolio">
                     Gym Websites
                 </button>
                 <button class="px-4 py-2 sm:px-6 sm:py-3 rounded-md font-medium text-gray-600 hover:text-primary transition text-sm sm:text-base"
-                        onclick="filterPortfolio('studio')">
+                        onclick="filterPortfolio('studio')" role="tab" aria-selected="false" aria-controls="studio-portfolio">
                     Studios
                 </button>
                 <button class="px-4 py-2 sm:px-6 sm:py-3 rounded-md font-medium text-gray-600 hover:text-primary transition text-sm sm:text-base"
-                        onclick="filterPortfolio('trainer')">
+                        onclick="filterPortfolio('trainer')" role="tab" aria-selected="false" aria-controls="trainer-portfolio">
                     Trainers
                 </button>
             </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8" id="portfolio-grid">
-            <div class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
-                 data-aos-delay="100" data-category="gym">
+            <article class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
+                     data-aos-delay="100" data-category="gym">
                 <img src="~/images/gym.jpg"
-                     alt="PowerFit Gym" class="w-full h-48 sm:h-64 object-cover">
+                     alt="PowerFit Gym Website - Modern gym website with integrated management system in India" class="w-full h-48 sm:h-64 object-cover" loading="lazy" width="400" height="300">
                 <div class="portfolio-overlay">
                     <div class="text-center text-white p-4 lg:p-6">
                         <h3 class="text-xl lg:text-2xl font-bold mb-2">PowerFit Gym</h3>
                         <p class="mb-4 text-sm lg:text-base">
-                            Modern gym website with integrated management
-                            system
+                            Modern gym website with integrated management system for Indian fitness centers
                         </p>
                         <button class="btn-primary text-white px-3 py-2 rounded-lg font-semibold text-sm lg:text-base">
-                            <a asp-page="/PowerFitGym" class="text-primary" target="_blank">View Project</a>
+                            <a asp-page="/PowerFitGym" class="text-light" target="_blank">View Project</a>
                         </button>
                     </div>
                 </div>
-            </div>
-            <div class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
-                 data-aos-delay="200" data-category="studio">
+            </article>
+
+            <article class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
+                     data-aos-delay="200" data-category="studio">
                 <img src="~/images/yoga.jpg"
-                     alt="Yoga Bliss Studio" class="w-full h-64 object-cover">
+                     alt="Yoga Bliss Studio Website - Serene yoga studio website with class booking system in India" class="w-full h-64 object-cover" loading="lazy" width="400" height="300">
                 <div class="portfolio-overlay">
                     <div class="text-center text-white p-6">
                         <h3 class="text-2xl font-bold mb-2">Yoga Bliss Studio</h3>
-                        <p class="mb-4">Serene yoga studio website with class booking system</p>
+                        <p class="mb-4">Serene yoga studio website with class booking system for Indian market</p>
                         <button class="btn-primary text-white px-3 py-2 rounded-lg font-semibold">
-                            <a asp-page="/YogaBlissStudio" class="text-primary" target="_blank">View Project</a>
+                            <a asp-page="/YogaBlissStudio" class="text-light" target="_blank">View Project</a>
                         </button>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
-                 data-aos-delay="300" data-category="trainer">
-
+            <article class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
+                     data-aos-delay="300" data-category="trainer">
                 <img src="~/images/gym1.jpg"
-                     alt="Mike Johnson Fitness" class="w-full h-64 object-cover">
+                     alt="Mike Johnson Fitness Website - Personal trainer website with client management in India" class="w-full h-64 object-cover" loading="lazy" width="400" height="300">
                 <div class="portfolio-overlay">
                     <div class="text-center text-white p-6">
                         <h3 class="text-2xl font-bold mb-2">Mike Johnson Fitness</h3>
-                        <p class="mb-4">Personal trainer website with client management</p>
+                        <p class="mb-4">Personal trainer website with client management for Indian fitness professionals</p>
                         <button class="btn-primary text-white px-3 py-2 rounded-lg font-semibold">
-                            <a asp-page="/MikeJohnsonFitness" class="text-primary" target="_blank">View Project</a>
+                            <a asp-page="/MikeJohnsonFitness" class="text-light" target="_blank">View Project</a>
                         </button>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
-                 data-aos-delay="400" data-category="gym">
+            <article class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
+                     data-aos-delay="400" data-category="gym">
                 <img src="~/images/gym2.jpg"
-                     alt="IronCore Fitness" class="w-full h-64 object-cover">
+                     alt="IronCore Fitness Website - CrossFit gym with membership management in India" class="w-full h-64 object-cover" loading="lazy" width="400" height="300">
                 <div class="portfolio-overlay">
                     <div class="text-center text-white p-6">
                         <h3 class="text-2xl font-bold mb-2">IronCore Fitness</h3>
-                        <p class="mb-4">CrossFit gym with membership management</p>
+                        <p class="mb-4">CrossFit gym with membership management for Indian fitness businesses</p>
                         <button class="btn-primary text-white px-3 py-2 rounded-lg font-semibold">
-                            <a asp-page="/IronCoreFitness" class="text-primary" target="_blank">View Project</a>
+                            <a asp-page="/IronCoreFitness" class="text-light" target="_blank">View Project</a>
                         </button>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
-                 data-aos-delay="500" data-category="studio">
+            <article class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
+                     data-aos-delay="500" data-category="studio">
                 <img src="~/images/dance.png"
-                     alt="Dance Dynamics" class="w-full h-64 object-cover">
+                     alt="Dance Dynamics Website - Dance studio website with class schedules in India" class="w-full h-64 object-cover" loading="lazy" width="400" height="300">
                 <div class="portfolio-overlay">
                     <div class="text-center text-white p-6">
                         <h3 class="text-2xl font-bold mb-2">Dance Dynamics</h3>
-                        <p class="mb-4">Dance studio website with class schedules</p>
+                        <p class="mb-4">Dance studio website with class schedules for Indian dance studios</p>
                         <button class="btn-primary text-white px-3 py-2 rounded-lg font-semibold">
-                            <a asp-page="/DanceDynamics" class="text-primary" target="_blank">View Project</a>
+                            <a asp-page="/DanceDynamics" class="text-light" target="_blank">View Project</a>
                         </button>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
-                 data-aos-delay="600" data-category="trainer">
+            <article class="portfolio-item rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up"
+                     data-aos-delay="600" data-category="trainer">
                 <img src="~/images/sarah.jpg"
-                     alt="Sarah's Pilates" class="w-full h-64 object-cover">
-
+                     alt="Sarah's Pilates Website - Pilates instructor website with booking system in India" class="w-full h-64 object-cover" loading="lazy" width="400" height="300">
                 <div class="portfolio-overlay">
                     <div class="text-center text-white p-6">
                         <h3 class="text-2xl font-bold mb-2">Sarah's Pilates</h3>
-                        <p class="mb-4">Pilates instructor website with booking system</p>
+                        <p class="mb-4">Pilates instructor website with booking system for Indian fitness professionals</p>
                         <button class="btn-primary text-white px-3 py-2 rounded-lg font-semibold">
-                            <a asp-page="/SarahPilates" class="text-primary" target="_blank">View Project</a>
+                            <a asp-page="/SarahPilates" class="text-light" target="_blank">View Project</a>
                         </button>
                     </div>
                 </div>
-            </div>
-
-
+            </article>
         </div>
     </div>
 </section>
 
 <!-- Testimonials Section -->
 <section class="py-16 lg:py-24 bg-gray-50">
-    <!-- Copy content from original HTML -->
     <div class="container mx-auto px-4 sm:px-6">
         <div class="text-center max-w-3xl mx-auto mb-12 lg:mb-16" data-aos="fade-up">
             <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4 lg:mb-6">
                 Client <span class="gradient-text-primary">Testimonials</span>
             </h2>
             <p class="text-lg sm:text-xl text-gray-600">
-                Hear from fitness business owners who have transformed their operations
+                Hear from fitness business owners in India who have transformed their operations
             </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            <div class="bg-white p-6 lg:p-8 rounded-3xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+            <article class="bg-white p-6 lg:p-8 rounded-3xl shadow-lg" data-aos="fade-up" data-aos-delay="100" itemscope itemtype="https://schema.org/Review">
                 <div class="flex items-center mb-4 lg:mb-6">
-                    
+                    <img src="~/images/gym.jpg"
+                         alt="vipin soni"
+                         class="w-12 h-12 lg:w-16 lg:h-16 rounded-full mr-3 lg:mr-4 ring-4 ring-orange-100">
                     <div>
-                        <h4 class="font-bold text-base lg:text-lg">Sachin kumar</h4>
-                        <p class="text-gray-600 text-xs lg:text-sm">Owner, Red Rock gym</p>
+                        <h4 class="font-bold text-base lg:text-lg" itemprop="author">Sachin Kumar</h4>
+                        <p class="text-gray-600 text-xs lg:text-sm" itemprop="itemReviewed">Owner, Red Rock Gym</p>
                     </div>
                 </div>
-                <div class="flex mb-3 lg:mb-4">
-                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base"></i>
-                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base"></i>
-                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base"></i>
-                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base"></i>
-                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base"></i>
+                <div class="flex mb-3 lg:mb-4" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                    <meta itemprop="ratingValue" content="5" />
+                    <meta itemprop="bestRating" content="5" />
+                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base" aria-hidden="true"></i>
+                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base" aria-hidden="true"></i>
+                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base" aria-hidden="true"></i>
+                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base" aria-hidden="true"></i>
+                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base" aria-hidden="true"></i>
                 </div>
-                <p class="text-gray-700 italic text-sm lg:text-base">
-                    "Unimanage gym management software has revolutionized how we run our business. The time
-                    saved on
-                    administrative tasks allows us to focus more on our members."
+                <p class="text-gray-700 italic text-sm lg:text-base" itemprop="reviewBody">
+                    "Unimanage gym management software has revolutionized how we run our business in India. The time saved on administrative tasks allows us to focus more on our members."
                 </p>
-            </div>
-            <div class="bg-white p-6 lg:p-8 rounded-3xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                <div class="flex items-center mb-4 lg:mb-6">
-                    
-                    <div>
-                        <h4 class="font-bold text-base lg:text-lg">Ashwani Lamba</h4>
-                        <p class="text-gray-600 text-xs lg:text-sm">Owner, Cosmo Fitness</p>
-                    </div>
-                </div>
-                <div class="flex mb-3 lg:mb-4">
-                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base"></i>
-                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base"></i>
-                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base"></i>
-                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base"></i>
-                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base"></i>
-                </div>
-                <p class="text-gray-700 italic text-sm lg:text-base">
-                    “Unimanage has completely streamlined our gym operations. From scheduling to member
-                    management, everything is effortless. The support team is excellent.”
-                </p>
-            </div>
-            <div class="bg-white p-6 lg:p-8 rounded-3xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                <div class="flex items-center mb-4 lg:mb-6">
-                    
-                    <div>
-                        <h4 class="font-bold text-base lg:text-lg">vipin soni</h4>
-                        <p class="text-gray-600 text-xs lg:text-sm">Owner, The muscle Monsters Gym</p>
-                    </div>
-                </div>
-                <div class="flex mb-3 lg:mb-4">
-                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base"></i>
-                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base"></i>
-                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base"></i>
-                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base"></i>
-                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base"></i>
-                </div>
-                <p class="text-gray-700 italic text-sm lg:text-base">
-                    “Unimanage gym management software makes our daily operations simple and efficient. It saves
-                    time, reduces errors, and helps us keep everything organized in one place.”
-                </p>
-            </div>
+            </article>
 
+            <article class="bg-white p-6 lg:p-8 rounded-3xl shadow-lg" data-aos="fade-up" data-aos-delay="100" itemscope itemtype="https://schema.org/Review">
+                <div class="flex items-center mb-4 lg:mb-6">
+                    <img src="~/images/Alphatitan.jpeg"
+                         alt="vipin soni"
+                         class="w-12 h-12 lg:w-16 lg:h-16 rounded-full mr-3 lg:mr-4 ring-4 ring-orange-100">
+                    <div>
+                        <h4 class="font-bold text-base lg:text-lg" itemprop="author">Sagar Diwans</h4>
+                        <p class="text-gray-600 text-xs lg:text-sm" itemprop="itemReviewed">Owner, Alpha Titan Gym</p>
+                    </div>
+                </div>
+                <div class="flex mb-3 lg:mb-4" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                    <meta itemprop="ratingValue" content="5" />
+                    <meta itemprop="bestRating" content="5" />
+                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base" aria-hidden="true"></i>
+                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base" aria-hidden="true"></i>
+                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base" aria-hidden="true"></i>
+                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base" aria-hidden="true"></i>
+                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base" aria-hidden="true"></i>
+                </div>
+                <p class="text-gray-700 italic text-sm lg:text-base" itemprop="reviewBody">
+                    "Unimanage has completely streamlined our gym operations in India. From scheduling to member management, everything is effortless. The support team is excellent."
+                </p>
+            </article>
+
+            <article class="bg-white p-6 lg:p-8 rounded-3xl shadow-lg" data-aos="fade-up" data-aos-delay="100" itemscope itemtype="https://schema.org/Review">
+                <div class="flex items-center mb-4 lg:mb-6">
+                    <img src="~/images/gym2.jpg"
+                         alt="vipin soni"
+                         class="w-12 h-12 lg:w-16 lg:h-16 rounded-full mr-3 lg:mr-4 ring-4 ring-orange-100">
+                    <div>
+                        <h4 class="font-bold text-base lg:text-lg" itemprop="author">Ashwani Lamba</h4>
+                        <p class="text-gray-600 text-xs lg:text-sm" itemprop="itemReviewed">Owner, Cosmo Fitness</p>
+                    </div>
+                </div>
+                <div class="flex mb-3 lg:mb-4" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                    <meta itemprop="ratingValue" content="5" />
+                    <meta itemprop="bestRating" content="5" />
+                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base" aria-hidden="true"></i>
+                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base" aria-hidden="true"></i>
+                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base" aria-hidden="true"></i>
+                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base" aria-hidden="true"></i>
+                    <i class="fas fa-star text-yellow-400 text-sm lg:text-base" aria-hidden="true"></i>
+                </div>
+                <p class="text-gray-700 italic text-sm lg:text-base" itemprop="reviewBody">
+                    "Unimanage gym management software makes our daily operations simple and efficient in India. It saves time, reduces errors, and helps us keep everything organized in one place."
+                </p>
+            </article>
         </div>
     </div>
 </section>
 
 <!-- Pricing Section -->
 <section id="pricing" class="py-16 lg:py-24 bg-white">
-    <!-- Copy content from original HTML -->
     <div class="container mx-auto px-4 sm:px-6">
         <div class="text-center max-w-3xl mx-auto mb-12 lg:mb-16" data-aos="fade-up">
             <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4 lg:mb-6">
                 Simple <span class="gradient-text-primary">Pricing</span> Plans
             </h2>
             <p class="text-lg sm:text-xl text-gray-600">
-                Choose the perfect plan for your fitness business
+                Choose the perfect plan for your fitness business in India
             </p>
         </div>
 
         <div class="flex justify-center mb-8 lg:mb-12" data-aos="fade-up">
-            <div class="inline-flex flex-col sm:flex-row bg-gray-100 rounded-lg p-1 w-full sm:w-auto">
+            <div class="inline-flex flex-col sm:flex-row bg-gray-100 rounded-lg p-1 w-full sm:w-auto" role="tablist">
                 <button class="tab-active px-4 py-2 sm:px-6 sm:py-3 rounded-md font-medium transition text-sm sm:text-base"
-                        onclick="switchPricing('monthly')">
+                        onclick="switchPricing('monthly')" role="tab" aria-selected="true" aria-controls="monthly-pricing">
                     Monthly
                 </button>
                 <button class="px-4 py-2 sm:px-6 sm:py-3 rounded-md font-medium text-gray-600 hover:text-primary transition text-sm sm:text-base"
-                        onclick="switchPricing('annual')">
+                        onclick="switchPricing('annual')" role="tab" aria-selected="false" aria-controls="annual-pricing">
                     Annual (Save more)
                 </button>
             </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
-            <div class="bg-white p-6 lg:p-8 rounded-3xl shadow-xl border border-gray-100" data-aos="fade-up"
-                 data-aos-delay="100">
+            <article class="bg-white p-6 lg:p-8 rounded-3xl shadow-xl border border-gray-100" data-aos="fade-up"
+                     data-aos-delay="100" itemscope itemtype="https://schema.org/Offer">
+                <meta itemprop="priceCurrency" content="INR" />
                 <h3 class="text-xl lg:text-2xl font-bold mb-2">Starter</h3>
-                <p class="text-gray-600 mb-4 lg:mb-6 text-sm lg:text-base">For gyms & trainers</p>
+                <p class="text-gray-600 mb-4 lg:mb-6 text-sm lg:text-base">For gyms & trainers in India</p>
                 <div class="mb-4 lg:mb-6">
-                    <span class="text-4xl lg:text-5xl font-bold monthly-price">₹1499</span>
-                    <span class="text-4xl lg:text-5xl font-bold annual-price hidden">₹999</span>
+                    <span class="text-4xl lg:text-5xl font-bold monthly-price" itemprop="price">₹1499</span>
+                    <span class="text-4xl lg:text-5xl font-bold annual-price hidden" itemprop="price">₹999</span>
                     <span class="text-gray-600">/month</span>
                 </div>
                 <ul class="space-y-2 lg:space-y-3 mb-6 lg:mb-8 text-sm lg:text-base">
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>Unlimited members</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>All management features</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>Role-Based Access Control</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>Account Management</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>Multi-Branch Support</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>Payment & Invoice System</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>Unlimited Logins</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>Advanced Reports & Analytics</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>For Biometric integration (Extra Price)</span>
-                    <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
-                        <span>For custom module(Extra Price)</span>
                     </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>For custom module (Extra Price)</span>
                     </li>
                 </ul>
-                <button class="w-full bg-gray-100 text-gray-800 py-3 rounded-xl font-semibold hover:bg-gray-200 transition text-sm lg:text-base">
-                    <a href="#contact">Get Started</a>
-                </button>
-            </div>
-            <div class="bg-white p-6 lg:p-8 rounded-3xl shadow-xl border border-gray-100 relative"
-                 data-aos="fade-up" data-aos-delay="100">
+                <a href="https://wa.me/919205807124?text=Hello%2C%20I%27m%20interested%20in%20getting%20started%20with%20your%20Gym%20Management%20Software."
+                   target="_blank"
+                   rel="noopener nofollow">
+                    <button class="w-full bg-gray-100 text-gray-800 py-3 rounded-xl font-semibold hover:bg-gray-200 transition text-sm lg:text-base">
+                        Get Started
+                    </button>
+                </a>
+
+            </article>
+
+            <article class="bg-white p-6 lg:p-8 rounded-3xl shadow-xl border border-gray-100 relative"
+                     data-aos="fade-up" data-aos-delay="100" itemscope itemtype="https://schema.org/Offer">
+                <meta itemprop="priceCurrency" content="INR" />
                 <!-- Fixed MOST POPULAR badge with responsive styling -->
                 <div class="popular-badge">
                     MOST POPULAR
                 </div>
                 <h3 class="text-2xl font-bold mb-2">Standard</h3>
-                <p class="text-gray-600 mb-6">For growing fitness businesses</p>
+                <p class="text-gray-600 mb-6">For growing fitness businesses in India</p>
                 <div class="mb-6">
-                    <span class="text-5xl font-bold monthly-price">₹4999</span>
-                    <span class="text-5xl font-bold annual-price hidden">₹4599</span>
+                    <span class="text-5xl font-bold monthly-price" itemprop="price">₹4999</span>
+                    <span class="text-5xl font-bold annual-price hidden" itemprop="price">₹4599</span>
                     <span class="text-gray-600 mb-6">/3month</span>
                 </div>
                 <ul class="space-y-2 lg:space-y-3 mb-6 lg:mb-8 text-sm lg:text-base">
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>Unlimited members</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>All management features</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>Role-Based Access Control</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>Biometric Integration</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>Account Management</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>Multi-Branch Support</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>Payment & Invoice System</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>Attendance Tracking</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>Unlimited Logins</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>Advanced Reports & Analytics</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
-                        <span>For custom module(Extra Price)</span>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>For custom module (Extra Price)</span>
                     </li>
                 </ul>
-                <button class="w-full bg-gray-100 text-gray-800 py-3 rounded-xl font-semibold hover:bg-gray-200 transition text-sm lg:text-base">
-                    <a href="#contact">Get Started</a>
-                </button>
-            </div>
+                <a href="https://wa.me/919205807124?text=Hello%2C%20I%27m%20interested%20in%20getting%20started%20with%20your%20Gym%20Management%20Software."
+                   target="_blank"
+                   rel="noopener nofollow">
+                    <button class="w-full bg-gray-100 text-gray-800 py-3 rounded-xl font-semibold hover:bg-gray-200 transition text-sm lg:text-base">
+                        Get Started
+                    </button>
+                </a>
 
-            <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-100" data-aos="fade-up"
-                 data-aos-delay="300">
+            </article>
+
+            <article class="bg-white p-8 rounded-3xl shadow-xl border border-gray-100" data-aos="fade-up"
+                     data-aos-delay="300" itemscope itemtype="https://schema.org/Offer">
+                <meta itemprop="priceCurrency" content="INR" />
                 <h3 class="text-2xl font-bold mb-2">Premium</h3>
-                <p class="text-gray-600 mb-6">For large fitness chains</p>
+                <p class="text-gray-600 mb-6">For large fitness chains in India</p>
                 <div class="mb-6">
-                    <span class="text-5xl font-bold monthly-price">₹6999</span>
-                    <span class="text-5xl font-bold annual-price hidden">₹6599</span>
+                    <span class="text-5xl font-bold monthly-price" itemprop="price">₹6999</span>
+                    <span class="text-5xl font-bold annual-price hidden" itemprop="price">₹6599</span>
                     <span class="text-gray-600 mb-6">/6month</span>
                 </div>
                 <ul class="space-y-2 lg:space-y-3 mb-6 lg:mb-8 text-sm lg:text-base">
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>Unlimited members</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>All management features</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>Role-Based Access Control</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>Biometric Integration</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>Account Management</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>Multi-Branch Support</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>Payment & Invoice System</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>Attendance Tracking</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>Unlimited Logins</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>Advanced Reports & Analytics</span>
                     </li>
                     <li class="flex items-center">
-                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm"></i>
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
                         <span>All features + custom modules</span>
                     </li>
                 </ul>
-                <button class="w-full bg-gray-100 text-gray-800 py-3 rounded-xl font-semibold hover:bg-gray-200 transition text-sm lg:text-base">
-                    <a href="#contact">Get Started</a>
-                </button>
-            </div>
+                <a href="https://wa.me/919205807124?text=Hello%2C%20I%27m%20interested%20in%20getting%20started%20with%20your%20Gym%20Management%20Software."
+                   target="_blank"
+                   rel="noopener nofollow">
+                    <button class="w-full bg-gray-100 text-gray-800 py-3 rounded-xl font-semibold hover:bg-gray-200 transition text-sm lg:text-base">
+                        Get Started
+                    </button>
+                </a>
 
+            </article>
         </div>
     </div>
 </section>
 
 <!-- CTA Section -->
 <section class="py-16 lg:py-24 gradient-primary text-white relative overflow-hidden">
-    <!-- Copy content from original HTML -->
     <div class="absolute inset-0 bg-black opacity-10"></div>
     <div class="container mx-auto px-4 sm:px-6 relative z-10">
         <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
             <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4 lg:mb-6">
-                Ready to Transform Your Fitness Business?
+                Ready to Transform Your Fitness Business in India?
             </h2>
             <p class="text-lg sm:text-xl text-orange-100 mb-6 lg:mb-8 max-w-2xl mx-auto">
-                Join hundreds of fitness businesses that have grown with our management software and web
-                services
+                Join hundreds of fitness businesses across India that have grown with our management software and web services
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <button class="bg-white text-orange-600 px-6 py-3 lg:px-8 lg:py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition shadow-xl">
-                    <i class="fas fa-calendar-check mr-2"></i>
+                    <i class="fas fa-calendar-check mr-2" aria-hidden="true"></i>
                     <a href="#contact">Schedule a Demo</a>
                 </button>
                 <button class="bg-transparent border-2 border-white text-white px-6 py-3 lg:px-8 lg:py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-orange-600 transition">
-                    <i class="fas fa-phone-alt mr-2" style="transform: scaleX(-1)"></i>
+                    <i class="fas fa-phone-alt mr-2" style="transform: scaleX(-1)" aria-hidden="true"></i>
                     <a href="#contact">Contact Sales</a>
                 </button>
             </div>
         </div>
     </div>
-
 </section>
 
-<!-- contact -->
+<!-- Contact Section -->
 <section id="contact" class="py-16 lg:py-24 bg-gray-50">
     <div class="container mx-auto px-4 sm:px-6">
         <div class="text-center max-w-3xl mx-auto mb-12 lg:mb-16" data-aos="fade-up">
@@ -1068,20 +1052,20 @@
                     <div class="space-y-4 lg:space-y-6">
                         <div class="flex items-start">
                             <div class="w-10 h-10 lg:w-12 lg:h-12 gradient-primary rounded-xl flex items-center justify-center mr-3 lg:mr-4 flex-shrink-0">
-                                <i class="fas fa-map-marker-alt text-white text-sm lg:text-base"></i>
+                                <i class="fas fa-map-marker-alt text-white text-sm lg:text-base" aria-hidden="true"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold mb-1 text-sm lg:text-base">Our Location</h4>
                                 <p class="text-gray-600 text-sm">
                                     M-3, Gali No. 7, Mamura, Sector 66, Noida,
-                                    Uttar Pradesh, 201301
+                                    Uttar Pradesh, 201301, India
                                 </p>
                             </div>
                         </div>
+
                         <div class="flex items-start">
                             <div class="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
-                                <i class="fas fa-phone-alt text-white" style="transform: scaleX(-1);"></i>
-
+                                <i class="fas fa-phone-alt text-white" style="transform: scaleX(-1);" aria-hidden="true"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold mb-1">Phone Number</h4>
@@ -1091,7 +1075,7 @@
 
                         <div class="flex items-start">
                             <div class="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
-                                <i class="fas fa-envelope text-white"></i>
+                                <i class="fas fa-envelope text-white" aria-hidden="true"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold mb-1">Email Address</h4>
@@ -1101,44 +1085,38 @@
 
                         <div class="flex items-start">
                             <div class="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
-                                <i class="fas fa-clock text-white"></i>
+                                <i class="fas fa-clock text-white" aria-hidden="true"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold mb-1">Business Hours</h4>
                                 <p class="text-gray-600">Monday - Friday: 9am - 6pm<br>Saturday: 10am - 4pm</p>
                             </div>
                         </div>
-
                     </div>
 
                     <div class="mt-6 lg:mt-8">
                         <h4 class="font-bold mb-3 lg:mb-4 text-sm lg:text-base">Follow Us</h4>
                         <div class="flex space-x-3 lg:space-x-4">
                             <a href="https://www.facebook.com/share/1BV25U342s/"
-                               class="w-10 h-10 lg:w-12 lg:h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-orange-100 hover:text-orange-600 transition">
-                                <i class="fab fa-facebook-f text-sm lg:text-base"></i>
+                               class="w-10 h-10 lg:w-12 lg:h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-orange-100 hover:text-orange-600 transition" aria-label="Follow us on Facebook">
+                                <i class="fab fa-facebook-f text-sm lg:text-base" aria-hidden="true"></i>
                             </a>
                             <a href="https://x.com/unimanage?t=WsxmJYOTXxyNUqmaN1_4eg&s=09"
-                               class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-orange-100 hover:text-orange-600 transition">
-                                <i class="fab fa-twitter"></i>
+                               class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-orange-100 hover:text-orange-600 transition" aria-label="Follow us on Twitter">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
                             </a>
                             <a href="https://www.instagram.com/unimanage/?igsh=enB6ZmVpdDR5NTd0#"
-                               class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-orange-100 hover:text-orange-600 transition">
-                                <i class="fab fa-instagram"></i>
+                               class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-orange-100 hover:text-orange-600 transition" aria-label="Follow us on Instagram">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
                             </a>
-                            <a href="#"
-                               class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-orange-100 hover:text-orange-600 transition">
-                                <i class="fab fa-linkedin-in"></i>
+                            <a href="https://www.linkedin.com/company/unimanage-technologies"
+                               class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-orange-100 hover:text-orange-600 transition" aria-label="Follow us on LinkedIn">
+                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-
-            
         </div>
     </div>
 </section>
-
-
-

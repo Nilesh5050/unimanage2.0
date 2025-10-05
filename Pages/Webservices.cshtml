@@ -1,17 +1,92 @@
 ﻿@page
 @{
-    ViewData["Title"] = "Web Services";
+    ViewData["Title"] = "Web Development Services for Fitness Businesses - Unimanage India";
+    ViewData["Description"] = "Professional web development services for fitness businesses in India. Custom websites, booking systems, and digital solutions tailored for gyms and fitness centers.";
+    ViewData["Keywords"] = "Web Development Services India, Fitness Website Design, Gym Web Solutions, Booking Systems for Gyms, Fitness Business Websites";
+    ViewData["Canonical"] = "https://unimanage.tech/web-services";
+    ViewData["OgImage"] = "https://unimanage.tech/images/web-services-og.jpg";
     Layout = "_Layout";
 }
+
+<!-- Structured Data - Service Page -->
+<script type="application/ld+json">
+    {
+      "@@context": "https://schema.org",
+      "@@type": "Service",
+      "name": "Web Development Services for Fitness Businesses",
+      "description": "Professional web development services for fitness businesses in India including custom websites, booking systems, and digital solutions",
+      "url": "https://unimanage.tech/web-services",
+      "provider": {
+        "@@type": "Organization",
+        "name": "Unimanage Technologies",
+        "url": "https://unimanage.tech/"
+      },
+      "serviceType": [
+        "Custom Website Development",
+        "Booking Systems & Integrations",
+        "Custom Templates Design",
+        "Maintenance & Support"
+      ],
+      "areaServed": "India",
+      "image": "https://unimanage.tech/images/web-services-og.jpg"
+    }
+</script>
+
+<!-- Structured Data - Organization -->
+<script type="application/ld+json">
+    {
+      "@@context": "https://schema.org",
+      "@@type": "Organization",
+      "name": "Unimanage Technologies",
+      "url": "https://unimanage.tech/",
+      "logo": "https://unimanage.tech/images/logo.png",
+      "description": "Best gym management software and web development services in India",
+      "address": {
+        "@@type": "PostalAddress",
+        "streetAddress": "M-3, Gali No. 7, Mamura, Sector 66",
+        "addressLocality": "Noida",
+        "addressRegion": "Uttar Pradesh",
+        "postalCode": "201301",
+        "addressCountry": "IN"
+      },
+      "contactPoint": {
+        "@@type": "ContactPoint",
+        "telephone": "+919205807124",
+        "contactType": "customer service",
+        "email": "support@unimanage.tech"
+      },
+      "sameAs": [
+        "https://www.facebook.com/share/1BV25U342s/",
+        "https://x.com/unimanage?t=WsxmJYOTXxyNUqmaN1_4eg&s=09",
+        "https://www.instagram.com/unimanage/?igsh=enB6ZmVpdDR5NTd0#"
+      ]
+    }
+</script>
+
+<!-- Breadcrumb Navigation -->
+<nav aria-label="breadcrumb" class="bg-gray-100 py-2">
+    <div class="container mx-auto px-4 sm:px-6">
+        <ol class="breadcrumb flex items-center text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+                <meta itemprop="position" content="1" />
+            </li>
+            <li class="breadcrumb-item active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span itemprop="name">Web Services</span>
+                <meta itemprop="position" content="2" />
+            </li>
+        </ol>
+    </div>
+</nav>
+
 <section id="web-services" class="py-16 lg:py-24 bg-gray-50">
-    <!-- Copy content from original HTML -->
     <div class="container mx-auto px-4 sm:px-6">
         <div class="text-center max-w-3xl mx-auto mb-12 lg:mb-16" data-aos="fade-up">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4 lg:mb-6">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4 lg:mb-6">
                 Web Development <span class="gradient-text-secondary">Services</span>
-            </h2>
+            </h1>
             <p class="text-lg sm:text-xl text-gray-600">
-                Professional websites and web applications tailored to your fitness business
+                Professional websites and web applications tailored to your fitness business in India
             </p>
         </div>
 
@@ -19,36 +94,32 @@
             <div data-aos="fade-right">
                 <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
                     <img src="~/images/webservice.jpg"
-                         alt="Web Development" class="w-full h-48 sm:h-64 object-cover">
+                         alt="Web Development for Fitness Businesses in India" class="w-full h-48 sm:h-64 object-cover" loading="lazy" width="800" height="600">
                     <div class="p-6 lg:p-8">
-                        <h3 class="text-xl lg:text-2xl font-bold mb-3 lg:mb-4">Custom Website Development</h3>
+                        <h2 class="text-xl lg:text-2xl font-bold mb-3 lg:mb-4">Custom Website Development</h2>
                         <p class="text-gray-600 mb-4 lg:mb-6 text-sm lg:text-base">
-                            We create stunning, responsive websites that capture your brand's essence and
-                            convert
-                            visitors into members. Our designs are optimized for performance, SEO, and user
-                            experience.
+                            We create stunning, responsive websites that capture your brand's essence and convert visitors into members. Our designs are optimized for performance, SEO, and user experience for the Indian fitness market.
                         </p>
                         <ul class="space-y-2 lg:space-y-3 mb-4 lg:mb-6 text-sm lg:text-base">
                             <li class="flex items-start">
-                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2 lg:mr-3"></i>
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2 lg:mr-3" aria-hidden="true"></i>
                                 <span>Responsive design for all devices</span>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2 lg:mr-3"></i>
-                                <span>SEO optimized structure</span>
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2 lg:mr-3" aria-hidden="true"></i>
+                                <span>SEO optimized structure for Indian market</span>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2 lg:mr-3"></i>
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2 lg:mr-3" aria-hidden="true"></i>
                                 <span>Fast loading performance</span>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2 lg:mr-3"></i>
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2 lg:mr-3" aria-hidden="true"></i>
                                 <span>Content management integration</span>
                             </li>
                         </ul>
                         <button class="btn-secondary text-white px-4 py-2 lg:px-6 lg:py-3 rounded-lg font-semibold hover:shadow-lg w-full sm:w-auto">
                             <a href="#contact"> Order Now</a>
-
                         </button>
                     </div>
                 </div>
@@ -56,86 +127,85 @@
 
             <div data-aos="fade-left">
                 <div class="space-y-6 lg:space-y-8">
-                    <div class="bg-white p-4 lg:p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <article class="bg-white p-4 lg:p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer" itemscope itemtype="https://schema.org/Service">
                         <div class="flex items-center space-x-4">
                             <div class="w-12 h-12 lg:w-16 lg:h-16 flex-shrink-0 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-white text-xl lg:text-2xl">
-                                <i class="fas fa-laptop-code"></i>
+                                <i class="fas fa-laptop-code" aria-hidden="true"></i>
                             </div>
 
                             <div class="flex-1">
-                                <h3 class="text-base lg:text-lg font-semibold text-gray-900 mb-1">
+                                <h3 class="text-base lg:text-lg font-semibold text-gray-900 mb-1" itemprop="name">
                                     Trendy Websites, Tailored for You
                                 </h3>
-                                <p class="text-gray-500 text-xs lg:text-sm leading-relaxed">
-                                    We specialize in crafting cutting-edge websites that not only meet but
-                                    exceed
-                                    your unique requirements. By blending innovative design trends with
-                                    user-centric
-                                    functionality, we ensure your online presence stands out in today's
-                                    competitive
-                                    digital landscape.
+                                <p class="text-gray-500 text-xs lg:text-sm leading-relaxed" itemprop="description">
+                                    We specialize in crafting cutting-edge websites that not only meet but exceed your unique requirements. By blending innovative design trends with user-centric functionality, we ensure your online presence stands out in today's competitive digital landscape in India.
                                 </p>
                             </div>
                         </div>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl  shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    </article>
+
+                    <article class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer" itemscope itemtype="https://schema.org/Service">
                         <div class="flex items-center space-x-4">
-                            <!-- Icon Section -->
                             <div class="w-16 h-16 flex-shrink-0 rounded-lg bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center text-white text-2xl">
-                                <i class="fas fa-calendar-check"></i>
+                                <i class="fas fa-calendar-check" aria-hidden="true"></i>
                             </div>
 
-                            <!-- Content Section -->
                             <div class="flex-1">
-                                <h3 class="text-lg font-semibold text-gray-900 mb-1">
+                                <h3 class="text-lg font-semibold text-gray-900 mb-1" itemprop="name">
                                     Booking Systems & Integrations
                                 </h3>
-                                <p class="text-gray-500 text-sm leading-relaxed">
-                                    Custom booking solutions for classes, personal training, and facility
-                                    reservations.
-                                    We also provide seamless WhatsApp and email integrations to keep your
-                                    clients
-                                    connected.
+                                <p class="text-gray-500 text-sm leading-relaxed" itemprop="description">
+                                    Custom booking solutions for classes, personal training, and facility reservations. We also provide seamless WhatsApp and email integrations to keep your clients connected for your Indian fitness business.
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-
-                    <div class="bg-white p-8 rounded-3xl shadow-lg card-hover">
+                    <article class="bg-white p-8 rounded-3xl shadow-lg card-hover" itemscope itemtype="https://schema.org/Service">
                         <div class="flex items-start">
                             <div class="w-14 h-14 gradient-secondary rounded-xl flex items-center justify-center mr-5 flex-shrink-0">
-                                <i class="fas fa-layer-group text-white text-xl"></i>
+                                <i class="fas fa-layer-group text-white text-xl" aria-hidden="true"></i>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold mb-2">Custom Templates Design</h4>
-                                <p class="text-gray-600">
-                                    Design and customize professional templates for
-                                    websites,
-                                    emails, and documents to match your brand identity.
+                                <h4 class="text-xl font-bold mb-2" itemprop="name">Custom Templates Design</h4>
+                                <p class="text-gray-600" itemprop="description">
+                                    Design and customize professional templates for websites, emails, and documents to match your fitness brand identity in India.
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-
-                    <div class="bg-white p-8 rounded-3xl shadow-lg card-hover">
+                    <article class="bg-white p-8 rounded-3xl shadow-lg card-hover" itemscope itemtype="https://schema.org/Service">
                         <div class="flex items-start">
                             <div class="w-14 h-14 gradient-secondary rounded-xl flex items-center justify-center mr-5 flex-shrink-0">
-                                <i class="fas fa-tools text-white text-xl"></i>
+                                <i class="fas fa-tools text-white text-xl" aria-hidden="true"></i>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold mb-2">Maintenance & Support</h4>
-                                <p class="text-gray-600">
-                                    Ongoing website maintenance, security updates, and
-                                    technical support.
+                                <h4 class="text-xl font-bold mb-2" itemprop="name">Maintenance & Support</h4>
+                                <p class="text-gray-600" itemprop="description">
+                                    Ongoing website maintenance, security updates, and technical support for your fitness business in India.
                                 </p>
                             </div>
                         </div>
-                    </div>
-
+                    </article>
                 </div>
+            </div>
+        </div>
 
+
+        <!-- CTA Section -->
+        <div class="mt-16 text-center" data-aos="fade-up">
+            <h2 class="text-2xl lg:text-3xl font-bold mb-4">Ready to Elevate Your Online Presence?</h2>
+            <p class="text-gray-600 mb-6 max-w-2xl mx-auto">Let's create a stunning website that attracts more members to your fitness business in India.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/contact" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition">
+                    <i class="fas fa-phone-alt mr-2" style="transform: scaleX(-1);" aria-hidden="true"></i>
+                    Get a Free Quote
+                </a>
+                <a href="/portfolio" class="btn-secondary text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition">
+                    <i class="fas fa-images mr-2" aria-hidden="true"></i>
+                    View Our Portfolio
+                </a>
             </div>
         </div>
     </div>

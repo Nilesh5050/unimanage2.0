@@ -3,44 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewData["Title"] - Unimanage Technologies</title>
+
+    <!-- Title -->
+    <title>@ViewData["Title"] | Unimanage Technologies - Gym Management Software & Web Development</title>
+
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Unimanage Technologies provides Gym Management Software with biometric integration and SEO-optimized website development services tailored to your business needs.">
-    <meta name="keywords" content="Gym Management Software, Fitness Software, Biometric Integration, Gym Attendance, SEO Optimized Websites, Web Development, Unimanage Technologies">
+    <meta name="description" content="Unimanage Technologies offers Gym Management Software with biometric integration and custom SEO-friendly website development to help fitness businesses grow.">
+    <meta name="keywords" content="Gym Management Software, Fitness Management System, Biometric Gym Attendance, Gym Software India, Fitness Club Management, SEO Websites, Web Development, Unimanage Technologies">
     <meta name="author" content="Unimanage Technologies">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.unimanage.com/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Unimanage Technologies - Gym Management Software & Web Development">
-    <meta property="og:description" content="All-in-one Gym Management Software with biometric integration and SEO-optimized websites.">
-    <meta property="og:image" content="~/images/gymicon.png">
+    <meta property="og:description" content="All-in-one Gym Management Software with biometric integration and SEO-friendly websites.">
+    <meta property="og:image" content="https://www.unimanage.com/images/gymicon.png">
     <meta property="og:url" content="https://www.unimanage.com/">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Unimanage Technologies - Gym Management Software & Web Development">
-    <meta name="twitter:description" content="Manage your fitness business smarter with biometric-enabled Gym Management Software and SEO-focused websites.">
-    <meta name="twitter:image" content="~/images/gymicon.png">
+    <meta name="twitter:description" content="Manage your fitness business smarter with biometric-enabled Gym Management Software and SEO-friendly websites.">
+    <meta name="twitter:image" content="https://www.unimanage.com/images/gymicon.png">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="~/image/favicon1.ico" />
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="~/css/site.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+        {
+          "@@context": "https://schema.org",
+          "@@type": "Organization",
+          "name": "Unimanage Technologies",
+          "url": "https://www.unimanage.com",
+          "logo": "https://www.unimanage.com/images/gymicon.png",
+          "sameAs": [
+            "https://www.facebook.com/share/1BV25U342s/",
+            "https://x.com/unimanage",
+            "https://www.instagram.com/unimanage/",
+            "https://www.linkedin.com/company/unimanage"
+          ],
+          "description": "Unimanage Technologies provides Gym Management Software with biometric integration and SEO-friendly web development services."
+        }
+    </script>
 </head>
-<header class="fixed top-0 w-full z-50 bg-white shadow-sm">
-    <div class="container mx-auto px-4 sm:px-6 py-4">
-        <div class="flex justify-between items-center">
-            <div class="flex items-center space-x-0">
-                <div class="w-10 h-10 sm:w-12 sm:h-12">
-                    <img src="~/images/gymicon.png" alt="Unimanage Technologies">
-                </div>
+
+<body class="bg-white">
+    <header class="fixed top-0 w-full z-50 bg-white shadow-sm" role="banner">
+        <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a asp-page="/Index" class="flex items-center space-x-0" aria-label="Unimanage Technologies Home">
+                <img src="~/images/gymicon.png" alt="Unimanage Gym Software Logo" class="w-10 h-10 sm:w-12 sm:h-12">
                 <div>
                     <span class="text-xl sm:text-2xl font-bold gradient-text-primary">Unimanage</span>
                     <p class="text-xs text-gray-500 -mt-1">Technologies</p>
                 </div>
-            </div>
+            </a>
 
-            <nav class="hidden lg:flex items-center space-x-8">
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center space-x-8" role="navigation" aria-label="Main Navigation">
                 <a asp-page="/Index" class="text-gray-700 hover:text-primary font-medium transition">Home</a>
                 <a asp-page="/About" class="text-gray-700 hover:text-primary font-medium transition">About</a>
                 <a asp-page="/Products" class="text-gray-700 hover:text-primary font-medium transition">Gym Software</a>
@@ -48,110 +78,109 @@
                 <a asp-page="/Portfolio" class="text-gray-700 hover:text-primary font-medium transition">Portfolio</a>
             </nav>
 
+            <!-- CTA + Mobile Menu -->
             <div class="flex items-center space-x-4">
-                <button class="hidden lg:block btn-primary text-white px-4 sm:px-6 py-2 rounded-lg font-semibold hover:shadow-lg">
-                    <a asp-page="/contact">Contact</a>
-                </button>
-                <a id="openMenu" class="lg:hidden text-gray">
+                <a asp-page="/Contact" class="hidden lg:block btn-primary text-white px-4 sm:px-6 py-2 rounded-lg font-semibold hover:shadow-lg">Contact</a>
+                <button id="openMenu" class="lg:hidden text-gray" aria-label="Open Menu">
                     <i class="fas fa-bars text-xl"></i>
-                </a>
+                </button>
             </div>
         </div>
-    </div>
-    <!-- Mobile Menu -->
-    <div class="overlay" id="overlay"></div>
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="flex justify-between items-center mb-8">
-            <button id="closeMenu" class="text-gray-700">
-                <i class="fas fa-times text-xl"></i>
-            </button>
-        </div>
-        <nav class="flex flex-col space-y-6">
-            <a href="#home" class="text-gray-700 hover:text-primary font-medium transition text-lg py-2 border-b border-gray-100">Home</a>
-            <a href="#about" class="text-gray-700 hover:text-primary font-medium transition text-lg py-2 border-b border-gray-100">About</a>
-            <a href="#gym-software" class="text-gray-700 hover:text-primary font-medium transition text-lg py-2 border-b border-gray-100">Gym Software</a>
-            <a href="#web-services" class="text-gray-700 hover:text-primary font-medium transition text-lg py-2 border-b border-gray-100">Web Services</a>
-            <a href="#portfolio" class="text-gray-700 hover:text-primary font-medium transition text-lg py-2 border-b border-gray-100">Portfolio</a>
-            <a href="#contact" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold text-center">Contact</a>
-        </nav>
-    </div>
-</header>
 
-<body class="bg-white">
-    <div style="overflow-x: hidden;">
+        <!-- Mobile Menu -->
+        <div class="overlay" id="overlay"></div>
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="flex justify-between items-center mb-8">
+                <button id="closeMenu" class="text-gray-700" aria-label="Close Menu">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-6" aria-label="Mobile Navigation">
+                <a asp-page="/Index" class="text-lg py-2 border-b border-gray-100">Home</a>
+                <a asp-page="/About" class="text-lg py-2 border-b border-gray-100">About</a>
+                <a asp-page="/Products" class="text-lg py-2 border-b border-gray-100">Gym Software</a>
+                <a asp-page="/Webservices" class="text-lg py-2 border-b border-gray-100">Web Services</a>
+                <a asp-page="/Portfolio" class="text-lg py-2 border-b border-gray-100">Portfolio</a>
+                <a asp-page="/Contact" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold text-center">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main style="overflow-x: hidden;" role="main">
         @RenderBody()
-    </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 lg:py-16" role="contentinfo">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-8 lg:mb-12">
+                <!-- About -->
+                <div>
+                    <a asp-page="/Index" class="flex items-center space-x-0 mb-4">
+                        <img src="~/images/gymicon.png" alt="Unimanage Technologies Logo" class="w-10 h-10 lg:w-12 lg:h-12">
+                        <div>
+                            <span class="text-xl lg:text-2xl font-bold text-white">Unimanage</span>
+                            <p class="text-xs text-gray-400 -mt-1">Technologies</p>
+                        </div>
+                    </a>
+                    <p class="mb-4 text-gray-400 text-sm">Empowering fitness businesses with innovative management software and professional web services.</p>
+                    <div class="flex space-x-3">
+                        <a href="https://www.facebook.com/share/1BV25U342s/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/unimanage" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/unimanage/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/unimanage-technologies" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Products</h4>
+                    <ul>
+                        <li><a asp-page="/Products">Gym Management Software</a></li>
+                        <li><a asp-page="/Webservices">Web Development</a></li>
+                        <li><a asp-page="/Webservices">Integrations</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Company</h4>
+                    <ul>
+                        <li><a asp-page="/About">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Support</h4>
+                    <ul>
+                        <li><a asp-page="/Contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">&copy; 2025 Unimanage Technologies. All rights reserved.</p>
+                <div class="flex items-center space-x-4">
+                    <a asp-page="/Privacy">Privacy Policy</a>
+                    <a asp-page="/Terms">Terms of Use</a>
+                    <a asp-page="/Security">Security Practices</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919205807124?text=Hello%2C%20I%27m%20interested%20in%20your%20Gym%20Management%20Software."
+       target="_blank"
+       rel="noopener nofollow"
+       class="whatsapp-float"
+       aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp whatsapp-icon"></i>
+    </a>
+
+
+    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="~/js/site.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
-<footer class="bg-gray-900 text-gray-300 py-12 lg:py-16">
-    <div class="container mx-auto px-4 sm:px-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-8 lg:mb-12">
-            <div data-aos="fade-up">
-                <div class="flex items-center space-x-0 mb-4 lg:mb-6">
-                    <div class="w-10 h-10 lg:w-12 lg:h-12">
-                        <img src="~/images/gymicon.png" alt="Unimanage Technologies">
-                    </div>
-                    <div>
-                        <span class="text-xl lg:text-2xl font-bold text-white">Unimanage</span>
-                        <p class="text-xs text-gray-400 -mt-1">Technologies</p>
-                    </div>
-                </div>
-                <p class="mb-4 lg:mb-6 text-gray-400 text-sm lg:text-base">
-                    Empowering fitness businesses with innovative management software and professional web development services.
-                </p>
-                <div class="flex space-x-3 lg:space-x-4">
-                    <a href="https://www.facebook.com/share/1BV25U342s/" class="w-8 h-8 lg:w-10 lg:h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-600 transition">
-                        <i class="fab fa-facebook-f text-sm"></i>
-                    </a>
-                    <a href="https://x.com/unimanage?t=WsxmJYOTXxyNUqmaN1_4eg&s=09" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-600 transition">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="https://www.instagram.com/unimanage/?igsh=enB6ZmVpdDR5NTd0#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-600 transition">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-600 transition">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="100">
-                <h4 class="text-white font-semibold mb-6">Products</h4>
-                <ul class="space-y-3">
-                    <li><a href="/Products" class="hover:text-white transition">Gym Management Software</a></li>
-                    <li><a href="/Webservices" class="hover:text-white transition">Web Development</a></li>
-                    <li><a href="/Webservices" class="hover:text-white transition">Integrations</a></li>
-                </ul>
-            </div>
-
-            <div data-aos="fade-up" data-aos-delay="200">
-                <h4 class="text-white font-semibold mb-6">Company</h4>
-                <ul class="space-y-3">
-                    <li><a href="/About" class="hover:text-white transition">About Us</a></li>
-                </ul>
-            </div>
-
-            <div data-aos="fade-up" data-aos-delay="300">
-                <h4 class="text-white font-semibold mb-6">Support</h4>
-                <ul class="space-y-3">
-                    <li><a href="/contact" class="hover:text-white transition">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="border-t border-gray-800 pt-6 lg:pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p class="text-gray-400 text-sm lg:text-base mb-4 md:mb-0">&copy; 2023 Unimanage Technologies. All rights reserved.</p>
-            <div class="flex items-center space-x-4 lg:space-x-6">
-                <a href="#" class="text-gray-400 hover:text-white transition text-sm lg:text-base">Privacy Policy</a>
-                <a href="#" class="text-gray-400 hover:text-white transition text-sm lg:text-base">Terms of Service</a>
-                <a href="#" class="text-gray-400 hover:text-white transition text-sm lg:text-base">Cookie Policy</a>
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/919205807124" target="_blank" class="whatsapp-float">
-    <i class="fab fa-whatsapp whatsapp-icon"></i>
-</a>
 </html>

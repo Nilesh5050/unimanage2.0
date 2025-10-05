@@ -1,323 +1,297 @@
 ﻿@page
 @{
-    ViewData["Title"] = "Product";
+    ViewData["Title"] = "Gym Management Software Features - Unimanage India";
+    ViewData["Description"] = "Explore comprehensive gym management software features by Unimanage. Member management, billing, scheduling, analytics and more for fitness businesses in India.";
+    ViewData["Keywords"] = "Gym Management Software Features, Fitness Business Solutions, Gym Software India, Member Management System, Gym Billing Software";
+    ViewData["Canonical"] = "https://unimanage.tech/product";
+    ViewData["OgImage"] = "https://unimanage.tech/images/product-og.jpg";
     Layout = "_Layout";
 }
+
+<!-- Structured Data - Product Page -->
+<script type="application/ld+json">
+    {
+      "@@context": "https://schema.org",
+      "@@type": "Product",
+      "name": "Unimanage Gym Management Software",
+      "description": "Comprehensive gym management software for fitness businesses in India",
+      "category": "SoftwareApplication",
+      "url": "https://unimanage.tech/product",
+      "image": "https://unimanage.tech/images/product-og.jpg",
+      "brand": {
+        "@@type": "Brand",
+        "name": "Unimanage Technologies"
+      },
+      "offers": {
+        "@@type": "Offer",
+        "priceCurrency": "INR",
+        "price": "1499",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@@type": "Organization",
+          "name": "Unimanage Technologies"
+        }
+      },
+      "featureList": [
+        "Member Management",
+        "Revenue Dashboard",
+        "Billing & Payments",
+        "Trainer Scheduling",
+        "Analytics & Reporting",
+        "Maintenance Logs",
+        "Branch Selection",
+        "Inventory & Stock",
+        "Accounts Tracking",
+        "Templates & Notifications",
+        "Lead Management",
+        "Birthday Wishes"
+      ]
+    }
+</script>
+
+<!-- Structured Data - Software Application -->
+<script type="application/ld+json">
+    {
+      "@@context": "https://schema.org",
+      "@@type": "SoftwareApplication",
+      "name": "Unimanage Gym Management Software",
+      "operatingSystem": "Web, iOS, Android",
+      "applicationCategory": "BusinessApplication",
+      "aggregateRating": {
+        "@@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "500"
+      },
+      "offers": {
+        "@@type": "Offer",
+        "price": "1499",
+        "priceCurrency": "INR"
+      }
+    }
+</script>
+
+<!-- Breadcrumb Navigation -->
+<nav aria-label="breadcrumb" class="bg-gray-100 py-2">
+    <div class="container mx-auto px-4 sm:px-6">
+        <ol class="breadcrumb flex items-center text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+                <meta itemprop="position" content="1" />
+            </li>
+            <li class="breadcrumb-item active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span itemprop="name">Product Features</span>
+                <meta itemprop="position" content="2" />
+            </li>
+        </ol>
+    </div>
+</nav>
+
 <section id="gym-software" class="py-16 lg:py-24 bg-white">
     <div class="container mx-auto px-4 sm:px-6">
         <div class="text-center max-w-3xl mx-auto mb-12 lg:mb-16" data-aos="fade-up">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4 lg:mb-6">
-                Gym Management <span class="gradient-text-primary">Software</span>
-            </h2>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4 lg:mb-6">
+                Gym Management <span class="gradient-text-primary">Software</span> Features
+            </h1>
             <p class="text-lg sm:text-xl text-gray-600">
-                All-in-one solution to streamline your fitness business operations
+                All-in-one solution to streamline your fitness business operations in India
             </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             <!-- Feature Cards -->
-            <div class="feature-card bg-white p-6 lg:p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="100">
+            <article class="feature-card bg-white p-6 lg:p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="100" itemscope itemtype="https://schema.org/SoftwareFeature">
                 <div class="feature-icon w-12 h-12 lg:w-16 lg:h-16 gradient-primary rounded-2xl flex items-center justify-center mb-4 lg:mb-6 shadow-lg">
-                    <i class="fas fa-users text-white text-xl lg:text-2xl"></i>
+                    <i class="fas fa-users text-white text-xl lg:text-2xl" aria-hidden="true"></i>
                 </div>
-                <h3 class="text-xl lg:text-2xl font-semibold mb-3 lg:mb-4">Member Management</h3>
-                <p class="text-gray-600 mb-4 lg:mb-6 text-sm lg:text-base">Effortlessly manage member profiles, attendance, and communication with our intuitive member portal.</p>
+                <h2 class="text-xl lg:text-2xl font-semibold mb-3 lg:mb-4" itemprop="name">Member Management</h2>
+                <p class="text-gray-600 mb-4 lg:mb-6 text-sm lg:text-base" itemprop="description">Effortlessly manage member profiles, attendance, and communication with our intuitive member portal for Indian fitness centers.</p>
                 <ul class="space-y-2 text-sm text-gray-600">
-                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Member profiles & photos</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Attendance tracking</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Automated reminders</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Member profiles & photos</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Attendance tracking</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Automated reminders</li>
                 </ul>
-            </div>
-            <div class="feature-card bg-white p-6 lg:p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
-                 data-aos-delay="200">
+            </article>
+
+            <article class="feature-card bg-white p-6 lg:p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="200" itemscope itemtype="https://schema.org/SoftwareFeature">
                 <div class="feature-icon w-12 h-12 lg:w-16 lg:h-16 gradient-primary rounded-2xl flex items-center justify-center mb-4 lg:mb-6 shadow-lg">
-                    <i class="fas fa-chart-line text-white text-xl lg:text-2xl"></i>
+                    <i class="fas fa-chart-line text-white text-xl lg:text-2xl" aria-hidden="true"></i>
                 </div>
-                <h3 class="text-xl lg:text-2xl font-semibold mb-3 lg:mb-4">Revenue Dashboard</h3>
-                <p class="text-gray-600 mb-4 lg:mb-6 text-sm lg:text-base">
-                    Track earnings, monitor growth
-                    trends, and get insights into your
-                    business performance in real-time.
+                <h2 class="text-xl lg:text-2xl font-semibold mb-3 lg:mb-4" itemprop="name">Revenue Dashboard</h2>
+                <p class="text-gray-600 mb-4 lg:mb-6 text-sm lg:text-base" itemprop="description">
+                    Track earnings, monitor growth trends, and get insights into your business performance in real-time for Indian gyms.
                 </p>
                 <ul class="space-y-2 text-sm text-gray-600">
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Real-time
-                        revenue tracking
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Monthly
-                        &
-                        yearly reports
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Visual
-                        charts & analytics
-                    </li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Real-time revenue tracking</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Monthly & yearly reports</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Visual charts & analytics</li>
                 </ul>
-            </div>
-            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
-                 data-aos-delay="300">
-                <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <i class="fas fa-credit-card text-white text-2xl"></i>
-                </div>
-                <h3 class="text-2xl font-semibold mb-4">Billing & Payments</h3>
-                <p class="text-gray-600 mb-6">
-                    Automate billing, process payments, and manage memberships with
-                    our
-                    secure payment system.
-                </p>
-                <ul class="space-y-2 text-sm text-gray-600">
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Recurring
-                        billing
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Payment
-                        processing
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Financial
-                        reports
-                    </li>
-                </ul>
-            </div>
-            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
-                 data-aos-delay="400">
-                <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <i class="fas fa-calendar-check text-white text-2xl"></i>
-                </div>
-                <h3 class="text-2xl font-semibold mb-4">Trainer Scheduling</h3>
-                <p class="text-gray-600 mb-6">
-                    Schedule personal training sessions and group classes with ease.
-                </p>
-                <ul class="space-y-2 text-sm text-gray-600">
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Personal
-                        training sessions
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Group
-                        class
-                        scheduling
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Trainer
-                        availability management
-                    </li>
-                </ul>
-            </div>
+            </article>
 
-
-            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
-                 data-aos-delay="500">
+            <article class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="300" itemscope itemtype="https://schema.org/SoftwareFeature">
                 <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <i class="fas fa-chart-bar text-white text-2xl"></i>
+                    <i class="fas fa-credit-card text-white text-2xl" aria-hidden="true"></i>
                 </div>
-                <h3 class="text-2xl font-semibold mb-4">Analytics & Reporting</h3>
-                <p class="text-gray-600 mb-6">
-                    Gain valuable insights into your business performance with
-                    comprehensive analytics and reports.
+                <h2 class="text-2xl font-semibold mb-4" itemprop="name">Billing & Payments</h2>
+                <p class="text-gray-600 mb-6" itemprop="description">
+                    Automate billing, process payments, and manage memberships with our secure payment system for Indian fitness businesses.
                 </p>
                 <ul class="space-y-2 text-sm text-gray-600">
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Revenue
-                        tracking
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Member
-                        retention
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Custom
-                        reports
-                    </li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Recurring billing</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Payment processing</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Financial reports</li>
                 </ul>
-            </div>
+            </article>
 
-            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
-                 data-aos-delay="600">
+            <article class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="400" itemscope itemtype="https://schema.org/SoftwareFeature">
                 <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <i class="fas fa-tools text-white text-2xl"></i>
+                    <i class="fas fa-calendar-check text-white text-2xl" aria-hidden="true"></i>
                 </div>
-                <h3 class="text-2xl font-semibold mb-4">Maintenance Logs</h3>
-                <p class="text-gray-600 mb-6">
-                    Track equipment repairs, costs, and replacements across locations.
+                <h2 class="text-2xl font-semibold mb-4" itemprop="name">Trainer Scheduling</h2>
+                <p class="text-gray-600 mb-6" itemprop="description">
+                    Schedule personal training sessions and group classes with ease for your Indian fitness business.
                 </p>
                 <ul class="space-y-2 text-sm text-gray-600">
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Repair
-                        history tracking
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Maintenance
-                        cost management
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Equipment
-                        replacement records
-                    </li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Personal training sessions</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Group class scheduling</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Trainer availability management</li>
                 </ul>
-            </div>
+            </article>
 
-            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
-                 data-aos-delay="600">
+            <article class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="500" itemscope itemtype="https://schema.org/SoftwareFeature">
                 <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <i class="fas fa-code-branch text-white text-2xl"></i>
+                    <i class="fas fa-chart-bar text-white text-2xl" aria-hidden="true"></i>
                 </div>
-                <h3 class="text-2xl font-semibold mb-4">Branch Selection</h3>
-                <p class="text-gray-600 mb-6">Select branches and track branch-wise metrics in one click.</p>
+                <h2 class="text-2xl font-semibold mb-4" itemprop="name">Analytics & Reporting</h2>
+                <p class="text-gray-600 mb-6" itemprop="description">
+                    Gain valuable insights into your business performance with comprehensive analytics and reports for Indian fitness centers.
+                </p>
                 <ul class="space-y-2 text-sm text-gray-600">
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Quick
-                        branch switching
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Branch-wise
-                        performance metrics
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Multi-location management
-                    </li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Revenue tracking</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Member retention</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Custom reports</li>
                 </ul>
-            </div>
+            </article>
+
+            <article class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="600" itemscope itemtype="https://schema.org/SoftwareFeature">
+                <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                    <i class="fas fa-tools text-white text-2xl" aria-hidden="true"></i>
+                </div>
+                <h2 class="text-2xl font-semibold mb-4" itemprop="name">Maintenance Logs</h2>
+                <p class="text-gray-600 mb-6" itemprop="description">
+                    Track equipment repairs, costs, and replacements across locations for your Indian gym business.
+                </p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Repair history tracking</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Maintenance cost management</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Equipment replacement records</li>
+                </ul>
+            </article>
+
+            <article class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="600" itemscope itemtype="https://schema.org/SoftwareFeature">
+                <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                    <i class="fas fa-code-branch text-white text-2xl" aria-hidden="true"></i>
+                </div>
+                <h2 class="text-2xl font-semibold mb-4" itemprop="name">Branch Selection</h2>
+                <p class="text-gray-600 mb-6" itemprop="description">Select branches and track branch-wise metrics in one click for multi-location gyms in India.</p>
+                <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Quick branch switching</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Branch-wise performance metrics</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Multi-location management</li>
+                </ul>
+            </article>
+
             <!-- Inventory & Stock -->
-            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
-                 data-aos-delay="200">
+            <article class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="200" itemscope itemtype="https://schema.org/SoftwareFeature">
                 <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <i class="fas fa-boxes text-white text-2xl"></i>
+                    <i class="fas fa-boxes text-white text-2xl" aria-hidden="true"></i>
                 </div>
-                <h3 class="text-2xl font-semibold mb-4">Inventory & Stock</h3>
-                <p class="text-gray-600 mb-6">Manage equipment categories, vendors, and inventory with ease.</p>
+                <h2 class="text-2xl font-semibold mb-4" itemprop="name">Inventory & Stock</h2>
+                <p class="text-gray-600 mb-6" itemprop="description">Manage equipment categories, vendors, and inventory with ease for your Indian fitness business.</p>
                 <ul class="space-y-2 text-sm text-gray-600">
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Equipment &
-                        category management
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Vendor
-                        tracking
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Stock
-                        level
-                        monitoring
-                    </li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Equipment & category management</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Vendor tracking</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Stock level monitoring</li>
                 </ul>
-            </div>
+            </article>
 
             <!-- Accounts Tracking -->
-            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
-                 data-aos-delay="400">
+            <article class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="400" itemscope itemtype="https://schema.org/SoftwareFeature">
                 <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <i class="fas fa-file-invoice-dollar text-white text-2xl"></i>
+                    <i class="fas fa-file-invoice-dollar text-white text-2xl" aria-hidden="true"></i>
                 </div>
-                <h3 class="text-2xl font-semibold mb-4">Accounts Tracking</h3>
-                <p class="text-gray-600 mb-6">
-                    Handle incomes, expenses, and export reports in a single
-                    dashboard.
+                <h2 class="text-2xl font-semibold mb-4" itemprop="name">Accounts Tracking</h2>
+                <p class="text-gray-600 mb-6" itemprop="description">
+                    Handle incomes, expenses, and export reports in a single dashboard for your Indian gym business.
                 </p>
                 <ul class="space-y-2 text-sm text-gray-600">
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Income
-                        &
-                        expense tracking
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Automated
-                        financial reports
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Export
-                        in
-                        multiple formats
-                    </li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Income & expense tracking</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Automated financial reports</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Export in multiple formats</li>
                 </ul>
-            </div>
+            </article>
 
             <!-- Templates & Notifications -->
-            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
-                 data-aos-delay="600">
+            <article class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="600" itemscope itemtype="https://schema.org/SoftwareFeature">
                 <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <i class="fas fa-bell text-white text-2xl"></i>
+                    <i class="fas fa-bell text-white text-2xl" aria-hidden="true"></i>
                 </div>
-                <h3 class="text-2xl font-semibold mb-4">Templates & Notifications</h3>
-                <p class="text-gray-600 mb-6">
-                    Customize WhatsApp and email templates to alert your members
-                    instantly.
+                <h2 class="text-2xl font-semibold mb-4" itemprop="name">Templates & Notifications</h2>
+                <p class="text-gray-600 mb-6" itemprop="description">
+                    Customize WhatsApp and email templates to alert your members instantly for your Indian fitness business.
                 </p>
                 <ul class="space-y-2 text-sm text-gray-600">
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Custom
-                        WhatsApp templates
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Email
-                        notification setup
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Automated
-                        alerts & reminders
-                    </li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Custom WhatsApp templates</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Email notification setup</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Automated alerts & reminders</li>
                 </ul>
-            </div>
+            </article>
 
             <!-- Lead Management -->
-            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
-                 data-aos-delay="200">
+            <article class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="200" itemscope itemtype="https://schema.org/SoftwareFeature">
                 <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <i class="fas fa-user-plus text-white text-2xl"></i>
+                    <i class="fas fa-user-plus text-white text-2xl" aria-hidden="true"></i>
                 </div>
-                <h3 class="text-2xl font-semibold mb-4">Lead Management</h3>
-                <p class="text-gray-600 mb-6">
-                    Capture, track, and convert leads seamlessly with built-in CRM
-                    tools.
+                <h2 class="text-2xl font-semibold mb-4" itemprop="name">Lead Management</h2>
+                <p class="text-gray-600 mb-6" itemprop="description">
+                    Capture, track, and convert leads seamlessly with built-in CRM tools for your Indian fitness business.
                 </p>
                 <ul class="space-y-2 text-sm text-gray-600">
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Lead
-                        capture & tracking
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Status
-                        &
-                        priority updates
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Follow-up
-                        reminders
-                    </li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Lead capture & tracking</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Status & priority updates</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Follow-up reminders</li>
                 </ul>
-            </div>
+            </article>
 
             <!-- Birthday Wishes -->
-            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up"
-                 data-aos-delay="400">
+            <article class="feature-card bg-white p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="400" itemscope itemtype="https://schema.org/SoftwareFeature">
                 <div class="feature-icon w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <i class="fas fa-birthday-cake text-white text-2xl"></i>
+                    <i class="fas fa-birthday-cake text-white text-2xl" aria-hidden="true"></i>
                 </div>
-                <h3 class="text-2xl font-semibold mb-4">Birthday Wishes</h3>
-                <p class="text-gray-600 mb-6">
-                    Send personalized birthday greetings and strengthen member
-                    relationships.
+                <h2 class="text-2xl font-semibold mb-4" itemprop="name">Birthday Wishes</h2>
+                <p class="text-gray-600 mb-6" itemprop="description">
+                    Send personalized birthday greetings and strengthen member relationships for your Indian gym business.
                 </p>
                 <ul class="space-y-2 text-sm text-gray-600">
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Automated
-                        birthday reminders
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Custom
-                        WhatsApp & email messages
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-2"></i>Boost
-                        member engagement
-                    </li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Automated birthday reminders</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Custom WhatsApp & email messages</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2" aria-hidden="true"></i>Boost member engagement</li>
                 </ul>
-            </div>
-
-            <!-- Add more feature cards from your original HTML -->
-            <!-- ... (Copy all feature cards from original HTML) ... -->
+            </article>
         </div>
+        <div class="mt-16 text-center" data-aos="fade-up">
+            <h2 class="text-2xl lg:text-3xl font-bold mb-4">Ready to Transform Your Gym Business in India?</h2>
+            <p class="text-gray-600 mb-6 max-w-2xl mx-auto">Join hundreds of fitness businesses across India that have grown with our comprehensive gym management software.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/contact" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition">
+                    <i class="fas fa-phone-alt mr-2" style="transform: scaleX(-1)" aria-hidden="true"></i>
+                    Request a Demo
+                </a>
+                <a href="/contact" class="btn-secondary text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition">
+                    <i class="fas fa-tag mr-2" aria-hidden="true"></i>
+                    View Pricing Plans
+                </a>
+            </div>
+        </div>
+        
     </div>
 </section>
