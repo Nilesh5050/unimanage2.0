@@ -1,0 +1,411 @@
+﻿@page
+@{
+    ViewData["Title"] = "Pricing Plans - Gym Management Software in India | Unimanage";
+    ViewData["Description"] = "Explore affordable pricing plans for Unimanage Gym Management Software in India. Choose from Starter, Standard, and Premium plans tailored for fitness businesses of all sizes.";
+    ViewData["Keywords"] = "Gym Software Pricing, Fitness Management Cost, Gym Software Plans India, Gym Management Subscription, Fitness Business Pricing";
+    ViewData["Canonical"] = "https://unimanage.tech/pricing";
+    ViewData["OgImage"] = "https://unimanage.tech/images/pricing-og.jpg";
+    Layout = "_Layout";
+}
+
+<!-- Structured Data - Product -->
+<script type="application/ld+json">
+    {
+      "@@context": "https://schema.org",
+      "@@type": "Product",
+      "name": "Unimanage Gym Management Software",
+      "description": "Comprehensive gym management software for fitness businesses in India",
+      "category": "SoftwareApplication",
+      "url": "https://unimanage.tech/pricing",
+      "image": "https://unimanage.tech/images/pricing-og.jpg",
+      "brand": {
+        "@@type": "Brand",
+        "name": "Unimanage Technologies"
+      },
+      "offers": [
+        {
+          "@@type": "Offer",
+          "name": "Starter Plan",
+          "description": "For gyms & trainers in India",
+          "priceCurrency": "INR",
+          "price": "1499",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@@type": "Organization",
+            "name": "Unimanage Technologies"
+          }
+        },
+        {
+          "@@type": "Offer",
+          "name": "Standard Plan",
+          "description": "For growing fitness businesses in India",
+          "priceCurrency": "INR",
+          "price": "4999",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@@type": "Organization",
+            "name": "Unimanage Technologies"
+          }
+        },
+        {
+          "@@type": "Offer",
+          "name": "Premium Plan",
+          "description": "For large fitness chains in India",
+          "priceCurrency": "INR",
+          "price": "6999",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@@type": "Organization",
+            "name": "Unimanage Technologies"
+          }
+        }
+      ]
+    }
+</script>
+
+<!-- Structured Data - FAQPage -->
+<script type="application/ld+json">
+    {
+      "@@context": "https://schema.org",
+      "@@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@@type": "Question",
+          "name": "What features are included in the Starter plan?",
+          "acceptedAnswer": {
+            "@@type": "Answer",
+            "text": "The Starter plan includes unlimited members, all management features, role-based access control, account management, multi-branch support, payment & invoice system, unlimited logins, and advanced reports & analytics. Biometric integration and custom modules are available at an extra price."
+          }
+        },
+        {
+          "@@type": "Question",
+          "name": "What is the difference between Standard and Premium plans?",
+          "acceptedAnswer": {
+            "@@type": "Answer",
+            "text": "The Standard plan includes biometric integration and attendance tracking, while the Premium plan includes all features plus custom modules. The Standard plan is billed quarterly while the Premium plan is billed semi-annually."
+          }
+        },
+        {
+          "@@type": "Question",
+          "name": "Do you offer discounts for annual billing?",
+          "acceptedAnswer": {
+            "@@type": "Answer",
+            "text": "Yes, we offer discounted rates for annual billing. The Starter plan reduces from ₹1499 to ₹999 per month, the Standard plan reduces from ₹4999 to ₹4599 per 3 months, and the Premium plan reduces from ₹6999 to ₹6599 per 6 months."
+          }
+        }
+      ]
+    }
+</script>
+
+<!-- Breadcrumb Navigation -->
+<nav aria-label="breadcrumb" class="bg-gray-100 py-2">
+    <div class="container">
+        <ol class="breadcrumb flex items-center text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+                <meta itemprop="position" content="1" />
+            </li>
+            <li class="breadcrumb-item active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span itemprop="name">Pricing</span>
+                <meta itemprop="position" content="2" />
+            </li>
+        </ol>
+    </div>
+</nav>
+
+<section id="pricing" class="py-16 lg:py-24 bg-white" aria-labelledby="pricing-heading">
+    <div class="container mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-3xl mx-auto mb-12 lg:mb-16" data-aos="fade-up">
+            <h1 id="pricing-heading" class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4 lg:mb-6">
+                Simple <span class="gradient-text-primary">Pricing</span> Plans
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-600">
+                Choose the perfect plan for your fitness business in India
+            </p>
+        </div>
+
+        <div class="flex justify-center mb-8 lg:mb-12" data-aos="fade-up">
+            <div class="inline-flex flex-col sm:flex-row bg-gray-100 rounded-lg p-1 w-full sm:w-auto" role="tablist" aria-label="Pricing period selection">
+                <button class="tab-active px-4 py-2 sm:px-6 sm:py-3 rounded-md font-medium transition text-sm sm:text-base"
+                        onclick="switchPricing('monthly')" role="tab" aria-selected="true" aria-controls="monthly-pricing">
+                    Monthly
+                </button>
+                <button class="px-4 py-2 sm:px-6 sm:py-3 rounded-md font-medium text-gray-600 hover:text-primary transition text-sm sm:text-base"
+                        onclick="switchPricing('annual')" role="tab" aria-selected="false" aria-controls="annual-pricing">
+                    Annual (Save more)
+                </button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+            <article class="bg-white p-6 lg:p-8 rounded-3xl shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300"
+                     data-aos="fade-up" data-aos-delay="100" itemscope itemtype="https://schema.org/Offer">
+                <meta itemprop="priceCurrency" content="INR" />
+                <h3 class="text-xl lg:text-2xl font-bold mb-2" itemprop="name">Starter</h3>
+                <p class="text-gray-600 mb-4 lg:mb-6 text-sm lg:text-base" itemprop="description">For gyms & trainers in India</p>
+                <div class="mb-4 lg:mb-6">
+                    <span class="text-4xl lg:text-5xl font-bold monthly-price" itemprop="price">₹1499</span>
+                    <span class="text-4xl lg:text-5xl font-bold annual-price hidden" itemprop="price">₹999</span>
+                    <span class="text-gray-600">/month</span>
+                </div>
+                <ul class="space-y-2 lg:space-y-3 mb-6 lg:mb-8 text-sm lg:text-base">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>Unlimited members</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>All management features</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>Role-Based Access Control</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>Account Management</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>Multi-Branch Support</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>Payment & Invoice System</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>Unlimited Logins</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>Advanced Reports & Analytics</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>For Biometric integration (Extra Price)</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>For custom module (Extra Price)</span>
+                    </li>
+                </ul>
+                <a href="https://wa.me/919205807124?text=Hello%2C%20I%27m%20interested%20in%20getting%20started%20with%20your%20Gym%20Management%20Software."
+                   target="_blank"
+                   rel="noopener nofollow"
+                   class="w-full bg-gray-100 text-gray-800 py-3 rounded-xl font-semibold hover:bg-gray-200 transition text-sm lg:text-base inline-block text-center">
+                    Get Started
+                </a>
+            </article>
+
+            <article class="bg-white p-6 lg:p-8 rounded-3xl shadow-xl border border-gray-100 relative hover:shadow-2xl transition-shadow duration-300"
+                     data-aos="fade-up" data-aos-delay="100" itemscope itemtype="https://schema.org/Offer">
+                <meta itemprop="priceCurrency" content="INR" />
+                <!-- Fixed MOST POPULAR badge with responsive styling -->
+                <div class="popular-badge">
+                    MOST POPULAR
+                </div>
+                <h3 class="text-2xl font-bold mb-2" itemprop="name">Standard</h3>
+                <p class="text-gray-600 mb-6" itemprop="description">For growing fitness businesses in India</p>
+                <div class="mb-6">
+                    <span class="text-5xl font-bold monthly-price" itemprop="price">₹4999</span>
+                    <span class="text-5xl font-bold annual-price hidden" itemprop="price">₹4599</span>
+                    <span class="text-gray-600 mb-6">/3month</span>
+                </div>
+                <ul class="space-y-2 lg:space-y-3 mb-6 lg:mb-8 text-sm lg:text-base">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>Unlimited members</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>All management features</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>Role-Based Access Control</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>Biometric Integration</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>Account Management</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>Multi-Branch Support</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>Payment & Invoice System</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>Attendance Tracking</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>Unlimited Logins</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>Advanced Reports & Analytics</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>For custom module (Extra Price)</span>
+                    </li>
+                </ul>
+                <a href="https://wa.me/919205807124?text=Hello%2C%20I%27m%20interested%20in%20getting%20started%20with%20your%20Gym%20Management%20Software."
+                   target="_blank"
+                   rel="noopener nofollow"
+                   class="w-full bg-gray-100 text-gray-800 py-3 rounded-xl font-semibold hover:bg-gray-200 transition text-sm lg:text-base inline-block text-center">
+                    Get Started
+                </a>
+            </article>
+
+            <article class="bg-white p-8 rounded-3xl shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300"
+                     data-aos="fade-up" data-aos-delay="300" itemscope itemtype="https://schema.org/Offer">
+                <meta itemprop="priceCurrency" content="INR" />
+                <h3 class="text-2xl font-bold mb-2" itemprop="name">Premium</h3>
+                <p class="text-gray-600 mb-6" itemprop="description">For large fitness chains in India</p>
+                <div class="mb-6">
+                    <span class="text-5xl font-bold monthly-price" itemprop="price">₹6999</span>
+                    <span class="text-5xl font-bold annual-price hidden" itemprop="price">₹6599</span>
+                    <span class="text-gray-600 mb-6">/6month</span>
+                </div>
+                <ul class="space-y-2 lg:space-y-3 mb-6 lg:mb-8 text-sm lg:text-base">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>Unlimited members</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>All management features</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>Role-Based Access Control</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>Biometric Integration</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>Account Management</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>Multi-Branch Support</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>Payment & Invoice System</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>Attendance Tracking</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>Unlimited Logins</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>Advanced Reports & Analytics</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2 lg:mr-3 text-sm" aria-hidden="true"></i>
+                        <span>All features + custom modules</span>
+                    </li>
+                </ul>
+                <a href="https://wa.me/919205807124?text=Hello%2C%20I%27m%20interested%20in%20getting%20started%20with%20your%20Gym%20Management%20Software."
+                   target="_blank"
+                   rel="noopener nofollow"
+                   class="w-full bg-gray-100 text-gray-800 py-3 rounded-xl font-semibold hover:bg-gray-200 transition text-sm lg:text-base inline-block text-center">
+                    Get Started
+                </a>
+            </article>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="mt-16 lg:mt-20" data-aos="fade-up">
+            <div class="text-center mb-8 lg:mb-12">
+                <h2 class="text-2xl lg:text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Find answers to common questions about our pricing plans</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <h3 class="font-bold text-lg mb-3">What payment methods do you accept?</h3>
+                    <p class="text-gray-600 text-sm">We accept all major credit cards, debit cards, UPI, and bank transfers for our gym management software subscriptions in India.</p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <h3 class="font-bold text-lg mb-3">Can I change my plan later?</h3>
+                    <p class="text-gray-600 text-sm">Yes, you can upgrade or downgrade your plan at any time. Changes will take effect at the start of your next billing cycle.</p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <h3 class="font-bold text-lg mb-3">Do you offer a free trial?</h3>
+                    <p class="text-gray-600 text-sm">Yes, we offer a 14-day free trial for all our plans. No credit card required to start your trial.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="mt-16 text-center" data-aos="fade-up">
+            <h2 class="text-2xl lg:text-3xl font-bold mb-4">Still have questions?</h2>
+            <p class="text-gray-600 mb-6 max-w-2xl mx-auto">Our team is here to help you choose the right plan for your fitness business in India.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/contact" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition">
+                    <i class="fas fa-phone-alt mr-2" style="transform: scaleX(-1); aria-hidden="true"></i>
+                    Contact Sales
+                </a>
+                <a href="https://wa.me/919205807124?text=Hello%2C%20I%27m%20interested%20in%20getting%20started%20with%20your%20Gym%20Management%20Software."
+                   target="_blank"
+                   rel="noopener nofollow"
+                   class="btn-secondary text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition">
+                    <i class="fab fa-whatsapp mr-2" aria-hidden="true"></i>
+                    Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Function to switch between monthly and annual pricing
+    function switchPricing(period) {
+        const monthlyPrices = document.querySelectorAll('.monthly-price');
+        const annualPrices = document.querySelectorAll('.annual-price');
+
+        if (period === 'monthly') {
+            monthlyPrices.forEach(price => price.classList.remove('hidden'));
+            annualPrices.forEach(price => price.classList.add('hidden'));
+        } else {
+            monthlyPrices.forEach(price => price.classList.add('hidden'));
+            annualPrices.forEach(price => price.classList.remove('hidden'));
+        }
+
+        // Update active tab
+        const tabs = document.querySelectorAll('[role="tab"]');
+        tabs.forEach(tab => {
+            if (tab.getAttribute('onclick').includes(period)) {
+                tab.setAttribute('aria-selected', 'true');
+                tab.classList.add('tab-active');
+                tab.classList.remove('text-gray-600', 'hover:text-primary');
+            } else {
+                tab.setAttribute('aria-selected', 'false');
+                tab.classList.remove('tab-active');
+                tab.classList.add('text-gray-600', 'hover:text-primary');
+            }
+        });
+    }
+</script>
