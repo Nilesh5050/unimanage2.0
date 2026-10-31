@@ -4,41 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Title -->
     <title>@ViewData["Title"] | Unimanage Technologies - Gym Management Software & Web Development</title>
 
-    <!-- SEO Meta Tags -->
     <meta name="description" content="Unimanage Technologies offers Gym Management Software with biometric integration and custom SEO-friendly website development to help fitness businesses grow.">
     <meta name="keywords" content="Gym Management Software, Fitness Management System, Biometric Gym Attendance, Gym Software India, Fitness Club Management, SEO Websites, Web Development, Unimanage Technologies">
     <meta name="author" content="Unimanage Technologies">
 
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://www.unimanage.com/" />
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Unimanage Technologies - Gym Management Software & Web Development">
     <meta property="og:description" content="All-in-one Gym Management Software with biometric integration and SEO-friendly websites.">
     <meta property="og:image" content="https://www.unimanage.com/images/gymicon.png">
     <meta property="og:url" content="https://www.unimanage.com/">
     <meta property="og:type" content="website">
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Unimanage Technologies - Gym Management Software & Web Development">
     <meta name="twitter:description" content="Manage your fitness business smarter with biometric-enabled Gym Management Software and SEO-friendly websites.">
     <meta name="twitter:image" content="https://www.unimanage.com/images/gymicon.png">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="~/images/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="~/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/images/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/images/apple-touch-icon.png">
 
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="~/css/site.css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Structured Data for SEO -->
     <script type="application/ld+json">
         {
           "@@context": "https://schema.org",
@@ -50,11 +45,25 @@
             "https://www.facebook.com/share/1BV25U342s/",
             "https://x.com/unimanage",
             "https://www.instagram.com/unimanage/",
-            "https://www.linkedin.com/company/unimanage"
+            "https://www.linkedin.com/company/unimanage-technologies"
           ],
           "description": "Unimanage Technologies provides Gym Management Software with biometric integration and SEO-friendly web development services."
         }
     </script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F1JH5FYX3K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-F1JH5FYX3K');
+    </script>
+    
+    @* <script async src="https://embed.tawk.to/6047638a385de407571e29b9/1f0bdpltb"></script> *@
+
+    @RenderSection("Head", required: false)
+
 </head>
 
 <body class="bg-white">
